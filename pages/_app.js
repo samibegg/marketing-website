@@ -1,6 +1,8 @@
 import Script from 'next/script';
 import Head from 'next/head';
 import '../styles/globals.css'; 
+import { DefaultSeo } from 'next-seo';
+import SEO from '../next-seo.config';
 
 function MyApp({ Component, pageProps }) {
   return (
@@ -28,6 +30,7 @@ function MyApp({ Component, pageProps }) {
           `,
         }}
       />
+      <DefaultSeo {...SEO} />
 
       <Component {...pageProps} />
     </>
