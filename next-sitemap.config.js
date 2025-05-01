@@ -28,4 +28,18 @@ module.exports = {
       },
     ],
   },
+  transform: async (config, path) => {
+    if (path === '/knowledge/AI-Strategy-2025-Policies-Executive-Summary') {
+      return {
+        loc: `${config.siteUrl}${path}`,
+        priority: 1.0,
+        lastmod: new Date().toISOString(),
+      };
+    }
+
+    return {
+      loc: `${config.siteUrl}${path}`,
+      priority: 0.7,
+    };
+  },
 };
