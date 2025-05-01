@@ -32,6 +32,7 @@ module.exports = {
     if (path === '/knowledge/AI-Strategy-2025-Policies-Executive-Summary') {
       return {
         loc: `${config.siteUrl}${path}`,
+        changefreq: 'daily',
         priority: 1.0,
         lastmod: new Date().toISOString(),
       };
@@ -39,7 +40,9 @@ module.exports = {
 
     return {
       loc: `${config.siteUrl}${path}`,
+      changefreq: 'daily',
       priority: 0.7,
+      lastmod: new Date().toISOString(),
     };
   },
 };
