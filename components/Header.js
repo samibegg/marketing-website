@@ -14,12 +14,6 @@ export default function Header() {
         <Link href="/knowledge-base" className="text-gray-700 hover:text-blue-600 transition">
           Knowledge Base
         </Link>
-        <Link href="/process" className="text-gray-700 hover:text-blue-600 transition">
-          Our Process
-        </Link>
-        <Link href="/about" className="text-gray-700 hover:text-blue-600 transition">
-          About Us
-        </Link>
       </nav>
     </header>
   );
