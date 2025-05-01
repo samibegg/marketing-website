@@ -131,8 +131,8 @@ const ReportPageKeyChallenges = () => {
   // --- SEO Content ---
   const pageTitle = "Key Challenges in the 2025 US AI Policy Environment"; // Updated
   const pageDescription = "Examining challenges from the 2025 US AI policies, including regulatory ambiguity, procurement standards, risk management, talent gaps, and budget scrutiny."; // Updated
-  const canonicalUrl = "https://www.yourwebsite.com/report/us-ai-policy-2025-key-challenges"; // Updated - Replace
-  const imageUrl = "https://www.yourwebsite.com/images/ai-policy-challenges-preview.jpg"; // Updated - Replace
+  const canonicalUrl = "https://www.forgemission.com/knowledge/AI-Strategy-2025-Policies-Executive-Summary"; // Updated - Replace
+  const imageUrl = "https://www.forgemission.com/images/ai-policy-challenges-preview.jpg"; // Updated - Replace
   const publicationDate = "2025-04-30T10:00:00Z"; // Keep or adjust
 
   // --- JSON-LD Structured Data ---
@@ -147,7 +147,7 @@ const ReportPageKeyChallenges = () => {
     "publisher": {
        "@type": "Organization",
        "name": "Your Organization Name", // Replace
-       "logo": { "@type": "ImageObject", "url": "https://www.yourwebsite.com/images/logo.png" } // Replace
+       "logo": { "@type": "ImageObject", "url": "https://www.forgemission.com/images/logo.png" } // Replace
     },
     "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl }
   };

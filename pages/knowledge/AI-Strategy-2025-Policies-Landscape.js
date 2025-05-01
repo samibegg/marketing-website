@@ -155,8 +155,8 @@ const ReportPage = () => {
   // --- SEO Content ---
   const pageTitle = "Navigating the 2025 US AI Policy Landscape: Strategic Imperatives";
   const pageDescription = "Analysis of the 2025 US AI policy shift, including Executive Order 14179, OMB Memos M-25-21 & M-25-22, BIS controls, and legislative proposals.";
-  const canonicalUrl = "https://www.yourwebsite.com/report/us-ai-policy-2025"; // Replace
-  const imageUrl = "https://www.yourwebsite.com/images/ai-policy-report-preview.jpg"; // Replace
+  const canonicalUrl = "https://www.forgemission.com/knowledge/AI-Strategy-2025-Policies-Executive-Summary"; // Replace
+  const imageUrl = "https://www.forgemission.com/images/ai-policy-report-preview.jpg"; // Replace
   const publicationDate = "2025-04-30T10:00:00Z"; // Adjust
 
   // --- JSON-LD Structured Data ---
@@ -171,7 +171,7 @@ const ReportPage = () => {
     "publisher": {
        "@type": "Organization",
        "name": "Your Organization Name",
-       "logo": { "@type": "ImageObject", "url": "https://www.yourwebsite.com/images/logo.png" }
+       "logo": { "@type": "ImageObject", "url": "https://www.forgemission.com/images/logo.png" }
     },
     "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl }
   };

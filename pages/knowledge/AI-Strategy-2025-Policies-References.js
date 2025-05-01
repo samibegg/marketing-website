@@ -108,8 +108,8 @@ const ReportPageReferences = () => {
   // --- SEO Content ---
   const pageTitle = "References | 2025 US AI Policy Report";
   const pageDescription = "Works cited and references for the report on Navigating the 2025 US AI Policy Landscape.";
-  const canonicalUrl = "https://www.yourwebsite.com/report/us-ai-policy-2025-references"; // Replace
-  const imageUrl = "https://www.yourwebsite.com/images/ai-policy-report-preview.jpg"; // Replace
+  const canonicalUrl = "https://www.forgemission.com/knowledge/AI-Strategy-2025-Policies-Executive-Summary"; // Replace
+  const imageUrl = "https://www.forgemission.com/images/ai-policy-report-preview.jpg"; // Replace
 
   // --- JSON-LD Structured Data ---
   const jsonLd = {

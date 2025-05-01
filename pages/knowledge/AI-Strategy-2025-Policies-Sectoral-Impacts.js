@@ -130,8 +130,8 @@ const ReportPageSectoralImpacts = () => {
   // --- SEO Content ---
   const pageTitle = "Sectoral Impacts of 2025 US AI Policy | AI Consulting Imperatives";
   const pageDescription = "Analysis of how the 2025 US AI policy changes impact federal agencies, regulated industries (healthcare, finance), defense, and the technology sector.";
-  const canonicalUrl = "https://www.yourwebsite.com/report/us-ai-policy-2025-sectoral-impacts"; // Replace
-  const imageUrl = "https://www.yourwebsite.com/images/ai-policy-sectoral-preview.jpg"; // Replace
+  const canonicalUrl = "https://www.forgemission.com/knowledge/AI-Strategy-2025-Policies-Executive-Summary"; // Replace
+  const imageUrl = "https://www.forgemission.com/images/ai-policy-sectoral-preview.jpg"; // Replace
   const publicationDate = "2025-04-30T10:00:00Z"; // Adjust
 
   // --- JSON-LD Structured Data ---
@@ -146,7 +146,7 @@ const ReportPageSectoralImpacts = () => {
     "publisher": {
        "@type": "Organization",
        "name": "Your Organization Name", // Replace
-       "logo": { "@type": "ImageObject", "url": "https://www.yourwebsite.com/images/logo.png" } // Replace
+       "logo": { "@type": "ImageObject", "url": "https://www.forgemission.com/images/logo.png" } // Replace
     },
     "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl }
   };

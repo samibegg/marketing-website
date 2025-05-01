@@ -124,8 +124,8 @@ const ReportPageExecutiveSummary = () => {
   // --- SEO Content ---
   const pageTitle = "Executive Summary | 2025 US AI Policy Report";
   const pageDescription = "Executive summary of the report analyzing the 2025 US AI policy landscape, its impacts, challenges, opportunities, and strategic recommendations for AI consulting firms.";
-  const canonicalUrl = "https://www.yourwebsite.com/report/us-ai-policy-2025-executive-summary"; // Replace
-  const imageUrl = "https://www.yourwebsite.com/images/ai-policy-report-preview.jpg"; // Replace
+  const canonicalUrl = "https://www.forgemission.com/knowledge/AI-Strategy-2025-Policies-Executive-Summary"; // Replace
+  const imageUrl = "https://www.forgemission.com/images/ai-policy-report-preview.jpg"; // Replace
 
   // --- JSON-LD Structured Data ---
   const jsonLd = {
@@ -141,7 +141,7 @@ const ReportPageExecutiveSummary = () => {
     "publisher": {
        "@type": "Organization",
        "name": "Your Organization Name", // Replace
-       "logo": { "@type": "ImageObject", "url": "https://www.yourwebsite.com/images/logo.png" } // Replace
+       "logo": { "@type": "ImageObject", "url": "https://www.forgemission.com/images/logo.png" } // Replace
     },
      "hasPart": [ // Indicate this is part of the report
         {

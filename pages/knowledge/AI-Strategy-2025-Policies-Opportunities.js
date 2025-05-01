@@ -131,8 +131,8 @@ const ReportPageOpportunities = () => {
   // --- SEO Content ---
   const pageTitle = "AI Consulting Opportunities from 2025 US AI Policies"; // Updated
   const pageDescription = "Exploring high-demand AI consulting services driven by the 2025 US AI policy landscape, including strategy, governance, risk management, data, and workforce enablement."; // Updated
-  const canonicalUrl = "https://www.yourwebsite.com/report/us-ai-policy-2025-opportunities"; // Updated - Replace
-  const imageUrl = "https://www.yourwebsite.com/images/ai-policy-opportunities-preview.jpg"; // Updated - Replace
+  const canonicalUrl = "https://www.forgemission.com/knowledge/AI-Strategy-2025-Policies-Executive-Summary"; // Updated - Replace
+  const imageUrl = "https://www.forgemission.com/images/ai-policy-opportunities-preview.jpg"; // Updated - Replace
   const publicationDate = "2025-04-30T10:00:00Z"; // Keep or adjust
 
   // --- JSON-LD Structured Data ---
@@ -147,7 +147,7 @@ const ReportPageOpportunities = () => {
     "publisher": {
        "@type": "Organization",
        "name": "Your Organization Name", // Replace
-       "logo": { "@type": "ImageObject", "url": "https://www.yourwebsite.com/images/logo.png" } // Replace
+       "logo": { "@type": "ImageObject", "url": "https://www.forgemission.com/images/logo.png" } // Replace
     },
     "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl }
   };

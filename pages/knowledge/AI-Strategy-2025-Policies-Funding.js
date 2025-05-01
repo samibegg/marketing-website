@@ -131,8 +131,8 @@ const ReportPageFunding = () => {
   // --- SEO Content ---
   const pageTitle = "Government Funding & Contract Opportunities in the 2025 US AI Policy Landscape"; // Updated
   const pageDescription = "Overview of funding streams (NSF, DoD, TMF), public-private partnerships, and strategies for winning performance-based AI contracts under the 2025 US AI policies."; // Updated
-  const canonicalUrl = "https://www.yourwebsite.com/report/us-ai-policy-2025-funding"; // Updated - Replace
-  const imageUrl = "https://www.yourwebsite.com/images/ai-policy-funding-preview.jpg"; // Updated - Replace
+  const canonicalUrl = "https://www.forgemission.com/knowledge/AI-Strategy-2025-Policies-Executive-Summary"; // Updated - Replace
+  const imageUrl = "https://www.forgemission.com/images/ai-policy-funding-preview.jpg"; // Updated - Replace
   const publicationDate = "2025-04-30T10:00:00Z"; // Keep or adjust
 
   // --- JSON-LD Structured Data ---
@@ -147,7 +147,7 @@ const ReportPageFunding = () => {
     "publisher": {
        "@type": "Organization",
        "name": "Your Organization Name", // Replace
-       "logo": { "@type": "ImageObject", "url": "https://www.yourwebsite.com/images/logo.png" } // Replace
+       "logo": { "@type": "ImageObject", "url": "https://www.forgemission.com/images/logo.png" } // Replace
     },
     "mainEntityOfPage": { "@type": "WebPage", "@id": canonicalUrl }
   };
