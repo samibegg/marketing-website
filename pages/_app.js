@@ -7,6 +7,7 @@ function MyApp({ Component, pageProps }) {
     <>
       <Head>
         <link rel="icon" href="/images/logo.png" />
+        <title>ForgeMission | Forged From Data, Mission-Driven AI Starts Here</title>
       </Head>
       {/* Google Analytics */}
       <Script
