@@ -22,7 +22,7 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold text-gray-800 mb-4">Connect</h4>
           <div className="flex space-x-6 text-gray-500">
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
+            <a href="https://www.linkedin.com/company/forgemission" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
               <FaLinkedin size={20} />
             </a>
             <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
