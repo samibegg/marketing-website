@@ -17,7 +17,7 @@ import SignUpModal from '../../components/SignUpForm';
  */
 const trackEvent = (eventName, eventData) => {
   console.log('Analytics Event:', eventName, eventData);
-  // Example: window.gtag('event', eventName, eventData);
+  window.gtag('event', eventName, eventData);
 };
 
 /**

@@ -12,7 +12,7 @@ import Head from 'next/head';
  */
 const trackEvent = (eventName, eventData) => {
   console.log('Analytics Event:', eventName, eventData);
-  // Example: window.gtag('event', eventName, eventData);
+  window.gtag('event', eventName, eventData);
 };
 
 /**
