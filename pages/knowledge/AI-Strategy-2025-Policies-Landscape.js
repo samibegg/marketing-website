@@ -5,6 +5,7 @@ import { ArrowRight, ArrowLeft } from 'lucide-react'; // Added ArrowLeft
 import Link from 'next/link';
 import React, { useState, useEffect, useRef, useCallback } from 'react'; // Added useRef, useCallback
 import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 
 /**
  * Placeholder function for analytics tracking.
@@ -179,25 +180,31 @@ const ReportPage = () => {
 
   return (
     <>
+      <NextSeo
+        title={pageTitle}
+        description={pageDescription}
+        canonical={canonicalUrl}
+        openGraph={{
+          type: 'article',
+          url: canonicalUrl,
+          title: pageTitle,
+          description: pageDescription,
+          images: [
+            {
+              url: imageUrl,
+              alt: pageTitle,
+            },
+          ],
+        }}
+        twitter={{
+          cardType: 'summary_large_image',
+          site: canonicalUrl,
+          title: pageTitle,
+          description: pageDescription,
+          image: imageUrl,
+        }}
+      />
       <Head>
-        {/* --- Primary Meta Tags --- */}
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        {/* --- Canonical URL --- */}
-        <link rel="canonical" href={canonicalUrl} />
-        {/* --- Open Graph / Facebook --- */}
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content={imageUrl} />
-        {/* --- Twitter --- */}
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={canonicalUrl} />
-        <meta property="twitter:title" content={pageTitle} />
-        <meta property="twitter:description" content={pageDescription} />
-        <meta property="twitter:image" content={imageUrl} />
-        {/* --- JSON-LD Structured Data --- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

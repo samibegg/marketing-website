@@ -7,6 +7,7 @@ import { ArrowRight } from 'lucide-react';
 import Link from 'next/link';
 import React, { useEffect, useRef } from 'react'; 
 import Head from 'next/head';
+import { NextSeo } from 'next-seo';
 
 import { useState } from 'react';
 import SignUpModal from '../../components/SignUpForm'; 
@@ -169,22 +170,31 @@ const ReportPageExecutiveSummary = () => {
 
   return (
     <>
+      <NextSeo
+        title={pageTitle}
+        description={pageDescription}
+        canonical={canonicalUrl}
+        openGraph={{
+          type: 'article',
+          url: canonicalUrl,
+          title: pageTitle,
+          description: pageDescription,
+          images: [
+            {
+              url: imageUrl,
+              alt: pageTitle,
+            },
+          ],
+        }}
+        twitter={{
+          cardType: 'summary_large_image',
+          site: canonicalUrl,
+          title: pageTitle,
+          description: pageDescription,
+          image: imageUrl,
+        }}
+      />
       <Head>
-        {/* --- Meta Tags --- */}
-        <title>{pageTitle}</title>
-        <meta name="description" content={pageDescription} />
-        <link rel="canonical" href={canonicalUrl} />
-        <meta property="og:type" content="article" />
-        <meta property="og:url" content={canonicalUrl} />
-        <meta property="og:title" content={pageTitle} />
-        <meta property="og:description" content={pageDescription} />
-        <meta property="og:image" content={imageUrl} />
-        <meta property="twitter:card" content="summary_large_image" />
-        <meta property="twitter:url" content={canonicalUrl} />
-        <meta property="twitter:title" content={pageTitle} />
-        <meta property="twitter:description" content={pageDescription} />
-        <meta property="twitter:image" content={imageUrl} />
-        {/* --- JSON-LD --- */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
