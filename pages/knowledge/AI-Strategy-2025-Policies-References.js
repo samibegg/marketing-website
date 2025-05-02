@@ -258,6 +258,8 @@ const ReportPageReferences = () => {
         title={pageTitle}
         description={pageDescription}
         canonical={canonicalUrl}
+        noindex={true}
+        nofollow={true}
         openGraph={{
           type: 'article',
           url: canonicalUrl,

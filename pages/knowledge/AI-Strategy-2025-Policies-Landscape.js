@@ -35,7 +35,7 @@ const debounce = (func, delay) => {
 /**
  * Component to display the formatted AI Policy Report with advanced analytics.
  */
-const ReportPage = () => {
+  const ReportPage = () => {
   const [sectionsOpen, setSectionsOpen] = useState({ A: false, B: false, C: false, D: false });
   const contentRef = useRef(null); // Ref for the main content area
   const scrollMilestonesReached = useRef(new Set()); // Track reached scroll depths
@@ -184,6 +184,8 @@ const ReportPage = () => {
         title={pageTitle}
         description={pageDescription}
         canonical={canonicalUrl}
+        noindex={true}
+        nofollow={true}
         openGraph={{
           type: 'article',
           url: canonicalUrl,
