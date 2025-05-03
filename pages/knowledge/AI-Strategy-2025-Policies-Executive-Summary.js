@@ -7,20 +7,15 @@ import React, { useEffect, useRef } from 'react';
 import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 
-import { useState } from 'react';
+import { useSession } from 'next-auth/react';
+import { useAuthModal } from '@/context/AuthModalContext'; 
+import { useRouter } from 'next/router'; 
 
-/**
- * Placeholder function for analytics tracking.
- * Replace this with your actual analytics integration code.
- */
 const trackEvent = (eventName, eventData) => {
   console.log('Analytics Event:', eventName, eventData);
   window.gtag('event', eventName, eventData);
 };
 
-/**
- * Simple debounce function.
- */
 const debounce = (func, delay) => {
   let timeoutId;
   return function(...args) {
@@ -31,14 +26,43 @@ const debounce = (func, delay) => {
   };
 };
 
-/**
- * Component to display the Executive Summary report page with analytics.
- */
+  
 const ReportPageExecutiveSummary = () => {
   const contentRef = useRef(null); // Ref for potential future use
   const scrollMilestonesReached = useRef(new Set()); // Ref for scroll tracking
   const activeTimeStart = useRef(Date.now()); // Ref for active time tracking
   const totalActiveTime = useRef(0); // Ref for active time tracking
+
+  // --- Hooks for Auth and Navigation ---
+  const { data: session, status } = useSession(); // Get session status
+  const { openModal } = useAuthModal(); // Get function to open login modal
+  const router = useRouter(); // Get router instance
+
+  // --- Conditional Button Logic ---
+  const nextPageRoute = '/knowledge/AI-Strategy-2025-Policies-Landscape'; // Define the target page
+
+  const handleConditionalClick = () => {
+    if (status === 'authenticated') {
+      // If logged in, navigate to the next page
+      router.push(nextPageRoute);
+      // Optionally call original click handler if it does more than navigation
+      // handleNextSectionClick();
+    } else if (status === 'unauthenticated') {
+      // If logged out, open the login modal
+      openModal();
+    }
+    // Do nothing if status is 'loading' (button will be disabled)
+  };
+
+  // Determine button text based on auth status
+  let buttonText = 'Loading...';
+  if (status === 'authenticated') {
+    buttonText = 'Go to Next Section';
+  } else if (status === 'unauthenticated') {
+    buttonText = 'Login to Continue'; // Or customize as needed
+  }
+  // --- End Conditional Button Logic ---
+
 
   // --- Analytics Tracking Effects ---
 
@@ -151,20 +175,6 @@ const ReportPageExecutiveSummary = () => {
      ]
   };
 
-  // Signup modal logic
-  let [isOpen, setIsOpen] = useState(false);
-
-  function closeModal() {
-    setIsOpen(false);
-    trackEvent('signup_closed', { button_text: 'Closed Sign up', target_url: '/report/us-ai-policy-2025' }); // Link to Landscape page
-  }
-
-  function openModal() {
-    trackEvent('signup_click', { button_text: 'Sign Up Button', target_url: '/report/us-ai-policy-2025' }); // Link to Landscape page
-    setIsOpen(true);
-  }
-
-
   return (
     <>
       <NextSeo
@@ -250,16 +260,21 @@ const ReportPageExecutiveSummary = () => {
             <div className="mt-12 pt-6 border-t border-gray-200 flex justify-end items-center"> {/* Changed to justify-end */}
               <div>
 
-              {/* Next Button */}
-              <Link href="/knowledge/AI-Strategy-2025-Policies-Landscape" passHref> {/* Update href to your conclusion/final page */}
-                 <button
-                   onClick={handleNextSectionClick}
-                   className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                 >
-                   Go to Next Section {/* Or next section title */}
-                   <ArrowRight className="ml-3 -mr-1 h-5 w-5" aria-hidden="true" />
-                 </button>
-              </Link>
+               {/* --- MODIFIED CONDITIONAL BUTTON --- */}
+               {/* The Link component is removed as navigation is handled in the onClick */}
+               <button
+                 onClick={handleConditionalClick} // Use the new conditional handler
+                 disabled={status === 'loading'} // Disable while checking session
+                 className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 disabled:opacity-50 disabled:cursor-not-allowed transition-opacity"
+               >
+                 {buttonText} {/* Display dynamic button text */}
+                 {/* Show arrow only when logged in and ready */}
+                 {status === 'authenticated' && (
+                    <ArrowRight className="ml-3 -mr-1 h-5 w-5" aria-hidden="true" />
+                 )}
+               </button>
+               {/* --- END MODIFIED CONDITIONAL BUTTON --- */}
+
               </div>
             </div>
 
