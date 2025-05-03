@@ -1,5 +1,3 @@
-'use client';
-
 import Image from 'next/image';
 import Header from '../../components/Header'; 
 import Footer from '../../components/Footer'; 
@@ -10,7 +8,6 @@ import Head from 'next/head';
 import { NextSeo } from 'next-seo';
 
 import { useState } from 'react';
-import SignUpModal from '../../components/SignUpForm'; 
 
 /**
  * Placeholder function for analytics tracking.
@@ -251,17 +248,18 @@ const ReportPageExecutiveSummary = () => {
 
             {/* Navigation Buttons Container */}
             <div className="mt-12 pt-6 border-t border-gray-200 flex justify-end items-center"> {/* Changed to justify-end */}
-               {/* Signup Button */}
               <div>
-                <button type="button" onClick={openModal}
-                   className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-                >
-                  Read The Full Report
-                   <ArrowRight className="ml-3 -mr-1 h-5 w-5" aria-hidden="true" />
-                </button>
 
-                {/* Render the modal component, passing state and control functions */}
-                <SignUpModal isOpen={isOpen} closeModal={closeModal} linkToNextPage="/knowledge/AI-Strategy-2025-Policies-Landscape" />
+              {/* Next Button */}
+              <Link href="/knowledge/AI-Strategy-2025-Policies-Landscape" passHref> {/* Update href to your conclusion/final page */}
+                 <button
+                   onClick={handleNextSectionClick}
+                   className="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-indigo-600 hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+                 >
+                   Go to Next Section {/* Or next section title */}
+                   <ArrowRight className="ml-3 -mr-1 h-5 w-5" aria-hidden="true" />
+                 </button>
+              </Link>
               </div>
             </div>
 
