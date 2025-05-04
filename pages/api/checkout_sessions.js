@@ -1,11 +1,14 @@
 // pages/api/checkout_sessions.js
-import { getSession } from 'next-auth/react'; // To get user session server-side
+import { getSession } from 'next-auth/react';
+import { getToken } from 'next-auth/jwt'; // Import getToken for deeper debugging
 import Stripe from 'stripe';
+import { connectToDatabase } from '@/lib/mongodb'; // Ensure DB connection is available if needed later
 
 // Initialize Stripe with the secret key
 const stripe = new Stripe(process.env.STRIPE_SECRET_KEY);
+const secret = process.env.NEXTAUTH_SECRET; // Get secret for getToken
 
-// Define Price IDs (could also be passed from frontend if more dynamic)
+// Define Price IDs
 const SINGLE_REPORT_PRICE_ID = process.env.STRIPE_SINGLE_REPORT_PRICE_ID;
 const SUBSCRIPTION_PRICE_ID = process.env.STRIPE_SUBSCRIPTION_PRICE_ID;
 
@@ -16,76 +19,100 @@ export default async function handler(req, res) {
     return;
   }
 
-  // 1. Get user session
-  const session = await getSession({ req }); // Requires req object
+  console.log('\n--- [checkout_sessions] Request Received ---');
+  // --- ADDED LOGGING ---
+  console.log('[checkout_sessions] Request Headers:', JSON.stringify(req.headers, null, 2)); // Log all headers
+  console.log('[checkout_sessions] NEXTAUTH_SECRET available:', !!secret);
+  console.log('[checkout_sessions] NEXTAUTH_SECRET length:', secret?.length || 0);
+  // --- END ADDED LOGGING ---
 
-  if (!session?.user) {
-    // Should ideally not happen if frontend checks, but good failsafe
-    return res.status(401).json({ error: 'You must be logged in to make a purchase.' });
+  // --- Attempt 1: Using getToken (More direct JWT check) ---
+  let token = null;
+  try {
+      token = await getToken({ req, secret }); // Pass explicit secret
+      console.log('[checkout_sessions] getToken result:', token ? 'Token Found' : 'No Token / Invalid Token');
+      if (token) {
+          // Log some decoded token data (avoid logging sensitive fields in production)
+          console.log('[checkout_sessions] Decoded Token (subset):', { id: token.id, email: token.email, name: token.name, iat: token.iat, exp: token.exp });
+      }
+  } catch (error) {
+      console.error('[checkout_sessions] Error calling getToken:', error);
   }
+  // --- End Attempt 1 ---
 
-  // 2. Get Price ID from request body
-  const { priceId } = req.body;
+  // --- Attempt 2: Using getSession (Original method) ---
+  let session = null;
+  try {
+      // getSession implicitly uses the secret and verifies against DB/adapter if using database strategy
+      session = await getSession({ req });
+      console.log('[checkout_sessions] getSession result:', session ? `Session Found for ${session.user?.email}` : 'No Session Found / Invalid');
+  } catch (error) {
+      // This catch might not fire for simple auth failures, getSession usually returns null
+      console.error('[checkout_sessions] Error calling getSession:', error);
+  }
+  // --- End Attempt 2 ---
+
+  // --- Authorization Check ---
+  // Prefer checking the token directly from getToken if available, otherwise use session
+  // This helps differentiate between JWT decoding failure vs session retrieval failure
+  const authorizedUser = token || session?.user;
+
+  if (!authorizedUser?.id) { // Check for user ID specifically
+    console.error('[checkout_sessions] Authorization failed (No valid token or session with user ID found)');
+    // Provide a slightly more informative error if possible
+    if (!token && !session) {
+        console.error('[checkout_sessions] Reason: Both getToken and getSession failed.');
+    } else if (!token) {
+        console.error('[checkout_sessions] Reason: getToken failed, but getSession found something (maybe without user ID?). Session:', session);
+    } else if (!session) {
+        console.error('[checkout_sessions] Reason: getToken succeeded, but getSession failed.');
+    }
+    return res.status(401).json({ error: 'Authentication required. Please log in again.' }); // Suggest re-login
+  }
+  // If we reach here, authorization is considered successful
+  console.log(`[checkout_sessions] User Authorized via ${token ? 'getToken' : 'getSession'}: ${authorizedUser.email || authorizedUser.id}`);
+
+
+  // --- Proceed with checkout logic ---
+  const { priceId, reportId } = req.body; // Include reportId if sent
 
   if (!priceId) {
-    return res.status(400).json({ error: 'Price ID is required.' });
+      console.error('[checkout_sessions] Price ID missing from request body');
+      return res.status(400).json({ error: 'Price ID is required.' });
+  }
+  // Basic validation if only two prices are expected
+  if (priceId !== SINGLE_REPORT_PRICE_ID && priceId !== SUBSCRIPTION_PRICE_ID) {
+      console.error(`[checkout_sessions] Invalid Price ID received: ${priceId}`);
+      return res.status(400).json({ error: 'Invalid Price ID provided.' });
   }
 
-  // 3. Determine checkout mode (payment or subscription)
-  let mode = 'payment'; // Default to one-time payment
-  if (priceId === SUBSCRIPTION_PRICE_ID) {
-    mode = 'subscription';
-  } else if (priceId !== SINGLE_REPORT_PRICE_ID) {
-    // Basic validation if only two prices are expected
-    return res.status(400).json({ error: 'Invalid Price ID provided.' });
-  }
-
-  // 4. Define Success and Cancel URLs
-  const successUrl = `${process.env.NEXTAUTH_URL}/purchase-success?session_id={CHECKOUT_SESSION_ID}`; // Example success page
-  const cancelUrl = `${process.env.NEXTAUTH_URL}/pricing`; // Redirect back to pricing on cancel
+  const mode = priceId === SUBSCRIPTION_PRICE_ID ? 'subscription' : 'payment';
+  const successUrl = `${process.env.NEXTAUTH_URL}/purchase-success?session_id={CHECKOUT_SESSION_ID}`;
+  const cancelUrl = `${process.env.NEXTAUTH_URL}/pricing`;
 
   try {
-    // 5. Prepare Checkout Session parameters
     const checkoutSessionParams = {
-      line_items: [
-        {
-          price: priceId,
-          quantity: 1,
-        },
-      ],
+      line_items: [{ price: priceId, quantity: 1 }],
       mode: mode,
       success_url: successUrl,
       cancel_url: cancelUrl,
-      // --- Associate with User ---
-      // Prefill email (optional but recommended)
-      customer_email: session.user.email,
-      // VERY IMPORTANT: Include client_reference_id to link session to your user ID
-      // This ID will be available in webhook events.
-      client_reference_id: session.user.id, // Assumes user.id is available in session (added via callbacks)
-      // --- Metadata (Optional) ---
-      // You can add other metadata if needed for webhooks
-      // metadata: {
-      //   userId: session.user.id,
-      //   // Add reportId if it's a single report purchase and known here
-      //   // reportId: req.body.reportId || null,
-      // },
-      // --- Subscription specific (Optional) ---
-      // subscription_data: {
-      //   metadata: { // Metadata specifically for the subscription object
-      //     userId: session.user.id,
-      //   }
-      // },
+      customer_email: authorizedUser.email, // Use email from validated token/session
+      client_reference_id: authorizedUser.id, // Use ID from validated token/session
+      // Add metadata including reportId if it exists and it's a one-time payment
+      metadata: mode === 'payment' && reportId ? { userId: authorizedUser.id, reportId: reportId } : { userId: authorizedUser.id },
+      // Add metadata to subscription too if needed
+      // subscription_data: mode === 'subscription' ? { metadata: { userId: authorizedUser.id } } : undefined,
     };
 
-    // 6. Create the Stripe Checkout Session
+    console.log('[checkout_sessions] Creating Stripe session with params:', checkoutSessionParams);
     const checkoutSession = await stripe.checkout.sessions.create(checkoutSessionParams);
-
-    // 7. Respond with the Session ID
+    console.log('[checkout_sessions] Stripe session created successfully:', checkoutSession.id);
     res.status(200).json({ sessionId: checkoutSession.id });
 
   } catch (error) {
-    console.error('Error creating Stripe Checkout Session:', error);
-    res.status(500).json({ error: 'Could not create checkout session', details: error.message });
+    console.error('[checkout_sessions] Error creating Stripe Checkout Session:', error);
+    // Provide more Stripe-specific error details if available
+    const stripeErrorCode = error.code ? ` (Stripe Code: ${error.code})` : '';
+    res.status(500).json({ error: `Could not create checkout session.${stripeErrorCode}`, details: error.message });
   }
 }
-
