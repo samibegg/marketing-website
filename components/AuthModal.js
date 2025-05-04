@@ -8,6 +8,7 @@ import { z } from 'zod';
 import { useRouter } from 'next/router';
 import { FcGoogle } from 'react-icons/fc'; // Google Icon
 import { AiOutlineClose } from 'react-icons/ai'; // Close Icon
+import Link from 'next/link'; // Import Link for the Forgot Password link
 
 // --- Zod Schemas ---
 const loginSchema = z.object({
@@ -75,13 +76,9 @@ export const AuthModal = () => {
       const result = await response.json();
       if (!response.ok) {
         setApiError(result.message || `Registration failed (Status: ${response.status})`);
-        // Optionally handle specific validation errors from result.errors if needed
       } else {
-        // Optionally show a success message before switching tabs
-        // toast.success(result.message || "Account created! Please log in.");
-        setActiveTab('login'); // Switch to login tab
-        resetSignupForm(); // Clear signup form
-        // Optionally pre-fill login email: resetLoginForm({ email: data.email, password: '' });
+        setActiveTab('login');
+        resetSignupForm();
       }
     } catch (err) { setApiError('A network error occurred.'); }
     finally { setIsLoading(false); }
@@ -90,34 +87,31 @@ export const AuthModal = () => {
   const handleGoogleSignIn = async () => {
     setIsLoading(true);
     setApiError(null);
-    try { await signIn('google'); } // NextAuth handles the redirect flow
+    try { await signIn('google'); }
     catch (err) {
       setApiError('Failed to start Google Sign-In.');
-      setIsLoading(false); // Reset loading only if initiation fails
+      setIsLoading(false);
     }
   };
 
   // --- Modal & Form Reset ---
   const closeModalAndReset = () => {
     closeModal();
-    // Delay reset slightly to allow modal fade-out animation if desired
     setTimeout(() => {
       setApiError(null);
       resetLoginForm();
       resetSignupForm();
       setActiveTab('login');
       setIsLoading(false);
-    }, 300); // Adjust timing if needed, or remove setTimeout for immediate reset
+    }, 300);
   };
 
-  // Reset forms when tab changes
   useEffect(() => {
-    setApiError(null); // Clear API error when switching tabs
+    setApiError(null);
     resetLoginForm();
     resetSignupForm();
   }, [activeTab]);
 
-  // Close modal on Escape key press
   useEffect(() => {
     const handleEscape = (event) => {
       if (event.key === 'Escape') {
@@ -131,19 +125,17 @@ export const AuthModal = () => {
   }, [isModalOpen]);
 
 
-  // Prevent rendering if modal is closed
   if (!isModalOpen) {
     return null;
   }
 
   // --- Render Component ---
   return (
-    // Using Fragment shorthand <> is fine here
     <>
       {/* Overlay */}
       <div
         className="fixed inset-0 bg-black bg-opacity-60 z-[999] transition-opacity duration-300 ease-out"
-        onClick={closeModalAndReset} // Close modal on overlay click
+        onClick={closeModalAndReset}
         aria-hidden="true"
       ></div>
 
@@ -206,7 +198,20 @@ export const AuthModal = () => {
                   {loginErrors.email && <p className="text-xs text-red-600 mt-1">{loginErrors.email.message}</p>}
                 </div>
                 <div>
-                  <label htmlFor="login-password" className="block text-sm font-medium text-gray-700 mb-1">Password</label>
+                  {/* --- MODIFIED PASSWORD INPUT AREA --- */}
+                  <div className="flex justify-between items-baseline mb-1">
+                      <label htmlFor="login-password" className="block text-sm font-medium text-gray-700">Password</label>
+                      {/* --- ADDED FORGOT PASSWORD LINK --- */}
+                      <Link href="/forgot-password" passHref>
+                          <span
+                              onClick={closeModal} // Close modal when clicking link
+                              className="text-xs text-blue-600 hover:text-blue-800 cursor-pointer hover:underline"
+                          >
+                              Forgot password?
+                          </span>
+                      </Link>
+                      {/* --- END FORGOT PASSWORD LINK --- */}
+                  </div>
                   <input
                     id="login-password"
                     type="password"
@@ -215,6 +220,7 @@ export const AuthModal = () => {
                     aria-invalid={loginErrors.password ? "true" : "false"}
                   />
                   {loginErrors.password && <p className="text-xs text-red-600 mt-1">{loginErrors.password.message}</p>}
+                  {/* --- END MODIFIED PASSWORD INPUT AREA --- */}
                 </div>
                 <button
                   type="submit"
@@ -231,53 +237,25 @@ export const AuthModal = () => {
               <form onSubmit={handleSignupSubmit(onRegister)} className="space-y-4">
                  <div>
                   <label htmlFor="signup-name" className="block text-sm font-medium text-gray-700 mb-1">Name</label>
-                  <input
-                    id="signup-name"
-                    type="text"
-                    {...registerSignup("name")}
-                    className={`w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 ${signupErrors.name ? 'border-red-500 focus:ring-red-500' : 'border-gray-300'}`}
-                    aria-invalid={signupErrors.name ? "true" : "false"}
-                  />
+                  <input id="signup-name" type="text" {...registerSignup("name")} className={`w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 ${signupErrors.name ? 'border-red-500 focus:ring-red-500' : 'border-gray-300'}`} aria-invalid={signupErrors.name ? "true" : "false"} />
                   {signupErrors.name && <p className="text-xs text-red-600 mt-1">{signupErrors.name.message}</p>}
                 </div>
                 <div>
                   <label htmlFor="signup-email" className="block text-sm font-medium text-gray-700 mb-1">Email</label>
-                  <input
-                    id="signup-email"
-                    type="email"
-                    {...registerSignup("email")}
-                    className={`w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 ${signupErrors.email ? 'border-red-500 focus:ring-red-500' : 'border-gray-300'}`}
-                    aria-invalid={signupErrors.email ? "true" : "false"}
-                  />
+                  <input id="signup-email" type="email" {...registerSignup("email")} className={`w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 ${signupErrors.email ? 'border-red-500 focus:ring-red-500' : 'border-gray-300'}`} aria-invalid={signupErrors.email ? "true" : "false"} />
                   {signupErrors.email && <p className="text-xs text-red-600 mt-1">{signupErrors.email.message}</p>}
                 </div>
                 <div>
                   <label htmlFor="signup-password" className="block text-sm font-medium text-gray-700 mb-1">Password</label>
-                  <input
-                    id="signup-password"
-                    type="password"
-                    {...registerSignup("password")}
-                    className={`w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 ${signupErrors.password ? 'border-red-500 focus:ring-red-500' : 'border-gray-300'}`}
-                    aria-invalid={signupErrors.password ? "true" : "false"}
-                  />
+                  <input id="signup-password" type="password" {...registerSignup("password")} className={`w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 ${signupErrors.password ? 'border-red-500 focus:ring-red-500' : 'border-gray-300'}`} aria-invalid={signupErrors.password ? "true" : "false"} />
                   {signupErrors.password && <p className="text-xs text-red-600 mt-1">{signupErrors.password.message}</p>}
                 </div>
                  <div>
                   <label htmlFor="signup-confirm-password" className="block text-sm font-medium text-gray-700 mb-1">Confirm Password</label>
-                  <input
-                    id="signup-confirm-password"
-                    type="password"
-                    {...registerSignup("confirmPassword")}
-                    className={`w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 ${signupErrors.confirmPassword ? 'border-red-500 focus:ring-red-500' : 'border-gray-300'}`}
-                    aria-invalid={signupErrors.confirmPassword ? "true" : "false"}
-                  />
+                  <input id="signup-confirm-password" type="password" {...registerSignup("confirmPassword")} className={`w-full px-3 py-2 border rounded-md shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500 ${signupErrors.confirmPassword ? 'border-red-500 focus:ring-red-500' : 'border-gray-300'}`} aria-invalid={signupErrors.confirmPassword ? "true" : "false"} />
                   {signupErrors.confirmPassword && <p className="text-xs text-red-600 mt-1">{signupErrors.confirmPassword.message}</p>}
                 </div>
-                <button
-                  type="submit"
-                  disabled={isLoading}
-                  className="w-full py-2 px-4 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition"
-                >
+                <button type="submit" disabled={isLoading} className="w-full py-2 px-4 bg-blue-600 text-white font-medium rounded-md hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition">
                   {isLoading ? 'Creating Account...' : 'Sign Up'}
                 </button>
               </form>
@@ -286,25 +264,15 @@ export const AuthModal = () => {
 
           {/* Divider */}
           <div className="relative my-6">
-            <div className="absolute inset-0 flex items-center" aria-hidden="true">
-              <div className="w-full border-t border-gray-300" />
-            </div>
-            <div className="relative flex justify-center">
-              <span className="bg-white px-2 text-sm text-gray-500">Or</span>
-            </div>
+            <div className="absolute inset-0 flex items-center" aria-hidden="true"><div className="w-full border-t border-gray-300" /></div>
+            <div className="relative flex justify-center"><span className="bg-white px-2 text-sm text-gray-500">Or</span></div>
           </div>
 
           {/* OAuth Providers */}
           <div>
-            <button
-              onClick={handleGoogleSignIn}
-              disabled={isLoading}
-              className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition"
-            >
-              <FcGoogle className="mr-2 -ml-1 h-5 w-5" aria-hidden="true" />
-              <span>Sign in with Google</span>
+            <button onClick={handleGoogleSignIn} disabled={isLoading} className="w-full inline-flex justify-center py-2 px-4 border border-gray-300 rounded-md shadow-sm bg-white text-sm font-medium text-gray-500 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 disabled:opacity-50 disabled:cursor-not-allowed transition">
+              <FcGoogle className="mr-2 -ml-1 h-5 w-5" aria-hidden="true" /><span>Sign in with Google</span>
             </button>
-            {/* Add other OAuth buttons here */}
           </div>
 
         </div>
@@ -312,4 +280,3 @@ export const AuthModal = () => {
     </>
   );
 };
-
