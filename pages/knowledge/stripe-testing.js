@@ -31,7 +31,7 @@ const TestStripePage = () => {
 
             {/* Navigation Buttons Container */}
             <div className="mt-12 pt-6 border-t border-gray-200 flex justify-between items-center">
-              <BuyReportButton reportId={reportIdentifier} />
+              <BuyReportButton reportId={reportIdentifier} /> 
 
             </div>
 
