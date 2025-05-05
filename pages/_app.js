@@ -5,11 +5,11 @@ import '../styles/globals.css';
 import { DefaultSeo } from 'next-seo';
 import SEO from '../next-seo.config'; // Assuming this file exists
 
-// --- NEW IMPORTS ---
 import { SessionProvider } from 'next-auth/react'; // NextAuth session management
 import { AuthModalProvider } from '@/context/AuthModalContext'; // Context for modal state
 import { AuthModal } from '@/components/AuthModal'; // The actual modal component
-// --- END NEW IMPORTS ---
+import { CookieConsentPopup } from '@/components/CookieConsentPopup'; // Import the new component
+import { AnnouncementPopup } from '@/components/AnnouncementPopup'; // Import the new component
 
 // Optional: Import Header if it's part of every page layout
 // import Header from '@/components/Header';
@@ -62,6 +62,8 @@ function MyApp({ Component, pageProps: { session, ...pageProps } }) { // Destruc
 
         {/* --- RENDER GLOBAL MODAL (controlled by context) --- */}
         <AuthModal />
+        <CookieConsentPopup /> 
+        <AnnouncementPopup /> 
         {/* --- END GLOBAL MODAL --- */}
 
       </AuthModalProvider>
