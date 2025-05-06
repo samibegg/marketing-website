@@ -69,6 +69,14 @@ const blogPosts = [
     date: "April 30, 2025"
   },
   {
+    title: "Prompt Engineering Field Guide",
+    excerpt: "A comparative overview of prompt engineering techniques for LLMs.",
+    category: "AI Strategy",
+    image: "/images/prompt-engineering.jpeg",
+    slug: "/knowledge/Prompt-Engineering-Field-Guide",
+    date: "May 5, 2025"
+  },
+  {
     title: "Design Patterns for Retrieval-Augmented Generation (RAG) Architectures",
     excerpt: "Explore advanced design patterns for building scalable RAG systems in production.",
     category: "AI Strategy",
