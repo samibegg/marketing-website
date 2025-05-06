@@ -16,7 +16,7 @@ export default function Footer() {
             <li><Link href="/contact" className="hover:underline">Contact</Link></li>
             <li><Link href="/careers" className="hover:underline">Careers</Link></li>
             <li><Link href="/process" className="hover:underline">Our Process</Link></li>
-            <li><Link href="/ai-cost-estimator" className="hover:underline">**NEW AI Cost Estimator (beta)</Link></li>
+            <li><Link href="/ai-cost-estimator" className="hover:underline">**NEW AI Cost Estimator <sup>Beta</sup></Link></li>
           </ul>
         </div>
 
