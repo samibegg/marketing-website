@@ -401,7 +401,7 @@ export default function TailoringPromptsLLMs() {
             {/* Navigation Buttons Container */}
             <div className="mt-12 pt-6 border-t border-gray-200 flex justify-between items-center">
                {/* Back Button */}
-               <Link href="/knowledge/prompt-engineering-field-guide" passHref> {/* Link to Challenges page */}
+               <Link href="/knowledge/prompt-engineering-complete-field-guide" passHref> {/* Link to Challenges page */}
                  <button
                    onClick={handleBackSectionClick}
                    className="inline-flex items-center px-6 py-3 border border-gray-300 text-base font-medium rounded-md shadow-sm text-gray-700 bg-white hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"

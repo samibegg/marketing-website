@@ -73,7 +73,7 @@ const blogPosts = [
     excerpt: "A comparative overview of prompt engineering techniques for LLMs.",
     category: "AI Strategy",
     image: "/images/prompt-engineering.jpeg",
-    slug: "/knowledge/prompt-engineering-field-guide",
+    slug: "/knowledge/prompt-engineering-complete-field-guide",
     date: "May 5, 2025"
   },
   {
