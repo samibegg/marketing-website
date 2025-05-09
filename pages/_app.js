@@ -2,6 +2,7 @@
 import Script from 'next/script';
 import Head from 'next/head';
 import '../styles/globals.css';
+import 'leaflet/dist/leaflet.css'; // Add this line
 import { DefaultSeo } from 'next-seo';
 import SEO from '../next-seo.config'; // Assuming this file exists
 
