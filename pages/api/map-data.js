@@ -13,10 +13,9 @@ async function getPreciseCoords(address, itemType = "unknown") {
         return DEFAULT_COORDS;
     }
 
-    // Construct the address string for the API
-    const addressString = `${address.street || ''}, ${address.city || ''}, ${address.stateOrProvince || ''}, ${address.postalCode || ''}, ${address.country || ''}`.trim();
+    const addressString = `${address.street || ''}, ${address.city || ''}, ${address.stateOrProvince || ''}, ${address.postalCode || ''}, ${address.country || ''}`.trim().replace(/^,|,$/g, '').replace(/,{2,}/g, ',');
     
-    if (addressString === ", , , ,") { // Check if address string is effectively empty
+    if (addressString === "" || addressString === ",") { // Check if address string is effectively empty
         console.warn(`Empty address string for ${itemType}, returning default coordinates.`);
         return DEFAULT_COORDS;
     }
@@ -31,17 +30,15 @@ async function getPreciseCoords(address, itemType = "unknown") {
 
         if (data.status === 'OK' && data.results && data.results.length > 0) {
             const location = data.results[0].geometry.location;
-            // Add a tiny random offset to prevent exact overlaps for identical geocoded addresses
             return {
                 lat: location.lat + (Math.random() - 0.5) * 0.0001,
                 lon: location.lng + (Math.random() - 0.5) * 0.0001,
             };
         } else {
             console.warn(`Geocoding failed for ${itemType} address: ${addressString}. Status: ${data.status}. Error: ${data.error_message || 'No results'}`);
-            // Fallback for failed geocoding
-            if (address.country && address.country !== "USA") {
+            if (address.country && address.country.toUpperCase() !== "USA" && address.country.toUpperCase() !== "UNITED STATES") {
                 return {
-                    lat: INTERNATIONAL_DEFAULT_COORDS.lat + (Math.random() - 0.5) * 10,
+                    lat: INTERNATIONAL_DEFAULT_COORDS.lat + (Math.random() - 0.5) * 10, // Broader spread for international defaults
                     lon: INTERNATIONAL_DEFAULT_COORDS.lon + (Math.random() - 0.5) * 20,
                 };
             }
@@ -49,7 +46,7 @@ async function getPreciseCoords(address, itemType = "unknown") {
         }
     } catch (error) {
         console.error(`Error during geocoding for ${itemType} address: ${addressString}:`, error);
-        return DEFAULT_COORDS; // Fallback on network error or other issues
+        return DEFAULT_COORDS;
     }
 }
 
@@ -66,92 +63,138 @@ export default async function handler(req, res) {
     }
 
     try {
-        // Use your connectToDatabase function to get the db instance for 'forge'
-        const { db } = await connectToDatabase(); 
+        const { db } = await connectToDatabase();
         console.log(`Successfully connected to database: ${db.databaseName}`);
 
+        // Fetch AI Summaries first and create a lookup map
+        const aiSummariesData = await db.collection('linked_ai_summary').find({}).toArray();
+        const summaryMap = new Map();
+        aiSummariesData.forEach(summaryDoc => {
+            if (summaryDoc.id && summaryDoc.type && summaryDoc.summary) {
+                if (!summaryMap.has(summaryDoc.type)) {
+                    summaryMap.set(summaryDoc.type, new Map());
+                }
+                summaryMap.get(summaryDoc.type).set(summaryDoc.id, summaryDoc.summary);
+            }
+        });
+        console.log(`Loaded ${aiSummariesData.length} AI summaries into lookup map.`);
 
-        // Fetching data - keep limits reasonable for geocoding
-        const personsData = await db.collection('linked_persons_data').find({}).limit(20).toArray(); 
+        const personsData = await db.collection('linked_persons_data').find({}).limit(20).toArray();
         const businessesData = await db.collection('linked_businesses_data').find({}).limit(20).toArray();
-        // For device locations, we might fetch more windows but process points within them
-        const deviceLocationsData = await db.collection('linked_device_location_data').find({}).limit(50).toArray(); 
+        const deviceLocationsData = await db.collection('linked_device_location_data').find({}).limit(50).toArray();
 
         const mapPoints = [];
         let geocodingPromises = [];
 
-        // Process Persons - Geocode all their addresses
+        // Process Persons
         for (const person of personsData) {
+            const personSummary = summaryMap.get('PersonSummary')?.get(person.personId) || null;
             if (person.addresses && person.addresses.length > 0) {
                 for (let i = 0; i < person.addresses.length; i++) {
                     const address = person.addresses[i];
-                    // Create a promise for each geocoding call
                     geocodingPromises.push(
                         getPreciseCoords(address, `person ${person.personId} address ${i}`).then(coords => {
                             mapPoints.push({
-                                id: `${person.personId}_address_${i}`, // Unique ID for each address point
-                                type: 'individual',
+                                id: person.personId, // Use personId for linking to summary on frontend if needed, or a more unique ID for the point itself
+                                // If multiple addresses per person, you might want a more unique point ID like `${person.personId}_address_${i}`
+                                // but the summary is per-person, so the core ID is person.personId.
+                                // For this example, if a person has multiple addresses, they will share the same person-level summary.
+                                // The frontend will use point.id (which is person.personId here) to find the summary.
+                                // Let's make point.id unique for the map marker itself, but store personId in fullData for summary linking.
+                                pointId: `${person.personId}_address_${i}`, // Unique ID for this specific address marker
+                                entityId: person.personId, // ID of the entity this point represents (for summary lookup)
+                                type: 'person', // Changed to lowercase to match getSummaryType on frontend
                                 name: `${person.firstName} ${person.lastName} (${address.type || 'address'})`,
                                 coordinates: [coords.lat, coords.lon],
                                 color: 'green',
-                                fullData: { ...person, currentAddress: address }, // Include current address in fullData for context
+                                fullData: { ...person, currentAddressDisplay: address, aiSummary: personSummary },
                             });
                         })
                     );
                 }
+            } else { // Add person even if no address, using default coordinates
+                 geocodingPromises.push(
+                    getPreciseCoords(null, `person ${person.personId} no address`).then(coords => {
+                        mapPoints.push({
+                            pointId: `${person.personId}_default`,
+                            entityId: person.personId,
+                            type: 'person',
+                            name: `${person.firstName} ${person.lastName} (No address data)`,
+                            coordinates: [coords.lat, coords.lon],
+                            color: 'darkgreen', // Different color for no address
+                            fullData: { ...person, aiSummary: personSummary },
+                        });
+                    })
+                );
             }
         }
 
-        // Process Businesses - Geocode all their addresses
+        // Process Businesses
         for (const business of businessesData) {
+            const businessSummary = summaryMap.get('BusinessSummary')?.get(business.businessId) || null;
             if (business.addresses && business.addresses.length > 0) {
                 for (let i = 0; i < business.addresses.length; i++) {
                     const address = business.addresses[i];
                     geocodingPromises.push(
                         getPreciseCoords(address, `business ${business.businessId} address ${i}`).then(coords => {
                             mapPoints.push({
-                                id: `${business.businessId}_address_${i}`, // Unique ID for each address point
+                                pointId: `${business.businessId}_address_${i}`,
+                                entityId: business.businessId,
                                 type: 'business',
                                 name: `${business.legalName} (${address.type || 'address'})`,
                                 coordinates: [coords.lat, coords.lon],
                                 color: 'red',
-                                fullData: { ...business, currentAddress: address },
+                                fullData: { ...business, currentAddressDisplay: address, aiSummary: businessSummary },
                             });
                         })
                     );
                 }
+            } else { // Add business even if no address
+                geocodingPromises.push(
+                    getPreciseCoords(null, `business ${business.businessId} no address`).then(coords => {
+                        mapPoints.push({
+                            pointId: `${business.businessId}_default`,
+                            entityId: business.businessId,
+                            type: 'business',
+                            name: `${business.legalName} (No address data)`,
+                            coordinates: [coords.lat, coords.lon],
+                            color: 'darkred',
+                            fullData: { ...business, aiSummary: businessSummary },
+                        });
+                    })
+                );
             }
         }
         
-        // Wait for all geocoding calls to complete
-        // This can be slow if there are many addresses.
-        // Consider rate limiting or queuing in a production app.
         console.log(`Starting ${geocodingPromises.length} geocoding operations...`);
         await Promise.all(geocodingPromises);
         console.log("All geocoding operations completed.");
 
-
-        // Process Device Locations (iterate through all points in all windows)
+        // Process Device Locations (each point in a window is a map point)
         deviceLocationsData.forEach(windowDoc => {
+            // The summary is for the window/device, not individual points.
+            // The ID in DeviceLocationSummary corresponds to windowDoc.windowId
+            const deviceWindowSummary = summaryMap.get('DeviceLocationSummary')?.get(windowDoc.windowId) || null;
+            
             if (windowDoc.locationPoints && windowDoc.locationPoints.length > 0) {
                 windowDoc.locationPoints.forEach((point, index) => {
-                    if (point.coordinates && point.coordinates.length === 2) {
+                    if (point.coordinates && point.coordinates.length === 2 && typeof point.coordinates[0] === 'number' && typeof point.coordinates[1] === 'number') {
                         mapPoints.push({
-                            // Create a more unique ID for each location point
-                            id: `${windowDoc.deviceId}_${windowDoc.windowId}_point_${index}`,
-                            type: 'device',
-                            name: `Device: ${windowDoc.deviceId} (Point ${index + 1} at ${new Date(point.timestamp).toLocaleTimeString()})`,
+                            pointId: `${windowDoc.deviceId}_${windowDoc.windowId}_point_${index}`,
+                            entityId: windowDoc.windowId, // The summary is for the window
+                            type: 'device', // Changed to lowercase
+                            name: `Device: ${windowDoc.deviceId} (Window ${windowDoc.windowId.substring(0,8)}... Point ${index + 1} at ${new Date(point.timestamp).toLocaleTimeString()})`,
                             coordinates: [point.coordinates[1], point.coordinates[0]], // Swap to [lat, lon]
                             color: 'blue',
-                            // For device points, fullData could be the point itself, or the whole window
-                            // Let's use the point data, and add window/device context
-                            fullData: { 
-                                ...point, 
-                                deviceId: windowDoc.deviceId, 
+                            fullData: {
+                                ...point,
+                                deviceId: windowDoc.deviceId,
                                 windowId: windowDoc.windowId,
                                 windowStartTime: windowDoc.windowStartTime,
-                                windowEndTime: windowDoc.windowEndTime
-                            }, 
+                                windowEndTime: windowDoc.windowEndTime,
+                                deviceInfo: windowDoc.deviceInfo,
+                                aiSummary: deviceWindowSummary // Summary for the whole window
+                            },
                         });
                     }
                 });
@@ -166,4 +209,3 @@ export default async function handler(req, res) {
         res.status(500).json({ error: 'Failed to fetch map data', details: e.message });
     }
 }
-
