@@ -372,7 +372,11 @@ export default function AIOperationsAdminSolutionsPage() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {serviceCards.map((card) => (
                   <Link href={card.link} key={card.title} legacyBehavior>
-                    <a className="block p-8 bg-slate-50 rounded-xl shadow-lg hover:shadow-blue-500/20 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02] group">
+                    <a 
+                      className="block p-8 bg-slate-50 rounded-xl shadow-lg hover:shadow-blue-500/20 transition-all duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-[1.02] group"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
                       {/* Placeholder for Icon - uncomment and use if you have icons */}
                       {/* {card.icon} */}
                       <div className="flex justify-center items-center mb-4 w-12 h-12 bg-sky-100 text-sky-600 rounded-full group-hover:bg-sky-200 transition-colors">
