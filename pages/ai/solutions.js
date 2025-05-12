@@ -63,6 +63,12 @@ const serviceCards = [
     link: "/ai/hr-recruitment-solutions", // This is the page from the current context
     // icon: <Users2 className="w-10 h-10 text-sky-600 mb-4" />
   },
+  {
+    title: "Social Media Content Automation",
+    description: "Generate engaging posts, schedule content, and analyze performance with AI to save time and boost reach.",
+    link: "/ai/social-media-solutions", // Ensure this path matches your actual page (create this page if needed)
+    // icon: <Share2 className="w-10 h-10 text-sky-600 mb-4" />
+  },
 ];
 
 const painPointQuestions = [
