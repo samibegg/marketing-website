@@ -60,8 +60,8 @@ export default function HomePage() {
             <Link href="/knowledge-base" className="bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md text-lg transition">
               Access Knowledge Base
             </Link>
-            <Link href="/case-studies" className="bg-gray-900 hover:bg-gray-800 text-white font-medium py-3 px-6 rounded-md text-lg transition">
-              View Case Studies
+            <Link href="/ai/solutions" className="bg-red-500 hover:bg-red-700 text-white font-medium py-3 px-6 rounded-md text-lg transition">
+              Unlock Your AI Advantage
             </Link>
           </div>
         </section>
