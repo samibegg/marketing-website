@@ -1,4 +1,4 @@
-    // pages/contact.js
+    // pages/demo.js
     import { useState } from 'react';
     import Header from '../components/Header'; // Adjust path if needed
     import Footer from '../components/Footer'; // Adjust path if needed
@@ -10,7 +10,7 @@
       const [email, setEmail] = useState('');
       const [subject, setSubject] = useState('');
       const [message, setMessage] = useState('');
-      const fromPage = 'ContactUs';
+      const fromPage = 'RequestDemo';
 
       // State for submission status
       const [status, setStatus] = useState(''); // '', 'loading', 'success', 'error'
@@ -34,7 +34,7 @@
 
           if (response.ok) {
             setStatus('success');
-            setStatusMessage('Message sent successfully! We will get back to you soon.');
+            setStatusMessage('Demo Request sent successfully! We will get back to you soon.');
             // Clear form fields on success
             setName('');
             setEmail('');
@@ -57,10 +57,10 @@
 
           <main className="flex-grow container mx-auto px-4 sm:px-6 py-16">
             <h1 className="text-4xl sm:text-5xl font-bold text-center text-gray-900 mb-10">
-              Contact Us
+              Request a Free Live AI Demo
             </h1>
             <p className="text-lg text-center text-gray-600 mb-16 max-w-3xl mx-auto">
-              Have questions about our technology consulting services? Want to discuss a potential project? Reach out using the form below or contact us directly.
+              Let us show you how AI can work for you.
             </p>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-16">
@@ -107,7 +107,6 @@
 
               {/* Contact Form Section */}
               <div>
-                <h2 className="text-2xl font-semibold text-gray-800 mb-6">Send Us a Message</h2>
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
@@ -121,7 +120,7 @@
                       onChange={(e) => setName(e.target.value)}
                       required
                       className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 transition"
-                      placeholder="John Doe"
+                      placeholder="You"
                     />
                   </div>
                   <div>
@@ -141,22 +140,28 @@
                   </div>
                   <div>
                     <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-1">
-                      Subject <span className="text-red-600">*</span>
+                      Demo Focus Area <span className="text-red-600">*</span>
                     </label>
-                    <input
-                      type="text"
+                    <select
                       id="subject"
                       name="subject"
                       value={subject}
                       onChange={(e) => setSubject(e.target.value)}
                       required
                       className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 transition"
-                      placeholder="Help with my AI Strategy"
-                    />
+                    >
+                      <option value="" disabled>Select a Use Case</option>
+                      <option value="Customer Service Automation">Customer Service Automation</option>
+                      <option value="Marketing & Sales Optimization">Marketing & Sales Optimization</option>
+                      <option value="Operations & Admin Automation">Operations & Admin Automation</option>
+                      <option value="Inventory & Demand Forecasting">Inventory & Demand Forecasting</option>
+                      <option value="Social Media Content Automation">Social Media Content Automation</option>
+                      <option value="Another Workflow">Another Workflow</option>
+                    </select>
                   </div>
                   <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
-                      Message <span className="text-red-600">*</span>
+                      What are you trying to improve? <span className="text-red-600">*</span>
                     </label>
                     <textarea
                       id="message"
@@ -166,7 +171,7 @@
                       onChange={(e) => setMessage(e.target.value)}
                       required
                       className="w-full px-4 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 transition"
-                      placeholder="Please describe your inquiry..."
+                      placeholder="My biggest pain is..."
                     />
                   </div>
                   <div>
@@ -179,7 +184,7 @@
                           : 'bg-blue-600 hover:bg-blue-700'
                       }`}
                     >
-                      {status === 'loading' ? 'Sending...' : 'Send Message'}
+                      {status === 'loading' ? 'Requesting...' : 'Request Demo'}
                     </button>
                   </div>
 

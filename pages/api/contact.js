@@ -8,7 +8,7 @@
         return res.status(405).json({ message: `Method ${req.method} Not Allowed` });
       }
 
-      const { name, email, subject, message } = req.body;
+      const { name, email, subject, message, fromPage } = req.body;
 
       // Basic validation
       if (!name || !email || !subject || !message) {
@@ -41,13 +41,13 @@
         from: `"${name}" <${process.env.EMAIL_SERVER_USER}>`, // Sender address (shows your configured email)
         replyTo: email, // Set reply-to to the user's email
         to: process.env.EMAIL_TO_ADDRESS, // List of receivers (comes from .env.local)
-        subject: `Contact Form Submission: ${subject}`, // Subject line
-        text: `You have received a new message from your website contact form.\n\n` +
+        subject: `${subject}`, // Subject line
+        text: `${fromPage} page sent a message.\n\n` +
               `Name: ${name}\n` +
               `Email: ${email}\n` +
               `Subject: ${subject}\n` +
               `Message:\n${message}`, // Plain text body
-        html: `<p>You have received a new message from your website contact form.</p>` +
+        html: `<p>${fromPage} page sent a message.</p>` +
               `<h2>Details:</h2>` +
               `<ul>` +
               `  <li><strong>Name:</strong> ${name}</li>` +
