@@ -140,7 +140,6 @@ export default function AIOperationsAdminSolutionsPage() {
         console.log("Scroll listener added."); // For debugging
     }
 
-
     // Cleanup function: Remove the listener when the component unmounts
     // or potentially when isChatOpen becomes true (if not handled by openChat itself)
     return () => {
@@ -469,10 +468,6 @@ export default function AIOperationsAdminSolutionsPage() {
                     </a>
                   </Link>
                 ))}
-                {/* You might need a fifth card to make it an odd number, or adjust grid for 5 items. For now, this grid will handle 5 items naturally, with the last one centered if on a new row in some screen sizes.
-                    If you want a specific layout for 5, you might need to use col-span or a different grid approach for the last item, or add a placeholder/featured card.
-                    For simplicity, this example will let the grid flow.
-                */}
               </div>
             </div>
           </section>
@@ -493,7 +488,6 @@ export default function AIOperationsAdminSolutionsPage() {
 
         {isChatOpen && <ChatWindow onClose={closeChat} />}
 
-         
         </main>
 
         <Footer />

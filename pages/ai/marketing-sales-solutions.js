@@ -6,6 +6,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { NextSeo } from 'next-seo';
+import ChatWindow from '@/components/ChatWindow'; // Adjust path if needed
 
 // Consider importing icons from a library like lucide-react for better visual appeal
 // import { Target, BarChartBig, Users, Settings, BrainCircuit } from 'lucide-react';
@@ -43,6 +44,66 @@ export default function AIMarketingSalesSolutionsPage() {
   const canonicalUrl = "https://www.forgemission.com/ai/marketing-sales-solutions"; 
   const imageUrl = "https://www.forgemission.com/images/ai/marketing-sales-solutions.jpg"; 
   const publicationDate = "2025-05-11T10:00:00Z"; // Keep or adjust
+
+  const [isChatOpen, setIsChatOpen] = useState(false);
+
+  const closeChat = useCallback(() => {
+    setIsChatOpen(false); // Setting this to false HIDES ChatWindow and SHOWS the toggle button below
+  }, []);
+  const openChat = useCallback(() => {
+    setIsChatOpen(true); // Setting this to true SHOWS ChatWindow and HIDES the toggle button below
+  }, []);
+  const hasOpenedByScroll = useRef(false);
+  const scrollListenerRef = useRef(null);
+
+  // Effect for handling scroll detection
+  useEffect(() => {
+    // Define the scroll handler logic
+    const handleScroll = () => {
+      // 1. Check if chat is already open or already triggered by scroll
+      if (isChatOpen || hasOpenedByScroll.current) {
+        return; // Don't do anything
+      }
+
+      // 2. Calculate scroll position and threshold
+      const scrollableHeight = document.documentElement.scrollHeight - window.innerHeight;
+      // Prevent division by zero or calculation if not scrollable
+      if (scrollableHeight <= 0) {
+          return;
+      }
+      const scrollThreshold = scrollableHeight * 0.25; // 25% threshold
+
+      // 3. Check if user scrolled past the threshold
+      if (window.scrollY > scrollThreshold) {
+        console.log("Scroll threshold (25%) reached. Opening chat automatically."); // For debugging
+        hasOpenedByScroll.current = true; // Set the flag
+        openChat(); // Call the function to open the chat
+      }
+    };
+
+    // Store the handler in the ref (optional, but can be useful for removal)
+    scrollListenerRef.current = handleScroll;
+
+    // Add the event listener only if the chat isn't already open.
+    // This avoids adding/removing listeners unnecessarily on every state change.
+    // Although the check inside handleScroll prevents action, this avoids the handler *call*.
+    if (!isChatOpen) {
+        window.addEventListener('scroll', handleScroll, { passive: true }); // Use passive for performance
+        console.log("Scroll listener added."); // For debugging
+    }
+
+    // Cleanup function: Remove the listener when the component unmounts
+    // or potentially when isChatOpen becomes true (if not handled by openChat itself)
+    return () => {
+      if (scrollListenerRef.current) { // Check if ref has the function
+         window.removeEventListener('scroll', scrollListenerRef.current);
+         console.log("Scroll listener removed."); // For debugging
+         scrollListenerRef.current = null; // Clear the ref
+      }
+    };
+    // Re-run the effect if isChatOpen changes (to potentially add/remove listener)
+    // or if openChat changes (though it's stable due to useCallback)
+  }, [isChatOpen, openChat]);
 
   // --- Analytics Tracking Effects ---
 
@@ -303,6 +364,23 @@ export default function AIMarketingSalesSolutionsPage() {
 
             </div>
           </div>
+
+        {/* Button to toggle chat visibility */}
+        {!isChatOpen && (
+          <button
+            onClick={openChat} // Use the specific open function
+            className="fixed bottom-4 right-4 sm:bottom-5 sm:right-5 bg-blue-600 text-white rounded-full p-3 shadow-lg z-40 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-opacity duration-300 animate-pulse" // z-index higher than chat window, optional pulse animation
+            aria-label="Open chat"
+          >
+            {/* Chat icon SVG */}
+            <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
+            </svg>
+          </button>
+        )}
+
+        {isChatOpen && <ChatWindow onClose={closeChat} />}
+
         </main>
 
         {/* Use your custom Footer component */}

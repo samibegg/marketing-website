@@ -14,7 +14,7 @@ const initialMessages = [
   {
     id: 'bot-action-book-demo',
     type: 'buttonLink',
-    text: 'Book a Demo',
+    text: 'Book a Free Demo',
     href: '/demo',
     sender: 'bot',
   },
