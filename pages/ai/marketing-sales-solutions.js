@@ -296,7 +296,7 @@ export default function AIMarketingSalesSolutionsPage() {
                 <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
                   Let us help you implement AI solutions that drive measurable results and significant ROI. Contact us today for a personalized consultation!
                 </p>
-                <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-opacity-50">
+                <Link href="/demo" className="bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-opacity-50">
                   Boost My ROI with AI
                 </Link>
               </section>

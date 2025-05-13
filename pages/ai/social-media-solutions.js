@@ -304,7 +304,7 @@ export default function AISocialMediaSolutionsPage() {
                 <p className="text-slate-600 mb-6 max-w-2xl mx-auto">
                   Let AI handle the heavy lifting of content creation, scheduling, and analysis, so you can focus on building your brand. Contact us for a social media AI consultation!
                 </p>
-                <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-opacity-50">
+                <Link href="/demo" className="bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-opacity-50">
                   Automate My Social Media
                 </Link>
               </section>

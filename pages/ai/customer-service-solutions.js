@@ -298,7 +298,7 @@ export default function AICustomerServiceSolutionsPage() {
                   Let us help you implement an AI-powered customer service solution tailored to your business needs. Contact us today for a free consultation!
                 </p>
                 {/* Updated button gradient */}
-                <Link href="/contact" className="bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-opacity-50">
+                <Link href="/demo" className="bg-gradient-to-r from-blue-600 to-sky-600 hover:from-blue-700 hover:to-sky-700 text-white font-bold py-3 px-8 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300 ease-in-out transform hover:scale-105 focus:outline-none focus:ring-2 focus:ring-sky-500 focus:ring-opacity-50">
                   Get Started with AI
                 </Link>
               </section>
