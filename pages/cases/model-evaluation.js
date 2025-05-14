@@ -87,12 +87,12 @@ const AIEvaluationSOW = () => {
                     B. Approach 2: Fine-tuning Pre-trained Models
                   </h3>
                   <p className="text-slate-600 leading-relaxed mb-4">
-                    <strong>Brief Description:</strong> This method adapts powerful, general-purpose AI models (like Large Language Models - LLMs) by further training them on your specific proprietary dataset.<span className="text-cyan-600 font-medium">[2]</span> This allows the model to specialize its broad knowledge to your unique context.
+                    <strong>Brief Description:</strong> This method adapts powerful, general-purpose AI models (like Large Language Models - LLMs) by further training them on your specific proprietary dataset. This allows the model to specialize its broad knowledge to your unique context.
                   </p>
                   <h4 className="text-lg font-medium text-slate-700 mt-5 mb-3">High-Level Implementation Steps for Evaluation:</h4>
                   <ol className="list-decimal list-outside pl-5 space-y-2 text-slate-600 leading-relaxed">
                     <li><strong>Base Model Selection:</strong> Choose a suitable pre-trained model (e.g., an LLM appropriate for the data type).</li>
-                    <li><strong>Proprietary Data Preparation:</strong> Curate a high-quality, relevant subset of your proprietary data for the fine-tuning process.<span className="text-cyan-600 font-medium">[2]</span></li>
+                    <li><strong>Proprietary Data Preparation:</strong> Curate a high-quality, relevant subset of your proprietary data for the fine-tuning process.</li>
                     <li><strong>Fine-tuning Process:</strong> Adjust the parameters of the pre-trained model using your proprietary data. This could involve full fine-tuning or more efficient methods like Parameter-Efficient Fine-Tuning (PEFT).</li>
                     <li><strong>Validation &amp; Testing:</strong> Test the fine-tuned model using sample external data, prompting it to assess consistency against the learned proprietary context.</li>
                     <li><strong>Performance Analysis:</strong> Evaluate accuracy, resource requirements for fine-tuning, and how it adapts to new proprietary data (e.g., need for re-fine-tuning).</li>
