@@ -104,15 +104,15 @@ const AIEvaluationSOW = () => {
                     C. Approach 3: Retrieval Augmented Generation (RAG)
                   </h3>
                   <p className="text-slate-600 leading-relaxed mb-4">
-                    <strong>Brief Description:</strong> RAG connects an AI model (typically an LLM) to your proprietary dataset, treating it as an external knowledge base.<span className="text-teal-600 font-medium">[1, 3]</span> When external data is prompted, the system first retrieves relevant information from your proprietary data and then uses this retrieved context to help the AI model assess if the external data &quot;makes sense&quot;.<span className="text-teal-600 font-medium">[1, 4, 5]</span>
+                    <strong>Brief Description:</strong> RAG connects an AI model (typically an LLM) to your proprietary dataset, treating it as an external knowledge base. When external data is prompted, the system first retrieves relevant information from your proprietary data and then uses this retrieved context to help the AI model assess if the external data &quot;makes sense&quot;.<span className="text-teal-600 font-medium">[1, 4, 5]</span>
                   </p>
                   <h4 className="text-lg font-medium text-slate-700 mt-5 mb-3">High-Level Implementation Steps for Evaluation:</h4>
                   <ol className="list-decimal list-outside pl-5 space-y-2 text-slate-600 leading-relaxed">
-                    <li><strong>Knowledge Base Creation:</strong> Process and store your proprietary data in a way that&apos;s efficiently searchable (e.g., a vector database after embedding the data <span className="text-teal-600 font-medium">[6]</span>).</li>
+                    <li><strong>Knowledge Base Creation:</strong> Process and store your proprietary data in a way that&apos;s efficiently searchable (e.g., a vector database after embedding the data).</li>
                     <li><strong>Retrieval Mechanism Setup:</strong> Implement a system to query this knowledge base based on the prompted external data.</li>
                     <li><strong>LLM Integration:</strong> Connect a suitable LLM to the retrieval system.</li>
                     <li><strong>Prompting &amp; Validation:</strong> Design prompts that instruct the LLM to use the retrieved proprietary context to validate the external data. Test with sample external data.</li>
-                    <li><strong>Performance Analysis:</strong> Evaluate the accuracy of validation, the quality of retrieval, response times, and the ease of updating the knowledge base with new proprietary data.<span className="text-teal-600 font-medium">[1, 3, 4]</span></li>
+                    <li><strong>Performance Analysis:</strong> Evaluate the accuracy of validation, the quality of retrieval, response times, and the ease of updating the knowledge base with new proprietary data.</li>
                   </ol>
                 </article>
               </div>
