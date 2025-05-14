@@ -6,7 +6,7 @@ const AIEvaluationSOW = () => {
     <>
       <Head>
         <title>AI Approaches Evaluation</title>
-        <meta name="description" content="Evaluating AI Approaches for External Data Validation and Anomaly Detection" />
+        <meta name="description" content="Evaluating AI Approaches for External Data Validation" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
@@ -16,7 +16,7 @@ const AIEvaluationSOW = () => {
         <main className="max-w-4xl mx-auto bg-white shadow-2xl rounded-lg overflow-hidden">
           <header className="bg-gradient-to-r from-sky-600 to-cyan-500 p-8 md:p-10 text-white">
             <h1 className="text-3xl md:text-4xl font-bold font-roboto-slab text-center">
-              Evaluating AI Approaches for External Data Validation and Anomaly Detection  
+              Evaluating AI Approaches for External Data Validation 
             </h1>
           </header>
 
