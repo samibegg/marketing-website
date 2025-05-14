@@ -197,7 +197,7 @@ const AIEvaluationSOW = () => {
                 <li>Actionable recommendation for a preferred AI validation strategy.</li>
               </ul>
             </section>
-          </div>Sent 
+          </div>
         </main>
       </div>
     </>
