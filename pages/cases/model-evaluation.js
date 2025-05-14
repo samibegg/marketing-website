@@ -104,7 +104,7 @@ const AIEvaluationSOW = () => {
                     C. Approach 3: Retrieval Augmented Generation (RAG)
                   </h3>
                   <p className="text-slate-600 leading-relaxed mb-4">
-                    <strong>Brief Description:</strong> RAG connects an AI model (typically an LLM) to your proprietary dataset, treating it as an external knowledge base. When external data is prompted, the system first retrieves relevant information from your proprietary data and then uses this retrieved context to help the AI model assess if the external data &quot;makes sense&quot;.<span className="text-teal-600 font-medium">[1, 4, 5]</span>
+                    <strong>Brief Description:</strong> RAG connects an AI model (typically an LLM) to your proprietary dataset, treating it as an external knowledge base. When external data is prompted, the system first retrieves relevant information from your proprietary data and then uses this retrieved context to help the AI model assess if the external data &quot;makes sense&quot;.
                   </p>
                   <h4 className="text-lg font-medium text-slate-700 mt-5 mb-3">High-Level Implementation Steps for Evaluation:</h4>
                   <ol className="list-decimal list-outside pl-5 space-y-2 text-slate-600 leading-relaxed">
