@@ -197,12 +197,7 @@ const AIEvaluationSOW = () => {
                 <li>Actionable recommendation for a preferred AI validation strategy.</li>
               </ul>
             </section>
-          </div>
-
-          <footer className="bg-slate-800 text-slate-300 p-6 text-center text-sm">
-            <p>&copy; {new Date().getFullYear()} Your Company Name. All Rights Reserved.</p>
-            <p>AI Evaluation Statement of Work</p>
-          </footer>
+          </div>Sent 
         </main>
       </div>
     </>
