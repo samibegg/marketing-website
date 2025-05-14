@@ -1,12 +1,12 @@
-// /pages/ai-evaluation-sow.jsx
+// /pages/cases/model-evaluation.js
 import Head from 'next/head';
 
 const AIEvaluationSOW = () => {
   return (
     <>
       <Head>
-        <title>AI Approaches Evaluation SOW</title>
-        <meta name="description" content="Statement of Work for Evaluating AI Approaches for External Data Validation" />
+        <title>AI Approaches Evaluation</title>
+        <meta name="description" content="Evaluating AI Approaches for External Data Validation and Anomaly Detection" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="true" />
         <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Roboto+Slab:wght@400;700&display=swap" rel="stylesheet" />
@@ -16,17 +16,17 @@ const AIEvaluationSOW = () => {
         <main className="max-w-4xl mx-auto bg-white shadow-2xl rounded-lg overflow-hidden">
           <header className="bg-gradient-to-r from-sky-600 to-cyan-500 p-8 md:p-10 text-white">
             <h1 className="text-3xl md:text-4xl font-bold font-roboto-slab text-center">
-              Statement of Work: Evaluating AI Approaches for External Data Validation
+              Evaluating AI Approaches for External Data Validation and Anomaly Detection  
             </h1>
           </header>
 
           <div className="p-6 md:p-10 space-y-10">
             <section aria-labelledby="project-objective">
               <h2 id="project-objective" className="text-2xl md:text-3xl font-semibold font-roboto-slab text-sky-700 mb-5 pb-2 border-b border-sky-200">
-                1. Project Objective
+                1. Objective
               </h2>
               <p className="text-base md:text-lg text-slate-700 leading-relaxed">
-                To evaluate and recommend the most suitable Artificial Intelligence (AI) approach for validating external data against the company&apos;s dynamic proprietary dataset. The goal is to determine if prompted external data &quot;makes sense&quot; within the context of the trusted internal data.
+                To evaluate, compare and ultimately recommend the most suitable AI-based approach for validating external data against the ground truth, a known high-veracity, dynamic, proprietary dataset. The goal is to determine if prompted external data &quot;makes sense&quot; within the context of the trusted internal data.
               </p>
             </section>
 
