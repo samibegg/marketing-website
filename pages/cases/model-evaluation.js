@@ -78,7 +78,7 @@ const AIEvaluationSOW = () => {
                     <li><strong>Model Selection &amp; Design:</strong> Choose an appropriate model architecture (e.g., classifier, anomaly detector like an autoencoder) based on the nature of the data and validation criteria.</li>
                     <li><strong>Model Training:</strong> Train the selected model on the prepared proprietary data.</li>
                     <li><strong>Validation &amp; Testing:</strong> Use sample external data (and potentially a held-out portion of proprietary data) to test the model&apos;s ability to identify data that does or does not &quot;make sense.&quot;</li>
-                    <li><strong>Performance Analysis:</strong> Evaluate accuracy, and how it handles new proprietary data (e.g., need for retraining <span className="text-sky-600 font-medium">[1]</span>).</li>
+                    <li><strong>Performance Analysis:</strong> Evaluate accuracy, and how it handles new proprietary data (e.g., need for retraining).</li>
                   </ol>
                 </article>
 
