@@ -124,7 +124,7 @@ const AIEvaluationSOW = () => {
               </h2>
               <ul className="space-y-6 text-slate-700 text-base md:text-lg">
                 <li>
-                  <strong className="font-medium text-slate-800">Phase 1: Setup &amp; Preparation</strong> <em className="text-slate-500">(Duration: [e.g., 1-2 Weeks])</em>
+                  <strong className="font-medium text-slate-800">Phase 1: Setup &amp; Preparation</strong> <em className="text-slate-500">(Duration: 1-2 Weeks)</em>
                   <ul className="list-disc list-outside pl-6 mt-2 space-y-1 text-slate-600">
                     <li>Gather and confirm access to all &quot;Required Starting Information.&quot;</li>
                     <li>Define detailed evaluation metrics and success criteria for each approach with business stakeholders.</li>
@@ -132,7 +132,7 @@ const AIEvaluationSOW = () => {
                   </ul>
                 </li>
                 <li>
-                  <strong className="font-medium text-slate-800">Phase 2: Individual Approach Evaluation</strong> <em className="text-slate-500">(Duration: [e.g., 2-3 Weeks per Approach])</em>
+                  <strong className="font-medium text-slate-800">Phase 2: Individual Approach Evaluation</strong> <em className="text-slate-500">(Duration: 2-3 Weeks per Approach)</em>
                   <ul className="list-disc list-outside pl-6 mt-2 space-y-3 text-slate-600">
                     <li>
                       Task 2.1: Training Custom Models
@@ -158,10 +158,10 @@ const AIEvaluationSOW = () => {
                   </ul>
                 </li>
                 <li>
-                  <strong className="font-medium text-slate-800">Phase 3: Comparative Analysis &amp; Recommendation</strong> <em className="text-slate-500">(Duration: [e.g., 1 Week])</em>
+                  <strong className="font-medium text-slate-800">Phase 3: Comparative Analysis &amp; Recommendation</strong> <em className="text-slate-500">(Duration: 1-2 Weeks)</em>
                   <ul className="list-disc list-outside pl-6 mt-2 space-y-1 text-slate-600">
                     <li>Compare the evaluated approaches against the defined success criteria.</li>
-                    <li>Analyze trade-offs (e.g., accuracy, cost, scalability, ease of updating with new proprietary data <span className="text-sky-600 font-medium">[1, 3, 4, 5]</span>).</li>
+                    <li>Analyze trade-offs (e.g., accuracy, cost, scalability, ease of updating with new proprietary data).</li>
                     <li>Develop a recommendation for the most suitable approach or a hybrid approach.</li>
                   </ul>
                 </li>
