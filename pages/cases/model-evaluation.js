@@ -1,5 +1,43 @@
 // /pages/cases/model-evaluation.js
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import Head from 'next/head';
+import Image from 'next/image'; // Keep for potential future use
+import Link from 'next/link';
+import { useRouter } from 'next/router';
+import { NextSeo } from 'next-seo';
+import { useSession } from 'next-auth/react';
+import { ArrowRight, ArrowLeft, ChevronDown, ChevronUp } from 'lucide-react'; // Added Chevron icons
+
+import Header from '@/components/Header'; // Adjust path if needed
+import Footer from '@/components/Footer'; // Adjust path if needed
+import { useAuthModal } from '@/context/AuthModalContext'; // Adjust path if needed
+
+/**
+ * Simple debounce function.
+ */
+const debounce = (func, delay) => {
+  let timeoutId;
+  return function (...args) {
+    clearTimeout(timeoutId);
+    timeoutId = setTimeout(() => {
+      func.apply(this, args);
+    }, delay);
+  };
+};
+
+/**
+ * Analytics Tracking Function (Placeholder)
+ */
+const trackEvent = (eventName, eventData) => {
+  console.log('Analytics Event:', eventName, eventData);
+  // Ensure gtag is available before calling
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', eventName, eventData);
+  } else {
+    console.warn('window.gtag not available for tracking event:', eventName);
+  }
+};
+
 
 const AIEvaluationSOW = () => {
   return (

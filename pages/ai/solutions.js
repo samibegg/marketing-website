@@ -332,96 +332,93 @@ export default function AIOperationsAdminSolutionsPage() {
             </div>
           </section>
            
-          {/* "Here's The Problem / The Numbers Prove It" Section */}
-          <section className="py-16 sm:py-24 bg-white">
-            <div className="max-w-5xl mx-auto px-6">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-                {/* Left Column: The Problem */}
-                <div>
-                  <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-6">
-                    The AI Adoption Dilemma: <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-sky-500 to-cyan-500">Keeping Pace or Falling Behind?</span>
-                  </h2>
-                  <p className="text-lg text-slate-600 mb-4">
-                    Keeping up with the relentless pace of AI advancements is virtually a full-time job – a commitment most business leaders can't afford. Yet, the untapped potential for growth and efficiency is too significant to ignore.
-                  </p>
-                  <p className="text-lg text-slate-600">
-                    You might perceive AI as a distant future or a Silicon Valley buzzword, but the current landscape paints a very different, and urgent, picture.
-                  </p>
-                </div>
+{/* "The AI Wake-Up Call / The Numbers Prove It" Section */}
+<section className="py-16 sm:py-24 bg-white">
+  <div className="max-w-5xl mx-auto px-6">
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      {/* Left Column: The Problem */}
+      <div>
+        <h2 className="text-3xl sm:text-4xl font-bold text-slate-800 mb-6">
+          The AI Wake-Up Call: <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-sky-500 to-cyan-500">Act Fast or Risk Obsolescence</span>
+        </h2>
+        <p className="text-lg text-slate-600 mb-4">
+          AI is no longer a futuristic concept—it’s the defining force behind today’s most disruptive business shifts. And while your competitors move quickly, hesitation could mean getting left behind.
+        </p>
+        <p className="text-lg text-slate-600">
+          The pace is breakneck, and the gap between adopters and laggards is growing. The question is no longer “if,” but “how fast.”
+        </p>
+      </div>
 
-                {/* Right Column: The Numbers */}
-                <div className="bg-slate-50 p-8 rounded-xl shadow-lg">
-                  <h3 className="text-2xl font-semibold text-blue-600 mb-6 text-center">
-                    {/* Icon placeholder: <BarChart className="inline-block mr-2" /> */}
-                    The Numbers Don't Lie: AI is Now
-                  </h3>
-                  <ul className="space-y-4">
-                    <li className="flex items-start">
-                      <span className="flex-shrink-0 inline-block w-5 h-5 mr-3 mt-1 text-sky-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-full h-full"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
-                      </span>
-                      <p className="text-slate-700"><strong className="font-bold text-sky-600">54% of businesses</strong> are actively looking to integrate AI right now – you're in ambitious company.</p>
-                    </li>
-                    <li className="flex items-start">
-                       <span className="flex-shrink-0 inline-block w-5 h-5 mr-3 mt-1 text-sky-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-full h-full"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
-                      </span>
-                      <p className="text-slate-700">This isn't surprising, as <strong className="font-bold text-sky-600">48% of companies</strong> have already embraced AI's power.</p>
-                    </li>
-                    <li className="flex items-start">
-                       <span className="flex-shrink-0 inline-block w-5 h-5 mr-3 mt-1 text-sky-500">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-full h-full"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
-                      </span>
-                      <p className="text-slate-700">The real driver? An astounding <strong className="font-bold text-sky-600">90% of leading global businesses</strong> are continuously investing in AI.</p>
-                    </li>
-                  </ul>
-                </div>
-              </div>
+      {/* Right Column: The Numbers */}
+      <div className="bg-slate-50 p-8 rounded-xl shadow-lg">
+        <h3 className="text-2xl font-semibold text-blue-600 mb-6 text-center">
+          {/* Icon placeholder: <BarChart className="inline-block mr-2" /> */}
+          The Numbers Are Clear: Delay is Risk
+        </h3>
+        <ul className="space-y-4">
+          <li className="flex items-start">
+            <span className="flex-shrink-0 inline-block w-5 h-5 mr-3 mt-1 text-sky-500">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-full h-full"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
+            </span>
+            <p className="text-slate-700"><strong className="font-bold text-sky-600">77% of executives</strong> say AI adoption is critical to their future growth (PwC).</p>
+          </li>
+          <li className="flex items-start">
+            <span className="flex-shrink-0 inline-block w-5 h-5 mr-3 mt-1 text-sky-500">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-full h-full"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
+            </span>
+            <p className="text-slate-700"><strong className="font-bold text-sky-600">61% of high-performing companies</strong> increased AI investments in the past year (McKinsey).</p>
+          </li>
+          <li className="flex items-start">
+            <span className="flex-shrink-0 inline-block w-5 h-5 mr-3 mt-1 text-sky-500">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="w-full h-full"><path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.857-9.809a.75.75 0 00-1.214-.882l-3.483 4.79-1.88-1.88a.75.75 0 10-1.06 1.061l2.5 2.5a.75.75 0 001.137-.089l4-5.5z" clipRule="evenodd" /></svg>
+            </span>
+            <p className="text-slate-700">Meanwhile, <strong className="font-bold text-sky-600">only 20% of firms</strong> feel fully prepared to scale AI effectively (Gartner).</p>
+          </li>
+        </ul>
+      </div>
+    </div>
 
-              <div className="mt-12 sm:mt-16">
-                <h3 className="text-2xl sm:text-3xl font-bold text-center text-slate-800 mb-8">
-                    Why This Urgent Push? <span className="block text-xl text-sky-600 font-semibold mt-1">The Impact is Undeniable.</span>
-                </h3>
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
-                    <div className="p-6 bg-slate-50 rounded-lg shadow-md">
-                        {/* Icon placeholder: <TrendingUp className="w-10 h-10 mx-auto mb-3 text-blue-500" /> */}
-                        <h4 className="text-4xl font-extrabold text-blue-600 mb-2">$4.8 Trillion</h4>
-                        <p className="text-slate-600">Added in global profits attributed to AI.</p>
-                    </div>
-                    <div className="p-6 bg-slate-50 rounded-lg shadow-md">
-                        {/* Icon placeholder: <TrendingUp className="w-10 h-10 mx-auto mb-3 text-blue-500" /> */}
-                        <h4 className="text-4xl font-extrabold text-blue-600 mb-2">39%</h4>
-                        <p className="text-slate-600">Productivity increase for Salesforce using AI (e.g., chatbots).</p>
-                    </div>
-                    <div className="p-6 bg-slate-50 rounded-lg shadow-md">
-                        {/* Icon placeholder: <TrendingUp className="w-10 h-10 mx-auto mb-3 text-blue-500" /> */}
-                        <h4 className="text-4xl font-extrabold text-blue-600 mb-2">47%</h4>
-                        <p className="text-slate-600">Predicted average profit boost for companies integrating AI (Accenture).</p>
-                    </div>
-                </div>
-                 <p className="text-center text-slate-600 mt-8 text-lg italic">
-                    And this transformation spans <strong className="text-slate-700">all industries</strong>: Manufacturing AI adoption surged by 270% in 4 years. Over half of healthcare invests in AI. Retail aims for 80% AI automation by 2027.
-                </p>
-              </div>
+    <div className="mt-12 sm:mt-16">
+      <h3 className="text-2xl sm:text-3xl font-bold text-center text-slate-800 mb-8">
+        Why the Urgency? <span className="block text-xl text-sky-600 font-semibold mt-1">Stakes Have Never Been Higher.</span>
+      </h3>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 text-center">
+        <div className="p-6 bg-slate-50 rounded-lg shadow-md">
+          {/* Icon placeholder: <TrendingUp className="w-10 h-10 mx-auto mb-3 text-blue-500" /> */}
+          <h4 className="text-4xl font-extrabold text-blue-600 mb-2">$7 Trillion</h4>
+          <p className="text-slate-600">Estimated global economic impact of AI by 2030 (McKinsey).</p>
+        </div>
+        <div className="p-6 bg-slate-50 rounded-lg shadow-md">
+          {/* Icon placeholder: <TrendingUp className="w-10 h-10 mx-auto mb-3 text-blue-500" /> */}
+          <h4 className="text-4xl font-extrabold text-blue-600 mb-2">40%</h4>
+          <p className="text-slate-600">Faster task completion reported by teams using AI tools (Deloitte).</p>
+        </div>
+        <div className="p-6 bg-slate-50 rounded-lg shadow-md">
+          {/* Icon placeholder: <TrendingUp className="w-10 h-10 mx-auto mb-3 text-blue-500" /> */}
+          <h4 className="text-4xl font-extrabold text-blue-600 mb-2">50%</h4>
+          <p className="text-slate-600">Profit margin growth expected from AI-driven automation (Accenture).</p>
+        </div>
+      </div>
+    </div>
 
-              <div className="mt-16 text-center bg-gradient-to-r from-blue-600 via-sky-500 to-cyan-500 p-8 sm:p-12 rounded-xl shadow-xl">
-                <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4">
-                  Future-Proof and Empower Your Team with AI Today!
-                </h3>
-                <p className="text-lg text-blue-100 mb-6 max-w-3xl mx-auto">
-                  Up-skilling isn’t just a choice; it’s a strategic imperative. The window of opportunity to lead with AI is wide open, but it’s closing faster than you think. <strong className="text-white">87% of businesses</strong> are already convinced AI will be their competitive edge in the next 5 years.
-                </p>
-                <p className="text-2xl font-semibold text-white mb-8">
-                    Don't get left behind. Now is your chance to integrate AI the right way.
-                </p>
-                <Link href="/demo" legacyBehavior>
-                  <a className="bg-white text-blue-600 hover:bg-slate-100 font-bold py-4 px-10 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 text-lg">
-                    Seize Your AI Advantage
-                  </a>
-                </Link>
-              </div>
-            </div>
-          </section>
+    <div className="mt-16 text-center bg-gradient-to-r from-blue-600 via-sky-500 to-cyan-500 p-8 sm:p-12 rounded-xl shadow-xl">
+      <h3 className="text-3xl sm:text-4xl font-bold text-white mb-4">
+        The AI Edge is Real — And It’s Closing Fast
+      </h3>
+      <p className="text-lg text-blue-100 mb-6 max-w-3xl mx-auto">
+        This isn’t just a trend—it’s a turning point. <strong className="text-white">91% of top-performing businesses</strong> are doubling down on AI within the next 12 months. Fall behind now, and it may take years to catch up.
+      </p>
+      <p className="text-2xl font-semibold text-white mb-8">
+        Seize the advantage. Transform your team with AI—before your competitors do.
+      </p>
+      <Link href="/demo" legacyBehavior>
+        <a className="bg-white text-blue-600 hover:bg-slate-100 font-bold py-4 px-10 rounded-lg shadow-md hover:shadow-lg transition-all duration-300 ease-in-out transform hover:scale-105 text-lg">
+          Seize Your AI Advantage
+        </a>
+      </Link>
+    </div>
+  </div>
+</section>
 
           {/* Services Section */}
           <section className="py-16 sm:py-24 bg-white">
