@@ -80,21 +80,37 @@ export default function AIServicePage() {
               <p>✅ Full AI pipelines with your own data and models.</p>
             </div>
           </div>
-          <a href="#image" className="mt-10 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-xl transition-all">
-            See Visual Example
+          <a href="#agentflow" className="mt-10 inline-block bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-xl transition-all">
+            Agentic Solutions
           </a>
         </div>
       </section>
 
       <Separator />
 
-      {/* Large Image Section */}
-      <section id="image" className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-white text-gray-900">
+      {/* Agentic flow Section */}
+      <section id="agentflow" className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-white text-gray-900">
         <div className="max-w-5xl">
-          <h2 className="text-3xl font-bold mb-6">See It in Action</h2>
-          <p className="mb-8 text-lg text-gray-700">Visualize how agentic workflows and RAG systems integrate seamlessly into your business processes.</p>
+          <h2 className="text-3xl font-bold mb-6">Agents in Action</h2>
+          <p className="mb-8 text-lg text-gray-700">Visualize agentic workflows integrating seamlessly into your business processes.</p>
           <div className="rounded-xl overflow-hidden shadow-lg mb-8">
             <img src="/images/automation-workflow.png" alt="AI Workflow System" className="w-full h-auto object-cover" />
+          </div>
+          <a href="#ragflow" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-xl transition-all">
+            Augmented With Your Data
+          </a>
+        </div>
+      </section>
+
+      <Separator />
+
+      {/* Rag flow Section */}
+      <section id="ragflow" className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-white text-gray-900">
+        <div className="max-w-5xl">
+          <h2 className="text-3xl font-bold mb-6">RAG Implemented</h2>
+          <p className="mb-8 text-lg text-gray-700">Securely Augment AI with Your Proprietary Context</p>
+          <div className="rounded-xl overflow-hidden shadow-lg mb-8">
+            <img src="/images/rag-flowchart.png" alt="AI Workflow System" className="w-full h-auto object-cover" />
           </div>
           <a href="#solution" className="bg-blue-500 hover:bg-blue-600 text-white font-bold py-3 px-6 rounded-xl transition-all">
             How We Do It
