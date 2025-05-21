@@ -21,15 +21,17 @@ export default function AIServicePage() {
         </Link>
       </section>
 
+      <Separator />
+
       {/* The Shift Section */}
-      <section id="journey" className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-blue-50 text-gray-900">
+      <section id="journey" className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-white text-gray-800">
         <div className="max-w-4xl">
           <h2 className="text-3xl font-bold mb-6">From Tools to Transformation</h2>
           <p className="text-lg mb-8">
             Your clients are asking about AI. Bolt-on tools won’t cut it. You need systems that integrate deeply and deliver results.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-            <div className="p-6 border rounded-xl bg-white">
+            <div className="p-6 border rounded-xl bg-gray-50">
               <h3 className="font-semibold mb-2">❌ ChatGPT Experiments</h3>
               <ul className="list-disc list-inside text-left">
                 <li>Unstable, no ownership</li>
@@ -37,7 +39,7 @@ export default function AIServicePage() {
                 <li>Compliance and data risks</li>
               </ul>
             </div>
-            <div className="p-6 border rounded-xl bg-white">
+            <div className="p-6 border rounded-xl bg-blue-50">
               <h3 className="font-semibold mb-2">✅ Agentic Systems</h3>
               <ul className="list-disc list-inside text-left">
                 <li>Custom agents for real tasks</li>
@@ -52,27 +54,29 @@ export default function AIServicePage() {
         </div>
       </section>
 
+      <Separator />
+
       {/* Problems We Solve */}
-      <section id="problems" className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-white text-gray-900">
+      <section id="problems" className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gray-50 text-gray-900">
         <div className="max-w-4xl">
           <h2 className="text-3xl font-bold mb-10">Problems We Solve</h2>
           <div className="grid md:grid-cols-3 gap-6 text-left">
-            <div className="p-6 bg-gray-50 rounded-xl shadow">
+            <div className="p-6 bg-white rounded-xl shadow">
               <p>❌ You’ve tried integrating APIs but nothing’s sticky.</p>
             </div>
-            <div className="p-6 bg-gray-50 rounded-xl shadow">
+            <div className="p-6 bg-white rounded-xl shadow">
               <p>❌ Your team lacks GPU infra or LLM experience.</p>
             </div>
-            <div className="p-6 bg-gray-50 rounded-xl shadow">
+            <div className="p-6 bg-white rounded-xl shadow">
               <p>❌ You can’t justify high SaaS AI costs to your clients.</p>
             </div>
-            <div className="p-6 bg-blue-100 rounded-xl">
+            <div className="p-6 bg-blue-50 rounded-xl">
               <p>✅ On-device and self-hosted AI solutions.</p>
             </div>
-            <div className="p-6 bg-blue-100 rounded-xl">
+            <div className="p-6 bg-blue-50 rounded-xl">
               <p>✅ Agent workflows for support, onboarding, data processing.</p>
             </div>
-            <div className="p-6 bg-blue-100 rounded-xl">
+            <div className="p-6 bg-blue-50 rounded-xl">
               <p>✅ Full AI pipelines with your own data and models.</p>
             </div>
           </div>
@@ -82,8 +86,10 @@ export default function AIServicePage() {
         </div>
       </section>
 
+      <Separator />
+
       {/* Large Image Section */}
-      <section id="image" className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gray-50 text-gray-900">
+      <section id="image" className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-white text-gray-900">
         <div className="max-w-5xl">
           <h2 className="text-3xl font-bold mb-6">See It in Action</h2>
           <p className="mb-8 text-lg text-gray-700">Visualize how agentic workflows and RAG systems integrate seamlessly into your business processes.</p>
@@ -96,21 +102,23 @@ export default function AIServicePage() {
         </div>
       </section>
 
+      <Separator />
+
       {/* Our Solution */}
-      <section id="solution" className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-blue-50 text-gray-900">
+      <section id="solution" className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-white text-gray-900">
         <div className="max-w-5xl">
           <h2 className="text-3xl font-bold mb-8">Our Solution: AI Built For You</h2>
           <p className="mb-12 text-lg">From architecture to implementation — we do the hard parts. You own the outcomes.</p>
           <div className="grid md:grid-cols-3 gap-8 text-left">
-            <div className="p-6 border rounded-xl bg-white">
+            <div className="p-6 border rounded-xl">
               <h3 className="text-xl font-semibold mb-2">🔍 Understand</h3>
               <p>We audit your workflows and identify AI opportunities that truly fit.</p>
             </div>
-            <div className="p-6 border rounded-xl bg-white">
+            <div className="p-6 border rounded-xl">
               <h3 className="text-xl font-semibold mb-2">⚙️ Build</h3>
               <p>We create agentic workflows, implement RAG, and integrate self-hosted or tuned models.</p>
             </div>
-            <div className="p-6 border rounded-xl bg-white">
+            <div className="p-6 border rounded-xl">
               <h3 className="text-xl font-semibold mb-2">🚀 Deploy</h3>
               <p>We deploy, monitor, and train your team on AI systems you own and understand.</p>
             </div>
@@ -121,8 +129,10 @@ export default function AIServicePage() {
         </div>
       </section>
 
+      <Separator />
+
       {/* CTA Section */}
-      <section id="cta" className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-gray-900 text-white">
+      <section id="cta" className="min-h-screen flex flex-col justify-center items-center text-center px-6 bg-white text-gray-900">
         <h2 className="text-3xl font-bold mb-6">Ready to stop experimenting and start implementing?</h2>
         <p className="mb-6 text-lg">Let’s explore your AI roadmap together.</p>
         <a
@@ -135,3 +145,26 @@ export default function AIServicePage() {
     </div>
   );
 }
+
+function Separator() {
+  return (
+    <div className="w-full h-1 overflow-hidden">
+      <div className="animate-slide-horizontal w-full h-full bg-gradient-to-r from-blue-400 via-purple-400 to-pink-400"></div>
+    </div>
+  );
+}
+
+<style jsx>{`
+  @keyframes slide-horizontal {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(100%);
+    }
+  }
+
+  .animate-slide-horizontal {
+    animation: slide-horizontal 3s linear infinite;
+  }
+`}</style>
