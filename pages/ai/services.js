@@ -129,7 +129,7 @@ export default function AIServicePage() {
         <h2 className="text-3xl font-bold mb-6">Ready to stop experimenting and start implementing?</h2>
         <p className="mb-6 text-lg">Let’s explore your AI roadmap together.</p>
         <a
-          href="/contact"
+          href="/demo"
           className="bg-blue-600 hover:bg-blue-700 text-white py-3 px-6 rounded-xl font-bold transition-all"
         >
           Book a Free AI Strategy Call
