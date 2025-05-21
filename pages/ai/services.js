@@ -6,8 +6,8 @@ export default function AIServicePage() {
   return (
     <div className="text-gray-900 bg-white scroll-smooth">
       <Head>
-        <title>AI Services for Small Tech Firms</title>
-        <meta name="description" content="Agentic AI workflows, RAG, self-hosted models and more for small web/software companies." />
+        <title>Building Real AI Solutions</title>
+        <meta name="description" content="Agentic AI workflows, RAG, self-hosted models and more for technology consulting companies." />
       </Head>
 
       {/* Hero Section */}
