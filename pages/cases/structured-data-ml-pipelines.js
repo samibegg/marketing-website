@@ -304,8 +304,8 @@ export default function ProjectDashboardPage() {
             <main className="flex-grow">
                 <div className="container mx-auto p-4 sm:p-6 lg:p-8 text-slate-800">
                     <div className="text-center mb-8">
-                        <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">ML on Structured Data Project</h1>
-                        <p className="text-slate-600 mt-2">An interactive dashboard for tracking project progress and timelines.</p>
+                        <h1 className="text-3xl sm:text-4xl font-bold text-slate-900">AI for Structured Data</h1>
+                        <p className="text-slate-600 mt-2">Dashboard: Implementing multiple tracks of ML pipelines for structured data.</p>
                     </div>
 
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8 items-center bg-white p-4 rounded-lg shadow-sm border border-slate-200">
