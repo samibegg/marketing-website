@@ -1,12 +1,10 @@
 import { useState } from 'react';
 import Head from 'next/head';
+import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
+import { ChevronRight } from 'lucide-react';
 import Header from '../../components/Header'; // Adjust path as needed
 import Footer from '../../components/Footer'; // Adjust path as needed
-import { ChevronRight } from 'lucide-react';
-
-// NOTE: To enable animations, you need to install framer-motion
-// npm install framer-motion
 
 // Data for the interactive demonstration section with more specific examples
 const demoData = {
@@ -246,8 +244,8 @@ export default function FineTuningValuePage() {
                             />
                         </div>
                     </Section>
-                    
-                    {/* Call to Action Section */}
+
+                     {/* Call to Action Section */}
                     <motion.section 
                         className="bg-white my-20 p-12 rounded-xl shadow-xl text-center"
                         initial={{ opacity: 0, scale: 0.95 }}
@@ -257,15 +255,16 @@ export default function FineTuningValuePage() {
                     >
                         <h2 className="text-3xl font-bold text-gray-800">Ready to Create Your Own AI Expert?</h2>
                         <p className="mt-3 mb-6 max-w-xl mx-auto text-gray-600">Let's schedule a pilot project and demonstrate the power of Fine-Tuning on your specific data.</p>
-                        <motion.button 
-                            className="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors flex items-center mx-auto"
-                            whileHover={{ scale: 1.05 }}
-                            whileTap={{ scale: 0.95 }}
-                        >
-                            Initiate a Pilot Project <ChevronRight className="ml-2 h-5 w-5" />
-                        </motion.button>
+                        <Link href="/demo" passHref>
+                            <motion.button
+                                className="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-colors flex items-center mx-auto"
+                                whileHover={{ scale: 1.05 }}
+                                whileTap={{ scale: 0.95 }}
+                            >
+                                Initiate a Pilot Project <ChevronRight className="ml-2 h-5 w-5" />
+                            </motion.button>
+                        </Link>
                     </motion.section>
-
                 </main>
 
                 <Footer />

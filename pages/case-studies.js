@@ -5,20 +5,28 @@ import Footer from '../components/Footer';
 
 const caseStudies = [
   {
+    title: 'Retrieval-Augmented Generation Transforms Info to Intel',
+    industry: 'All',
+    solution: 'AI (Machine Learning, RAG)',
+    impact: '10x faster and 10x optimization',
+    image: '/images/real-time-datalake.jpeg',
+    slug: '/cases/rag-value', 
+  },
+  {
+    title: 'Fine-tune Models to Build Powerful AI Domain Experts',
+    industry: 'All',
+    solution: 'AI (Machine Learning, Fine-tuning, LLMs)',
+    impact: '10x faster and 10x optimization',
+    image: '/images/spark-performance.jpeg',
+    slug: '/cases/fine-tuning-value', 
+  },
+  {
     title: 'Global Cloud Migration for a Financial Institution',
     industry: 'Finance',
     solution: 'Cloud Transformation & Migration',
     impact: '60% cost reduction and 99.99% uptime',
     image: '/images/aws-migration.jpeg',
     slug: '/cases/global-cloud-migration-for-a-financial-institution', 
-  },
-  {
-    title: 'Real-Time Data Platform for a Logistics Giant',
-    industry: 'Supply Chain',
-    solution: 'Big Data Solutions',
-    impact: '3x faster optimization with Kafka/Spark',
-    image: '/images/spark-performance.jpeg',
-    slug: '/cases/real-time-data-platform-for-a-logistics-giant', 
   },
   {
     title: 'E-Commerce Platform Modernization with Microservices',
@@ -59,6 +67,14 @@ const caseStudies = [
     impact: '99.99% uptime and reduced server costs by 40%',
     image: '/images/hybrid-cloud.jpeg',
     slug: '/cases/automated-infrastructure-scaling-for-a-saas-platform', 
+  },
+  {
+    title: 'Real-Time Data Platform for a Logistics Giant',
+    industry: 'Supply Chain',
+    solution: 'Big Data Solutions',
+    impact: '3x faster optimization with Kafka/Spark',
+    image: '/images/spark-performance.jpeg',
+    slug: '/cases/real-time-data-platform-for-a-logistics-giant', 
   },
   {
     title: 'Migrating On-Premise Data Centers to AWS Cloud',

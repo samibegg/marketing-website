@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { Search, Sparkles, AlertTriangle, HelpCircle, BookLock, Clock, Lightbulb, LockKeyhole, Rocket, ChevronRight } from 'lucide-react';
 import Header from '../../components/Header'; // Adjust path as needed
 import Footer from '../../components/Footer'; // Adjust path as needed
+import Link from 'next/link';
 
 /**
  * TitleSection Component
@@ -276,9 +277,11 @@ export default function RagDemoPage() {
                     <section className="bg-white my-20 p-12 rounded-xl shadow-xl text-center">
                         <h2 className="text-3xl font-bold text-gray-800">Ready to Unlock Your Organization's Knowledge?</h2>
                         <p className="mt-3 mb-6 max-w-xl mx-auto text-gray-600">Let's schedule a pilot project and demonstrate the power of RAG on your specific data.</p>
-                        <button className="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-105 flex items-center mx-auto">
-                            Initiate a Pilot Project <ChevronRight className="ml-2" />
-                        </button>
+                        <Link href="/demo" legacyBehavior>
+                            <a className="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-105 flex items-center mx-auto w-max">
+                                Initiate a Pilot Project <ChevronRight className="ml-2" />
+                            </a>
+                        </Link>
                     </section>
                 </main>
                 <Footer />
