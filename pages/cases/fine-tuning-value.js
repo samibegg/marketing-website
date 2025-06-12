@@ -98,7 +98,7 @@ export default function FineTuningValuePage() {
                             </div>
                             <div className="bg-white rounded-xl shadow-lg p-8 transform transition-transform duration-300 hover:-translate-y-2 hover:shadow-2xl">
                                 <h3 className="text-2xl font-bold text-green-500 mb-4">The Solution</h3>
-                                <p className="text-gray-600">Combine the power of a state-of-the-art model like Meta's Llama 3 with an enterprise-grade framework like NVIDIA NeMo. This creates a custom AI that understands your data and delivers unparalleled value.</p>
+                                <p className="text-gray-600">Combine the power of a state-of-the-art model with an modern, parameter efficient finetuning method. This creates a custom AI that understands your data and delivers unparalleled value.</p>
                             </div>
                         </div>
                     </Section>
@@ -109,7 +109,7 @@ export default function FineTuningValuePage() {
                         <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                             {/* Generic Model Column */}
                             <div>
-                                <h3 className="text-2xl font-bold text-center mb-6">Generic Llama 3</h3>
+                                <h3 className="text-2xl text-center mb-6">Original Pre-trained LLM (Llama, Mistral, Gemini, etc)</h3>
                                 <div className="space-y-3 mb-6">
                                     {demoData.questions.map(q => (
                                         <div key={`gen-${q.id}`} onClick={() => setActiveQuestion(q.id)}
@@ -126,7 +126,7 @@ export default function FineTuningValuePage() {
 
                             {/* Fine-Tuned Model Column */}
                             <div>
-                                <h3 className="text-2xl font-bold text-center mb-6">Fine-Tuned Llama 3</h3>
+                                <h3 className="text-2xl text-center mb-6">The same LLM, Fine-Tuned with Private Data</h3>
                                 <div className="space-y-3 mb-6">
                                     {demoData.questions.map(q => (
                                         <div key={`ft-${q.id}`} onClick={() => setActiveQuestion(q.id)}
