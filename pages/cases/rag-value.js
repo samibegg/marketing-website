@@ -1,6 +1,22 @@
 import { useState } from 'react';
 import Head from 'next/head';
 import { Search, Sparkles, AlertTriangle, HelpCircle, BookLock, Clock, Lightbulb, LockKeyhole, Rocket, ChevronRight } from 'lucide-react';
+import Header from '../../components/Header'; // Adjust path as needed
+import Footer from '../../components/Footer'; // Adjust path as needed
+
+/**
+ * TitleSection Component
+ * The main hero/title section for the page.
+ */
+const TitleSection = () => (
+    <section className="bg-gradient-to-r from-blue-700 to-blue-500 text-white text-center py-16 px-4">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight">From Information Maze to Instant Insight</h1>
+        <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-blue-100">
+            Discover how Retrieval-Augmented Generation (RAG) transforms your SharePoint knowledge base into an intelligent, active partner.
+        </p>
+    </section>
+);
+
 
 // Sub-component for the problem cards for better readability
 const ProblemCard = ({ icon, title, children }) => (
@@ -29,6 +45,10 @@ const ValueCard = ({ icon, title, children }) => (
 );
 
 
+/**
+ * Main Page Component
+ * This would be your page file, e.g., pages/rag-demo.js
+ */
 export default function RagDemoPage() {
     // State for the "Old Way" search simulation
     const [isOldWaySearching, setIsOldWaySearching] = useState(false);
@@ -86,14 +106,10 @@ export default function RagDemoPage() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
+            {/* In a real app, a Layout component would wrap the page and include the Header/Footer */}
             <div className="bg-gray-50 text-gray-800">
-                {/* Header */}
-                <header className="bg-gradient-to-r from-blue-700 to-blue-500 text-white text-center py-16 px-4">
-                    <h1 className="text-4xl md:text-5xl font-bold tracking-tight">From Information Maze to Instant Insight</h1>
-                    <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-blue-100">
-                        Discover how Retrieval-Augmented Generation (RAG) transforms your SharePoint knowledge base into an intelligent, active partner.
-                    </p>
-                </header>
+                <Header />
+                <TitleSection />
 
                 <main className="container mx-auto px-4 sm:px-6 lg:px-8">
                     {/* Section 1: The Problem */}
@@ -221,10 +237,7 @@ export default function RagDemoPage() {
                         </button>
                     </section>
                 </main>
-
-                <footer className="text-center py-8 bg-gray-200 text-gray-600">
-                    <p>&copy; {new Date().getFullYear()} Your Company Name. All Rights Reserved.</p>
-                </footer>
+                <Footer />
             </div>
         </>
     );
