@@ -21,6 +21,14 @@ const caseStudies = [
     slug: '/cases/fine-tuning-value', 
   },
   {
+    title: 'Build AI Pipelines to Enhance Structured Data',
+    industry: 'All',
+    solution: 'AI (Machine Learning, Custom Pipelines)',
+    impact: '10x faster and 10x optimization',
+    image: '/images/kafka-exactly-once.jpeg',
+    slug: '/cases/structured-data-ml-pipelines', 
+  },
+  {
     title: 'Global Cloud Migration for a Financial Institution',
     industry: 'Finance',
     solution: 'Cloud Transformation & Migration',
