@@ -44,6 +44,22 @@ const ValueCard = ({ icon, title, children }) => (
     </div>
 );
 
+const TimelineItem = ({ phase, title, description, alignment }) => {
+    const isLeft = alignment === 'left';
+    return (
+        <div className={`mb-8 flex justify-between items-center w-full ${isLeft ? 'flex-row-reverse left-timeline' : 'right-timeline'}`}>
+            <div className="order-1 w-5/12"></div>
+            <div className="z-20 flex items-center order-1 bg-blue-600 shadow-xl w-12 h-12 rounded-full">
+                <h1 className="mx-auto font-bold text-lg text-white">{phase}</h1>
+            </div>
+            <div className={`order-1 bg-white rounded-lg shadow-xl w-5/12 px-6 py-4 ${isLeft ? 'text-right' : 'text-left'}`}>
+                <h3 className="font-bold text-gray-800 text-xl">{title}</h3>
+                <p className="text-sm leading-snug tracking-wide text-gray-600 text-opacity-100">{description}</p>
+            </div>
+        </div>
+    );
+};
+
 
 /**
  * Main Page Component
@@ -225,6 +241,34 @@ export default function RagDemoPage() {
                             <ValueCard icon={<Lightbulb size={28}/>} title="Smarter, Faster Decisions">Get complete, synthesized answers based on all relevant data, reducing risk and ensuring you're acting on the full picture.</ValueCard>
                             <ValueCard icon={<LockKeyhole size={28}/>} title="Unlock Institutional Knowledge">Turn your passive archive into an active, intelligent expert that any employee can consult for immediate insights.</ValueCard>
                             <ValueCard icon={<Rocket size={28}/>} title="Boost Employee Productivity">Empower your workforce with tools that eliminate friction, reduce frustration, and allow them to perform at their best.</ValueCard>
+                        </div>
+                    </section>
+
+                    <section className="py-20">
+                        <h2 className="text-3xl md:text-4xl font-bold text-center text-blue-800">The Path Forward</h2>
+                        <p className="text-lg text-center text-gray-600 max-w-2xl mx-auto mt-4 mb-12">
+                           A phased approach ensures we deliver value quickly while building a robust, scalable solution for the entire organization.
+                        </p>
+                        <div className="relative container mx-auto px-6 flex flex-col space-y-8">
+                            <div className="absolute z-0 w-2 h-full bg-blue-200 shadow-md inset-0 top-0 left-1/2 -ml-1"></div>
+                            <TimelineItem 
+                                phase="1"
+                                title="Proof of Concept (2-4 Weeks)"
+                                description="Connect to a sample of SharePoint data to build and validate the core RAG pipeline. Demonstrate accurate, cited answers on a limited scale."
+                                alignment="left"
+                            />
+                            <TimelineItem 
+                                phase="2"
+                                title="Pilot Program (4-6 Weeks)"
+                                description="Expand data sources, refine the user interface, and deploy the RAG solution to a select group of users for real-world testing and feedback."
+                                alignment="right"
+                            />
+                             <TimelineItem 
+                                phase="3"
+                                title="Full-Scale Deployment & Iteration"
+                                description="Roll out the solution across the organization. Establish a process for continuous data indexing, performance monitoring, and improvement."
+                                alignment="left"
+                            />
                         </div>
                     </section>
 

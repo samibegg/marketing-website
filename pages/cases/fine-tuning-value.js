@@ -2,6 +2,7 @@ import { useState } from 'react';
 import Head from 'next/head';
 import Header from '../../components/Header'; // Adjust path as needed
 import Footer from '../../components/Footer'; // Adjust path as needed
+import { Search, Sparkles, AlertTriangle, HelpCircle, BookLock, Clock, Lightbulb, LockKeyhole, Rocket, ChevronRight } from 'lucide-react';
 
 // Data for the interactive demonstration section
 const demoData = {
@@ -24,7 +25,14 @@ const demoData = {
     }
 };
 
-// Sub-components for better organization
+const TitleSection = () => (
+    <section className="bg-gradient-to-r from-blue-700 to-blue-500 text-white text-center py-20 px-4">
+        <h1 className="text-4xl md:text-5xl font-bold tracking-tight">From Generic AI to Domain-Specific Expert</h1>
+        <p className="mt-4 text-lg md:text-xl max-w-3xl mx-auto text-blue-100">
+            Discover how fine-tuning transforms a powerful, general model into a bespoke AI that understands your unique business context and drives real value.
+        </p>
+    </section>
+);
 
 const Section = ({ id, children }) => (
     <section id={id} className="py-16 sm:py-24">
@@ -77,6 +85,7 @@ export default function FineTuningValuePage() {
 
             <div className="bg-gray-50 text-gray-800">
                 <Header />
+                <TitleSection />
 
                 <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <Section id="title-section">
@@ -178,7 +187,15 @@ export default function FineTuningValuePage() {
                             />
                         </div>
                     </Section>
-                </main>
+
+                     <section className="bg-white my-20 p-12 rounded-xl shadow-xl text-center">
+                        <h2 className="text-3xl font-bold text-gray-800">Ready to Unlock Your Organization's Knowledge?</h2>
+                        <p className="mt-3 mb-6 max-w-xl mx-auto text-gray-600">Let's schedule a pilot project and demonstrate the power of fine-tuning .</p>
+                        <button className="bg-blue-600 text-white font-bold py-3 px-8 rounded-lg hover:bg-blue-700 transition-transform transform hover:scale-105 flex items-center mx-auto">
+                            Initiate a Pilot Project <ChevronRight className="ml-2" />
+                        </button>
+                    </section>
+               </main>
 
                 <Footer />
             </div>
