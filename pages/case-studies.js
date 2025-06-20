@@ -5,6 +5,14 @@ import Footer from '../components/Footer';
 
 const caseStudies = [
   {
+    title: 'State of the AI Technology Ecosystem - June 2025',
+    industry: 'All',
+    solution: 'Artificial Intelligence',
+    impact: '10x faster and 10x optimization',
+    image: '/images/agentic-workflow.jpeg',
+    slug: '/cases/ai-ecosystem-june-2025', 
+  },
+  {
     title: 'Retrieval-Augmented Generation Transforms Info to Intel',
     industry: 'All',
     solution: 'AI (Machine Learning, RAG)',
