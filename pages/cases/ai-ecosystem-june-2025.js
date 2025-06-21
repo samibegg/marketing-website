@@ -3,6 +3,7 @@ import Header from '../../components/Header'; // Adjust path as needed
 import Footer from '../../components/Footer'; // Adjust path as needed
 import Link from 'next/link';
 import React, { useState } from 'react';
+import { NextSeo } from 'next-seo';
 
 
 // --- Component for Table 1: LLM Providers ---
