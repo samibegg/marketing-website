@@ -28,7 +28,7 @@ export default function Footer() {
             <a href="https://www.linkedin.com/company/forgemission" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600">
               <FaLinkedin size={20} />
             </a>
-            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
+            <a href="https://x.com/forgemissioncom" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
               <FaTwitter size={20} />
             </a>
             <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">
