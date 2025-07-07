@@ -204,7 +204,7 @@ export default function Researcher() {
                     disabled={item._busy}
                     className="px-3 py-1 bg-emerald-600 text-white rounded-lg text-sm disabled:opacity-50"
                   >
-                    {item._busy === 'search' ? 'Searching…' : '🔎 Do Web Search'}
+                    {item._busy === 'search' ? 'Searching…' : '🔎 Perform Web Search'}
                   </button>
 
                   <button
@@ -216,7 +216,7 @@ export default function Researcher() {
                       ? `Enriching… ${item._poll || ''}`
                       : item._enriched
                       ? '✅ Enriched'
-                      : '🔄 Enrich via n8n'}
+                      : '🔄 Enrich with Deep Research'}
                   </button>
 
                   <button
@@ -228,7 +228,7 @@ export default function Researcher() {
                       ? '✅ Saved'
                       : item._busy === 'save'
                       ? 'Saving…'
-                      : '💾 Save'}
+                      : '💾 Save to Document Store'}
                   </button>
                 </div>
 
