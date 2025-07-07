@@ -195,44 +195,83 @@ export default function Researcher() {
         {results.length > 0 && (
           <ul className="mt-6 space-y-4">
             {results.map((item, idx) => (
-              <li key={idx} className="bg-gray-50 rounded-xl p-4 shadow">
-                <pre className="text-xs whitespace-pre-wrap">{JSON.stringify(item, null, 2)}</pre>
+              <li
+                key={idx}
+                className="relative flex rounded-xl bg-white shadow ring-1 ring-gray-200"
+              >
+                {/* Accent bar */}
+                <div className="w-1 rounded-l-xl bg-blue-600" />
 
-                <div className="mt-2 flex gap-3">
-                  <button
-                    onClick={() => doWebSearch(idx, item)}
-                    disabled={item._busy}
-                    className="px-3 py-1 bg-emerald-600 text-white rounded-lg text-sm disabled:opacity-50"
-                  >
-                    {item._busy === 'search' ? 'Searching…' : '🔎 Do Web Search'}
-                  </button>
+                <div className="flex-1 p-4">
+                  {/* Name (if present) */}
+                  {item.name && (
+                    <h3 className="text-lg font-semibold text-gray-900">
+                      {item.name}
+                    </h3>
+                  )}
 
-                  <button
-                    onClick={() => enrichEntity(idx, item)}
-                    disabled={item._busy || item._enriched}
-                    className="px-3 py-1 bg-teal-600 text-white rounded-lg text-sm disabled:opacity-50"
-                  >
-                    {item._busy === 'enrich'
-                      ? `Enriching… ${item._poll || ''}`
-                      : item._enriched
-                      ? '✅ Enriched'
-                      : '🔄 Enrich via n8n'}
-                  </button>
+                  {/* Key–value pairs */}
+                  <dl className="mt-2 grid grid-cols-[auto,1fr] gap-x-2 gap-y-1 text-sm">
+                    {Object.entries(item).map(([key, val]) =>
+                      key.startsWith('_') || key === 'name' ? null : (
+                        <Fragment key={key}>
+                          <dt className="font-medium text-gray-500 capitalize">
+                            {key.replace(/_/g, ' ')}
+                          </dt>
+                          <dd className="break-words text-gray-800">
+                            {typeof val === 'object' ? (
+                              <pre className="whitespace-pre-wrap break-all">
+                                {JSON.stringify(val, null, 2)}
+                              </pre>
+                            ) : (
+                              val
+                            )}
+                          </dd>
+                        </Fragment>
+                      )
+                    )}
+                  </dl>
 
-                  <button
-                    onClick={() => saveToMongo(idx)}
-                    disabled={item._busy || item._saved}
-                    className="px-3 py-1 bg-indigo-600 text-white rounded-lg text-sm disabled:opacity-50"
-                  >
-                    {item._saved
-                      ? '✅ Saved'
-                      : item._busy === 'save'
-                      ? 'Saving…'
-                      : '💾 Save'}
-                  </button>
+                  {/* Action buttons */}
+                  <div className="mt-4 flex gap-3">
+                    <button
+                      onClick={() => doWebSearch(idx, item)}
+                      disabled={item._busy}
+                      className="px-3 py-1 rounded-lg bg-emerald-600 text-white text-sm disabled:opacity-50"
+                    >
+                      {item._busy === 'search' ? 'Searching…' : '🔎 Web Search'}
+                    </button>
+
+                    <button
+                      onClick={() => enrichEntity(idx, item)}
+                      disabled={item._busy || item._enriched}
+                      className="px-3 py-1 rounded-lg bg-teal-600 text-white text-sm disabled:opacity-50"
+                    >
+                      {item._busy === 'enrich'
+                        ? `Enriching… ${item._poll || ''}`
+                        : item._enriched
+                        ? '✅ Enriched'
+                        : '🔄 Enrich'}
+                    </button>
+
+                    <button
+                      onClick={() => saveToMongo(idx)}
+                      disabled={item._busy || item._saved}
+                      className="px-3 py-1 rounded-lg bg-indigo-600 text-white text-sm disabled:opacity-50"
+                    >
+                      {item._saved
+                        ? '✅ Saved'
+                        : item._busy === 'save'
+                        ? 'Saving…'
+                        : '💾 Save'}
+                    </button>
+                  </div>
+
+                  {/* Per‑item error */}
+                  {item._err && (
+                    <p className="mt-2 text-xs text-red-500">{item._err}</p>
+                  )}
                 </div>
-
-                {item._err && <p className="text-red-500 text-xs mt-1">{item._err}</p>}
               </li>
             ))}
           </ul>
