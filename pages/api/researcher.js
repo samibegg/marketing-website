@@ -11,18 +11,13 @@ export default async function handler(req, res) {
   const sessionId = incoming || randomUUID();
   const webhookUrl = process.env.N8N_WEBHOOK_URL;
 
-  try {
-    // Fire‑and‑forget: we do NOT wait for n8n to finish
-    await fetch(webhookUrl, {
-      method : 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body   : JSON.stringify({ sessionId, chatInput: prompt })
-    });
+  fetch(webhookUrl, {
+    method  : 'POST',
+    headers : { 'Content-Type': 'application/json' },
+    body    : JSON.stringify({ sessionId, chatInput: prompt })
+  }).catch(err => console.error('n8n call failed:', err));
 
-    // Respond immediately with sessionId so client can poll
-    return res.status(200).json({ ok: true, sessionId });
-  } catch (err) {
-    console.error('n8n researcher error:', err);
-    return res.status(500).json({ error: err.message });
-  }
+  // Immediately tell the browser to start polling
+  return res.status(200).json({ queued: true, sessionId });
+
 }
