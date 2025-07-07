@@ -14,7 +14,7 @@ export default async function handler(req, res) {
     const rsp = await fetch(webhookUrl, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ sessionId, text: prompt })
+      body: JSON.stringify({ sessionId, chatInput: prompt })
     });
 
     if (!rsp.ok) throw new Error(`n8n replied ${rsp.status}`);

@@ -16,7 +16,7 @@ export default async function handler(req, res) {
     await fetch(webhookUrl, {
       method : 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body   : JSON.stringify({ sessionId, text: prompt })
+      body   : JSON.stringify({ sessionId, chatInput: prompt })
     });
 
     // Respond immediately with sessionId so client can poll
