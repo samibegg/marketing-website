@@ -63,7 +63,8 @@ export default function Researcher() {
 
       if (!data) throw new Error('Timed out waiting for n8n');
 
-      setResults(Array.isArray(data) ? data : [data]);
+      const finalResults = Array.isArray(data?.data) ? data.data : (Array.isArray(data) ? data : [data]);
+      setResults(finalResults);
     } catch (e) {
       setGlobalErr(e.message);
     }
