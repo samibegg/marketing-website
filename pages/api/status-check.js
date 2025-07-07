@@ -11,6 +11,7 @@ export default async function handler(req, res) {
 
   // 1) n8n is posting finished data
   if (data) {
+    console.log('STORE', sessionId);      // <- should print the long hex ID
     cache[sessionId] = data;
     return res.status(200).json({ stored: true });
   }
