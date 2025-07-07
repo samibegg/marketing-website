@@ -17,16 +17,44 @@ export default function Researcher() {
 
   async function submitPrompt() {
     setLoading(true); setGlobalErr(''); setResults([]);
+
     try {
       const r = await fetch('/api/researcher', {
         method : 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body   : JSON.stringify({ prompt, sessionId: sessionRef.current })
+        body   : JSON.stringify({ prompt })
       });
       const j = await r.json();
       if (!r.ok) throw new Error(j.error);
-      setResults(Array.isArray(j.data) ? j.data : [j.data]);
-    } catch (e) { setGlobalErr(e.message); }
+
+      const sessionId = j.sessionId;
+
+      // Poll every 4 s up to ~80 s (20 tries)
+      let tries = 0;
+      let data  = null;
+      while (tries < 20) {
+        await new Promise(res => setTimeout(res, 4000));
+        const poll = await fetch('/api/status-check', {
+          method : 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body   : JSON.stringify({ sessionId })
+        });
+        const pj = await poll.json();
+
+        if (poll.status === 200 && pj.status === 'complete') {
+          data = pj.data;
+          break;
+        }
+        tries++;
+      }
+
+      if (!data) throw new Error('Timed out waiting for n8n');
+
+      // Show data (array or single object)
+      setResults(Array.isArray(data) ? data : [data]);
+    } catch (e) {
+      setGlobalErr(e.message);
+    }
     setLoading(false);
   }
 
@@ -58,18 +86,41 @@ export default function Researcher() {
 
     try {
       const r = await fetch('/api/entity-enrich', {
-        method : 'POST',
+        method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body   : JSON.stringify({ doc, sessionId: sessionRef.current })
+        body: JSON.stringify({ doc })
       });
       const j = await r.json();
       if (!r.ok) throw new Error(j.error);
 
-      // Append the returned data under a new key
-      upd[idx] = { ...upd[idx], n8n_enriched: j.data, _enriched: true };
+      const sessionId = j.sessionId;
+
+      // Poll for result
+      let tries = 0;
+      let enriched = null;
+      while (tries < 20) {  // Max ~60–90s total
+        await new Promise(r => setTimeout(r, 4000));
+        const poll = await fetch('/api/status-check', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ sessionId })
+        });
+        const pj = await poll.json();
+
+        if (poll.status === 200 && pj.status === 'complete') {
+          enriched = pj.data;
+          break;
+        }
+        tries++;
+      }
+
+      if (!enriched) throw new Error('Timed out waiting for enrichment');
+
+      upd[idx] = { ...upd[idx], n8n_enriched: enriched, _enriched: true };
     } catch (e) {
       upd[idx]._err = e.message;
     }
+
     upd[idx]._busy = null;
     setResults([...upd]);
   }
