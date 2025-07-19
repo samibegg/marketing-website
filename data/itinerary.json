@@ -1,0 +1,1282 @@
+[
+{
+  "date": "7/27/2025",
+  "location": "Washington, DC",
+  "items": [
+    {
+      "activity": "Depart IAD at 5:45 PM",
+      "flight": {
+        "airline": "United Airlines",
+        "flight_number": "UA6321",
+        "confirmation": "I6321Q",
+        "departure": {
+          "airport": "Washington Dulles International (IAD)",
+          "terminal": "Terminal C",
+          "time": "5:45 PM EDT",
+          "gate": "Check 2 hours before departure"
+        },
+        "arrival": {
+          "airport": "Zurich Airport (ZRH)",
+          "time": "8:00 AM CET+1",
+          "terminal": "Terminal 1"
+        },
+        "flight_status": "https://www.united.com/en/us/fly/travel/flight-status",
+        "check_in": "https://www.united.com/web-checkin",
+        "seat_selection": "https://www.united.com/en/us/myunited",
+        "baggage_info": "1 carry-on + 1 personal item included, checked bag fees apply",
+        "aircraft": "Boeing 767-300ER (typical for this route)",
+        "flight_duration": "8h 15m"
+      }
+    },
+    "Pack essentials for overnight flight"
+  ],
+  "tips": [
+    "Arrive early at IAD to avoid summer travel congestion.",
+    "Use United's lounge if eligible.",
+    "Pack snacks and chargers."
+  ],
+  "weather": {
+    "temperature": "Hot, ~88°F (31°C)",
+    "forecast": "https://weather.gov/lwx/",
+    "humidity": "High, typical summer weather"
+  },
+  "sunset": "8:25 PM",
+  "emergency_contacts": {
+    "us_embassy": "N/A (domestic)",
+    "local_emergency": "911"
+  },
+  "transportation": {
+    "airport_shuttle": "Complimentary from Hilton",
+    "rideshare": "Uber/Lyft available",
+    "parking": "IAD parking rates: $6-25/day depending on lot"
+  }
+},
+
+{
+  "date": "7/28/2025",
+  "location": "Zurich & Elm, Switzerland",
+  "items": [
+    {
+      "activity": "Arrive ZRH at 8:00 AM",
+      "airport_info": {
+        "customs": "EU/Non-EU lines available",
+        "currency_exchange": "Available in arrivals hall",
+        "transport_to_city": "Train every 10-15 minutes to Zurich HB (10 minutes, ~CHF 6.80)"
+      }
+    },
+    {
+      "activity": "Pick up rental car",
+      "rental": {
+        "company": "Budget (via Expedia)",
+        "location": "ZRH Airport - Rental Car Center",
+        "phone": "+41 43 255 56 56",
+        "requirements": "Valid driver's license, credit card, minimum age 21",
+        "swiss_driving_tips": [
+          "Vignette required for highways (CHF 40/year)",
+          "Speed limits: 50 km/h city, 80 km/h country roads, 120 km/h highways",
+          "Right-hand traffic"
+        ],
+        "fuel": "Petrol stations close early on Sundays",
+        "emergency_roadside": "+41 140 (TCS)"
+      }
+    },
+    {
+      "activity": "Check into Hilton Zurich Airport & drop bags",
+      "hotel": {
+        "name": "Hilton Zurich Airport",
+        "address": "Hohenbühlstrasse 10, 8152 Opfikon",
+        "phone": "+41 43 210 40 00",
+        "website": "https://www.hilton.com/zurich-airport",
+        "check_in": "3:00 PM (early check-in requested)",
+        "check_out": "Next morning",
+        "amenities": ["Airport shuttle", "Fitness center", "Restaurant", "WiFi", "Business center"],
+        "shuttle_info": "Complimentary shuttle every 10 minutes to/from ZRH",
+        "distance_to_airport": "5 minutes by shuttle",
+        "note": "Drop bags and freshen up before driving to Elm for hiking"
+      }
+    },
+    {
+      "activity": "Drive to Elm for hiking",
+      "destination": {
+        "village": "Elm Village",
+        "trail": "Elm Trail",
+        "address": "Schiesserblock 24, 8767 Elm, Switzerland",
+        "driving_route": {
+          "from": "Hilton Zurich Airport",
+          "distance": "~90 km",
+          "duration": "1.5 hours",
+          "route": "A1 → A3 → A15 → Glarus → Elm",
+          "scenic_highlights": ["Lake Walen views", "Alpine valleys", "Traditional Swiss villages"]
+        },
+        "hiking_info": {
+          "trail_name": "Elm Panorama Trail",
+          "difficulty": "Moderate",
+          "duration": "2-3 hours",
+          "elevation_gain": "~400m",
+          "highlights": ["Tschingelhörner peaks", "Alpine meadows", "Traditional architecture"],
+          "best_start_time": "Late morning (11 AM - 12 PM after drive)",
+          "what_to_bring": ["Hiking boots", "Water", "Snacks", "Weather protection"]
+        },
+        "village_info": {
+          "elevation": "977m",
+          "restaurants": ["Gasthaus Elm", "Restaurant Segnes"],
+          "parking": "Village center parking available"
+        }
+      }
+    },
+    {
+      "activity": "Return to Hilton Zurich Airport",
+      "return_info": {
+        "from": "Elm Village",
+        "to": "Hilton Zurich Airport",
+        "distance": "~90 km",
+        "duration": "1.5 hours",
+        "estimated_arrival": "~6:00 PM"
+      }
+    },
+    {
+      "activity": "Dinner at mit&ohne Kebab Restaurant",
+      "restaurant": {
+        "name": "mit&ohne Kebab Restaurant",
+        "address": "Badenerstrasse 248, 8004 Zürich, Schweiz",
+        "cuisine": "Turkish/Middle Eastern",
+        "specialty": "Kebabs and Turkish cuisine",
+        "location": "Zurich West district",
+        "dinner_time": "7:30 PM - 9:00 PM",
+        "drive_from_hotel": "~20 minutes from Hilton ZRH"
+      }
+    },
+    {
+      "activity": "Return to Hilton Zurich Airport for the night",
+      "note": "Staying at Hilton ZRH overnight, convenient for tomorrow's departure to city center"
+    }
+  ],
+  "tips": [
+    "Drive carefully on mountain roads to Elm.",
+    "Swiss tap water is drinkable everywhere.",
+    "Start hike early to enjoy full day in mountains.",
+    "Try local Alpine cuisine at village restaurants."
+  ],
+  "weather": {
+    "temperature": "72–80°F (22–27°C) in valleys, cooler at elevation",
+    "forecast": "https://www.meteoswiss.admin.ch"
+  },
+  "sunset": "9:00 PM",
+  "currency": {
+    "local": "Swiss Franc (CHF)",
+    "exchange_rate": "~1 USD = 0.87 CHF (check current rates)",
+    "payment": "Cards widely accepted, contactless preferred"
+  },
+  "emergency_contacts": {
+    "police": "117",
+    "medical": "144",
+    "fire": "118",
+    "us_embassy": "+41 31 357 70 11"
+  },
+  "transport_apps": [
+    "SBB Mobile (trains)",
+    "ZVV (Zurich transport)",
+    "Uber (limited availability)"
+  ]
+},
+
+{
+  "date": "7/29/2025",
+  "location": "Zurich, Switzerland",
+  "items": [
+    {
+      "activity": "Visit FIFA Museum",
+      "details": {
+        "address": "Seestrasse 27, 8002 Zürich",
+        "phone": "+41 43 388 25 00",
+        "hours": "10:00 AM - 6:00 PM (Tuesday-Sunday)",
+        "tickets": "Adults CHF 24, online booking recommended",
+        "website": "https://www.fifamuseum.com",
+        "duration": "2-3 hours",
+        "nearest_transport": "Tram 7/14 to Enge station",
+        "suggested_time": "1:00 PM - 4:00 PM"
+      }
+    },
+    {
+      "activity": "Tour Lindt Chocolate World",
+      "details": {
+        "address": "Schokoladenplatz 1, 8802 Kilchberg",
+        "phone": "+41 44 716 22 33",
+        "hours": "10:00 AM - 6:00 PM daily",
+        "tickets": "Adults CHF 15, advance booking required",
+        "website": "https://www.lindt-home-of-chocolate.com",
+        "duration": "1.5-2 hours",
+        "transport": "S-Bahn S8/S24 to Kilchberg",
+        "parking": "Free on-site parking",
+        "suggested_time": "4:30 PM - 6:30 PM"
+      }
+    },
+    {
+      "activity": "Check into Ambassador Hotel & Spa",
+      "hotel": {
+        "name": "Ambassador Hotel & Spa",
+        "address": "Falkenstrasse 6, 8008 Zürich",
+        "phone": "+41 44 258 98 98",
+        "website": "https://www.ambassador.ch",
+        "check_in": "3:00 PM (after Lindt visit)",
+        "check_out": "12:00 PM",
+        "amenities": ["Spa", "Fitness center", "Restaurant", "Bar", "WiFi", "Business center"],
+        "location": "Central Zurich location, walking distance to main attractions",
+        "parking": "Keep rental car at hotel - valet parking available (additional fee) for onward journey to Wengen",
+        "luxury_features": ["Premium spa services", "Fine dining", "Concierge services"]
+      }
+    },
+    {
+      "activity": "Evening walk along Lake Zurich or Bahnhofstrasse",
+      "details": {
+        "bahnhofstrasse": {
+          "description": "1.4 km luxury shopping street",
+          "highlights": ["Paradeplatz", "Jelmoli", "Sprüngli cafe"],
+          "walking_time": "30-45 minutes"
+        },
+        "lake_zurich": {
+          "promenade": "Scenic lakeside walk from Bellevue to Tiefenbrunnen",
+          "evening_activities": ["Lakeside dining", "Sunset views", "Evening boat tours"],
+          "boat_tours": {
+            "operator": "Zürichsee-Schifffahrtsgesellschaft (ZSG)",
+            "departure_points": ["Bürkliplatz", "Bellevue", "Wollishofen"],
+            "evening_options": [
+              {
+                "name": "Sunset cruise",
+                "duration": "1.5 hours",
+                "cost": "CHF 25",
+                "highlights": ["City lights", "Alpine backdrop", "Romantic atmosphere"]
+              }
+            ],
+            "booking": "https://www.zsg.ch"
+          }
+        }
+      }
+    }
+  ]
+},
+
+
+
+  {
+    "date": "7/30/2025",
+    "location": "Wengen via Lauterbrunnen",
+    "items": [
+      {
+        "activity": "Drive Zurich → Lauterbrunnen",
+        "route": {
+          "distance": "~150 km",
+          "duration": "2.5-3 hours",
+          "route": "A3 → A4 → A8 → A6 → exit Interlaken Ost",
+          "tolls": "Swiss highway vignette required",
+          "scenic_stops": ["Lucerne (optional)", "Brienz Lake viewpoint"],
+          "fuel_stops": "Multiple stations along A6"
+        }
+      },
+      {
+        "activity": "Park in Lauterbrunnen and take train to Wengen",
+        "transport": {
+          "parking": {
+            "name": "Lauterbrunnen BLT Parking",
+            "address": "Bahnhofstrasse, 3822 Lauterbrunnen",
+            "cost": "CHF 15/day",
+            "capacity": "Large lot, usually available"
+          },
+          "train": {
+            "operator": "Wengernalp Railway (WAB)",
+            "frequency": "Every 30 minutes",
+            "duration": "14 minutes",
+            "cost": "CHF 9.60 one-way",
+            "tickets": "Buy at station or SBB app",
+            "scenic_tip": "Sit on left side for valley views"
+          }
+        }
+      },
+      {
+        "activity": "Check into Hotel Edelweiss",
+        "hotel": {
+          "name": "Hotel Edelweiss Wengen",
+          "address": "3823 Wengen",
+          "phone": "+41 33 856 56 56",
+          "website": "https://edelweiss-wengen.ch",
+          "check_in": "3:00 PM",
+          "check_out": "11:00 AM",
+          "amenities": ["Mountain views", "Restaurant", "Wellness area", "WiFi"],
+          "note": "Car-free village - luggage transport available from station"
+        }
+      }
+    ],
+    "tips": [
+      "Staubbach Falls is right outside Lauterbrunnen station.",
+      "Sit on the left side of the train to Wengen for best views.",
+      "Wengen is car-free — enjoy the alpine peace."
+    ],
+    "weather": {
+      "temperature": "Cooler, 68°F (20°C)",
+      "mountain_weather": "Can change quickly, pack layers"
+    },
+    "sunset": "8:55 PM",
+    "attractions_nearby": [
+      {
+        "name": "Staubbach Falls",
+        "location": "Lauterbrunnen village center",
+        "height": "297 meters",
+        "access": "5-minute walk from train station"
+      }
+    ]
+  },
+  {
+    "date": "7/31/2025",
+    "location": "Wengen",
+    "items": [
+      {
+        "activity": "Explore mountain trails",
+        "trails": [
+          {
+            "name": "Wengen to Kleine Scheidegg",
+            "difficulty": "Easy-moderate",
+            "duration": "1.5 hours",
+            "highlights": ["Eiger North Face views", "Alpine flowers"]
+          },
+          {
+            "name": "Männlichen Panorama Trail",
+            "difficulty": "Easy",
+            "duration": "1 hour",
+            "highlights": ["360° mountain views", "Photo opportunities"]
+          }
+        ]
+      },
+      {
+        "activity": "Ride the Männlichen cable car",
+        "cable_car": {
+          "operator": "Luftseilbahn Wengen-Männlichen",
+          "hours": "8:30 AM - 5:00 PM (summer)",
+          "cost": "CHF 32 return",
+          "duration": "6 minutes up",
+          "website": "https://www.maennlichen.ch",
+          "booking": "Tickets available on-site or online"
+        }
+      },
+      {
+        "activity": "Visit Kleine Scheidegg",
+        "details": {
+          "elevation": "2,061 meters",
+          "access": "Train from Wengen (20 minutes, CHF 15.20)",
+          "attractions": ["Jungfraujoch Railway station", "Eiger views", "Mountain restaurants"],
+          "restaurants": ["Restaurant Kleine Scheidegg", "Eigergletscher Restaurant"]
+        }
+      }
+    ],
+    "tips": [
+      "Wear hiking shoes — trails can be muddy.",
+      "Look out for marmots!",
+      "Buy picnic items from Coop and lunch outdoors."
+    ],
+    "weather": {
+      "temperature": "60–70°F (16–21°C)",
+      "conditions": "Mountain weather - pack rain jacket"
+    },
+    "sunset": "8:55 PM",
+    "equipment_rental": {
+      "name": "Sport Wengen",
+      "address": "Wengen village center",
+      "items": ["Hiking poles", "Rain gear", "Backpacks"]
+    },
+    "grocery_store": {
+      "name": "Coop Wengen",
+      "hours": "8:00 AM - 6:30 PM",
+      "products": ["Picnic supplies", "Swiss specialties", "Hiking snacks"]
+    }
+  },
+  {
+    "date": "8/1/2025",
+    "location": "Wengen (Hotel Transfer)",
+    "items": [
+      {
+        "activity": "Check out of Edelweiss, check into Belvedere",
+        "hotels": {
+          "checkout": {
+            "hotel": "Hotel Edelweiss Wengen",
+            "time": "11:00 AM",
+            "luggage_storage": "Available if needed"
+          },
+          "checkin": {
+            "hotel": "Hotel Belvedere Wengen",
+            "address": "3823 Wengen",
+            "phone": "+41 33 855 14 14",
+            "website": "https://belvedere-wengen.ch",
+            "check_in": "3:00 PM",
+            "amenities": ["Spa", "Alpine views", "Fine dining", "Wellness center"],
+            "transport": "Short walk within village"
+          }
+        }
+      },
+      {
+        "activity": "Stroll around Wengen village",
+        "highlights": [
+          "Traditional Swiss chalets",
+          "Village church with mountain backdrop",
+          "Local craft shops",
+          "Wengen tourist information center"
+        ]
+      },
+      {
+        "activity": "Relax or spa if hotel has wellness",
+        "spa_options": {
+          "hotel_spa": "Hotel Belvedere Wellness Center",
+          "services": ["Alpine spa treatments", "Sauna", "Relaxation areas"],
+          "booking": "Reserve in advance at front desk"
+        }
+      }
+    ],
+    "tips": [
+      "Try local Alpine cheese or rösti.",
+      "Check for live music at restaurants.",
+      "Sunsets can be stunning from your hotel balcony."
+    ],
+    "weather": {
+      "temperature": "Mild, 67°F (19°C)"
+    },
+    "sunset": "8:50 PM",
+    "dining": [
+      {
+        "name": "Restaurant Taverne",
+        "specialty": "Rösti, Swiss Alpine cuisine",
+        "atmosphere": "Traditional, often has live music"
+      },
+      {
+        "name": "Hotel Silberhorn Restaurant",
+        "specialty": "Fine dining with mountain views",
+        "reservation": "Recommended"
+      }
+    ]
+  },
+  {
+    "date": "8/2/2025",
+    "location": "Wengen",
+    "items": [
+      {
+        "activity": "Optional day trip to Jungfraujoch",
+        "details": {
+          "name": "Top of Europe",
+          "elevation": "3,454 meters",
+          "train": {
+            "route": "Wengen → Kleine Scheidegg → Jungfraujoch",
+            "duration": "1.5 hours each way",
+            "cost": "CHF 220-240 return (varies by season)",
+            "booking": "https://www.jungfrau.ch",
+            "advance_booking": "Recommended, especially in summer"
+          },
+          "attractions": ["Ice Palace", "Sphinx Observatory", "Glacier views", "Alpine Sensation"],
+          "tips": [
+            "Bring warm clothes (temperature around 0°C)",
+            "Sunglasses essential due to snow glare",
+            "Allow full day (6-8 hours total)"
+          ]
+        }
+      },
+      {
+        "activity": "Visit Trümmelbach Falls",
+        "details": {
+          "address": "Trümmelbachfälle, 3824 Lauterbrunnen",
+          "phone": "+41 33 855 32 32",
+          "hours": "9:00 AM - 5:00 PM (April-October)",
+          "admission": "CHF 12 adults",
+          "access": "Bus from Lauterbrunnen (10 minutes) or walk (45 minutes)",
+          "description": "Glacier waterfalls inside the mountain",
+          "special": "Underground elevator and viewing galleries"
+        }
+      },
+      {
+        "activity": "Walk Lauterbrunnen Valley",
+        "route": {
+          "distance": "Valley floor walk: 3-5 km",
+          "duration": "1-2 hours",
+          "highlights": ["72 waterfalls", "Valley views", "Traditional farms"],
+          "access": "Train down to Lauterbrunnen, walk, train back up"
+        }
+      }
+    ],
+    "tips": [
+      "Jungfraujoch is expensive — book in advance.",
+      "Trümmelbach is inside a mountain — wear layers.",
+      "Watch for cows with bells in the valley!"
+    ],
+    "weather": {
+      "temperature": "Cool in mountains, ~62°F (17°C)",
+      "jungfraujoch": "Around 32°F (0°C) - very cold!"
+    },
+    "sunset": "8:45 PM"
+  },
+  {
+    "date": "8/3/2025",
+    "location": "Basel",
+    "items": [
+      {
+        "activity": "Train to Lauterbrunnen → drive to Basel",
+        "route": {
+          "train": "Wengen → Lauterbrunnen (14 minutes, CHF 9.60)",
+          "drive": "Lauterbrunnen → Basel (180 km, 2.5 hours)",
+          "route_details": "A6 via Bern, well-marked highways",
+          "fuel_stops": "Multiple stations along A6"
+        }
+      },
+      {
+        "activity": "Check into Homely Basel",
+        "hotel": {
+          "name": "Homely",
+          "address": "7 Rue de Landser, 68300 Saint-Louis, France",
+          "phone": "+33 3 89 69 52 90 (typical French hotel format)",
+          "location_note": "Located in Saint-Louis, France (near Basel, Switzerland border)",
+          "distance_to_basel": "5-10 minutes drive to Basel city center",
+          "cross_border": "French hotel serving Basel area - passport may be required",
+          "currency": "Euro (EUR) accepted",
+          "amenities": ["Modern accommodation", "Easy Basel access", "Parking available"]
+        }
+      },
+      {
+        "activity": "Evening stroll by the Rhine",
+        "details": {
+          "route": "Rhine promenade from Mittlere Brücke to Wettsteinbrücke",
+          "duration": "30-45 minutes",
+          "highlights": ["Historic bridges", "River views", "Old Town skyline"],
+          "dining": "Many riverside restaurants and bars"
+        }
+      }
+    ],
+    "tips": [
+      "Stop in Bern for lunch if time allows.",
+      "Basel has great public art — look out for Tinguely fountains.",
+      "Rathaus (Town Hall) is a colorful landmark worth seeing."
+    ],
+    "weather": {
+      "temperature": "Warm, 75–80°F (24–27°C)"
+    },
+    "sunset": "8:45 PM",
+    "attractions": [
+      {
+        "name": "Basel Minster (Cathedral)",
+        "address": "Münsterplatz, 4051 Basel",
+        "highlights": ["Gothic architecture", "City views from towers"]
+      },
+      {
+        "name": "Tinguely Fountain",
+        "location": "Theaterplatz",
+        "description": "Kinetic water sculptures by Jean Tinguely"
+      }
+    ],
+    "transport": {
+      "parking": "Public parking garages available",
+      "public_transport": "Excellent tram and bus network",
+      "day_pass": "TNW day pass for unlimited public transport"
+    }
+  },
+  {
+    "date": "8/4/2025",
+    "location": "Budapest, Hungary",
+    "items": [
+      {
+        "activity": "Fly BSL → BUD",
+        "flight": {
+          "airline": "Wizz Air",
+          "flight_number": "W6 2357 (typical)",
+          "departure": {
+            "airport": "Basel-Mulhouse-Freiburg Airport (BSL/MLH/EAP)",
+            "terminal": "Terminal 1",
+            "time": "5:10 PM CET",
+            "check_in": "Online check-in recommended"
+          },
+          "arrival": {
+            "airport": "Budapest Ferenc Liszt International (BUD)",
+            "terminal": "Terminal 2A/2B",
+            "time": "6:50 PM CET"
+          },
+          "flight_status": "https://wizzair.com/en-gb/flights/flight-status",
+          "check_in": "https://wizzair.com/en-gb/check-in",
+          "baggage": "Cabin bag included, checked bag extra fee",
+          "duration": "1h 40m"
+        }
+      },
+      {
+        "activity": "Return car in Basel",
+        "car_rental": {
+          "location": "Basel Airport rental car return",
+          "budget_phone": "+41 61 325 27 27",
+          "fuel_requirement": "Return with same fuel level",
+          "inspection": "Allow 30 minutes for car inspection"
+        }
+      },
+      {
+        "activity": "Check into Hilton Budapest",
+        "hotel": {
+          "name": "Hilton Budapest",
+          "address": "Hess András tér 1-3, 1014 Budapest",
+          "phone": "+36 1 889 6600",
+          "website": "https://www.hilton.com/budapest",
+          "location": "Castle District, Buda side",
+          "check_in": "3:00 PM",
+          "amenities": ["Castle views", "Fitness center", "Restaurant", "WiFi"]
+        }
+      }
+    ],
+    "tips": [
+      "Buy Forint at airport or use ATM.",
+      "Try Hungarian goulash for dinner.",
+      "Enjoy panoramic view from Fisherman's Bastion."
+    ],
+    "weather": {
+      "temperature": "Hot, 88°F (31°C)",
+      "forecast": "https://www.idokep.hu"
+    },
+    "sunset": "8:00 PM",
+    "currency": {
+      "local": "Hungarian Forint (HUF)",
+      "exchange_rate": "~1 USD = 350 HUF (check current rates)",
+      "payment": "Cards widely accepted, cash useful for small vendors"
+    },
+    "transport": {
+      "airport_to_city": [
+        "Airport bus 200E to Kőbánya-Kispest Metro (M3 blue line)",
+        "Airport shuttle minibus",
+        "Taxi (30-40 minutes to city center)"
+      ],
+      "public_transport_app": "BudapestGO app",
+      "day_pass": "24-hour transport pass ~1,650 HUF"
+    },
+    "emergency_contacts": {
+      "police": "107",
+      "ambulance": "104",
+      "fire": "105",
+      "us_embassy": "+36 1 475 4400"
+    }
+  },
+  {
+    "date": "8/5/2025",
+    "location": "Budapest",
+    "items": [
+      {
+        "activity": "Visit Buda Castle and Castle Hill",
+        "details": {
+          "address": "Szent György tér, 1014 Budapest",
+          "access": [
+            "Funicular from Clark Ádám tér (CHF 4 return)",
+            "Walk up Castle Hill",
+            "Bus 16/16A/116"
+          ],
+          "attractions": [
+            "Hungarian National Gallery",
+            "Budapest History Museum",
+            "Royal Palace courtyards"
+          ],
+          "hours": "10:00 AM - 6:00 PM (varies by museum)",
+          "tickets": "Combined tickets available"
+        }
+      },
+      {
+        "activity": "Walk across Chain Bridge",
+        "details": {
+          "name": "Széchenyi Chain Bridge",
+          "length": "375 meters",
+          "highlights": ["Historic suspension bridge", "Danube River views", "Lion sculptures"],
+          "photo_tip": "Best views from Buda side looking toward Parliament"
+        }
+      },
+      {
+        "activity": "Explore Parliament or Central Market",
+        "options": [
+          {
+            "name": "Hungarian Parliament Building",
+            "address": "Kossuth Lajos tér 1-3, 1055 Budapest",
+            "tours": "Guided tours available (advance booking required)",
+            "booking": "https://www.parlament.hu",
+            "duration": "45 minutes"
+          },
+          {
+            "name": "Central Market Hall",
+            "address": "Vámház krt. 1-3, 1093 Budapest",
+            "hours": "6:00 AM - 6:00 PM (Mon-Sat)",
+            "highlights": ["Hungarian paprika", "Local crafts", "Traditional foods"]
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Take funicular up Castle Hill.",
+      "Market is great for paprika and souvenirs.",
+      "Sunset views from Gellért Hill are incredible."
+    ],
+    "weather": {
+      "temperature": "Sunny, ~90°F (32°C)",
+      "conditions": "Very hot - bring water and sun protection"
+    },
+    "sunset": "7:55 PM",
+    "dining_recommendations": [
+      {
+        "name": "Frici Papa Restaurant",
+        "address": "Kálvin tér 9, 1091 Budapest",
+        "specialty": "Traditional Hungarian goulash"
+      },
+      {
+        "name": "Café Gerbeaud",
+        "address": "Vörösmarty tér 7, 1051 Budapest",
+        "specialty": "Historic café, pastries"
+      }
+    ]
+  },
+  {
+    "date": "8/6/2025",
+    "location": "Budapest",
+    "items": [
+      {
+        "activity": "Visit Széchenyi Thermal Baths",
+        "details": {
+          "address": "Állatkerti krt. 9-11, 1146 Budapest",
+          "phone": "+36 1 363 3210",
+          "hours": "6:00 AM - 10:00 PM daily",
+          "admission": "~6,500 HUF weekdays, 7,000 HUF weekends",
+          "website": "https://www.szechenyibath.hu",
+          "facilities": ["18 pools", "Saunas", "Steam rooms", "Massage services"],
+          "what_to_bring": ["Swimsuit", "Flip-flops", "Towel (or rent on-site)"],
+          "lockers": "Electronic lockers available"
+        }
+      },
+      {
+        "activity": "Relax in City Park",
+        "details": {
+          "name": "Városliget (City Park)",
+          "attractions": [
+            "Vajdahunyad Castle",
+            "Millennium Monument",
+            "Budapest Zoo (if interested)",
+            "Boating lake"
+          ],
+          "walking_paths": "Well-maintained paths perfect for strolling"
+        }
+      },
+      {
+        "activity": "Budapest Circus Show at 5 PM",
+        "details": {
+          "name": "Budapest Circus",
+          "venue": "Check current venue - circus moves locations",
+          "tickets": "Book in advance online or at venue",
+          "show_duration": "2 hours with intermission",
+          "family_friendly": "Suitable for all ages"
+        }
+      }
+    ],
+    "tips": [
+      "Bring flip-flops and towel for baths.",
+      "Explore Vajdahunyad Castle nearby.",
+      "Arrive early to the circus for best seats."
+    ],
+    "weather": {
+      "temperature": "Hot, ~88°F (31°C)"
+    },
+    "sunset": "7:50 PM"
+  },
+  {
+    "date": "8/7/2025",
+    "location": "Copenhagen, Denmark",
+    "timezone": "CEST (UTC+2)",
+    "currency": "Danish Krone (DKK)",
+    "exchange_rate": "1 USD = 6.7 DKK",
+    "emergency_number": "112",
+    "items": [
+      {
+        "type": "flight",
+        "description": "Fly BUD → CPH (7:35 PM → 9:30 PM, Ryanair)",
+        "flight_number": "FR2347",
+        "airline": "Ryanair",
+        "departure": {
+          "airport": "Budapest Ferenc Liszt International Airport (BUD)",
+          "terminal": "2A",
+          "time": "19:35",
+          "address": "Budapest, 1185 Hungary"
+        },
+        "arrival": {
+          "airport": "Copenhagen Airport (CPH)",
+          "terminal": "3",
+          "time": "21:30",
+          "address": "Lufthavnsboulevarden 6, 2770 Kastrup, Denmark"
+        },
+        "flight_status_url": "https://www.ryanair.com/us/en/check-in",
+        "check_in_url": "https://www.ryanair.com/us/en/check-in",
+        "baggage_policy_url": "https://www.ryanair.com/us/en/useful-info/help-centre/fees",
+        "duration": "1h 55min"
+      },
+      {
+        "type": "accommodation",
+        "description": "Check out Hilton, check into SLH Copenhagen",
+        "checkout_hotel": {
+          "name": "Hilton Copenhagen Airport",
+          "address": "Ellehammersvej 20, 2770 Kastrup, Denmark",
+          "phone": "+45 32 50 15 01",
+          "checkout_time": "12:00 PM",
+          "express_checkout": "Available via Hilton Honors app"
+        },
+        "checkin_hotel": {
+          "name": "Small Luxury Hotels Copenhagen (Hotel Sanders)",
+          "address": "Tordenskjoldsgade 15, 1055 Copenhagen K, Denmark",
+          "phone": "+45 46 40 00 40",
+          "checkin_time": "3:00 PM",
+          "early_checkin": "Available upon request",
+          "amenities": ["Concierge", "Restaurant", "Bar", "WiFi"]
+        }
+      }
+    ],
+    "transportation": {
+      "airport_to_city": {
+        "metro_m2": {
+          "duration": "13 minutes to Kongens Nytorv",
+          "cost": "36 DKK (~$5.40)",
+          "frequency": "Every 4-6 minutes",
+          "payment": "Contactless card/mobile payment"
+        },
+        "train": {
+          "duration": "13 minutes to Central Station",
+          "cost": "36 DKK (~$5.40)"
+        }
+      }
+    },
+    "tips": [
+      "Use contactless card for train from airport to city.",
+      "Evening stroll around Nyhavn is magical.",
+      "Try smørrebrød (open-face sandwiches) for late dinner."
+    ],
+    "weather": "Mild, 70°F (21°C)",
+    "sunset": "8:55 PM"
+  },
+  {
+    "date": "8/8/2025",
+    "location": "Copenhagen",
+    "timezone": "CEST (UTC+2)",
+    "items": [
+      {
+        "type": "attraction",
+        "name": "Tivoli Gardens",
+        "address": "Vesterbrogade 3, 1630 Copenhagen V, Denmark",
+        "phone": "+45 33 15 10 01",
+        "hours": "11:00 AM - 11:00 PM",
+        "ticket_price": "140 DKK (~$21) adults",
+        "booking_url": "https://www.tivoli.dk",
+        "nearest_station": "København H (Central Station)",
+        "special_notes": "Evening shows and lights - check schedule at entrance"
+      },
+      {
+        "type": "attraction",
+        "name": "Nyhavn",
+        "address": "Nyhavn, 1051 Copenhagen K, Denmark",
+        "description": "Historic waterfront with colorful 17th-century townhouses",
+        "canal_tours": {
+          "operators": "Multiple from Nyhavn pier",
+          "duration": "1 hour",
+          "cost": "110-150 DKK (~$16-22)"
+        },
+        "best_photo_spots": "Canal-side at houses #18-20"
+      },
+      {
+        "type": "food",
+        "name": "Danish pastries",
+        "recommended_locations": [
+          {
+            "name": "Lagkagehuset",
+            "address": "Multiple locations",
+            "specialty": "Traditional Danish pastries"
+          },
+          {
+            "name": "Juno the Bakery",
+            "address": "Istedgade 88, 1650 Copenhagen",
+            "specialty": "Artisanal sourdough pastries"
+          }
+        ]
+      }
+    ],
+    "tips": [
+      "Tivoli is great in the evening too—live shows and lights.",
+      "Hop on a harbor canal boat tour.",
+      "Rosenborg Castle and crown jewels are nearby."
+    ],
+    "nearby_attractions": {
+      "rosenborg_castle": {
+        "address": "Øster Voldgade 4A, 1350 Copenhagen K",
+        "hours": "10:00 AM - 4:00 PM",
+        "ticket_price": "120 DKK (~$18)"
+      }
+    },
+    "weather": "68–72°F (20–22°C)",
+    "sunset": "8:50 PM"
+  },
+  {
+    "date": "8/9/2025",
+    "location": "Copenhagen",
+    "timezone": "CEST (UTC+2)",
+    "items": [
+      {
+        "type": "attraction",
+        "name": "Little Mermaid statue",
+        "address": "Langelinie, 2100 Copenhagen Ø, Denmark",
+        "best_time": "Early morning (7-8 AM for fewer crowds)",
+        "transport": "Bus 1A or 15E to Langelinie Park",
+        "parking": "Limited street parking available",
+        "nearby": "Kastellet fortress walkable distance"
+      },
+      {
+        "type": "shopping",
+        "name": "Strøget shopping street",
+        "address": "Strøget, 1160 Copenhagen K, Denmark",
+        "description": "Pedestrian shopping area - longest in Europe",
+        "length": "1.1 km",
+        "stores": "Mix of international brands and Danish design",
+        "hours": "Most shops 10 AM - 7 PM (Mon-Sat), 12 PM - 6 PM (Sun)"
+      },
+      {
+        "type": "attraction",
+        "name": "Round Tower (Rundetaarn)",
+        "address": "Købmagergade 52A, 1150 Copenhagen K, Denmark",
+        "phone": "+45 33 73 03 73",
+        "hours": "10:00 AM - 6:00 PM",
+        "ticket_price": "40 DKK (~$6) adults",
+        "height": "34.8 meters",
+        "special_feature": "Spiral ramp instead of stairs",
+        "view": "Panoramic view of Copenhagen"
+      }
+    ],
+    "transportation": {
+      "bike_rental": {
+        "donkey_republic": {
+          "app": "Donkey Republic",
+          "cost": "~25 DKK/hour (~$3.75)",
+          "locations": "Throughout city center"
+        },
+        "city_bikes": {
+          "bycyklen": "Electric bikes available citywide"
+        }
+      }
+    },
+    "food": {
+      "street_food": {
+        "hot_dogs": {
+          "locations": "Street vendors citywide",
+          "popular_spots": "Nørreport Station, Strøget",
+          "cost": "35-45 DKK (~$5-7)"
+        }
+      }
+    },
+    "tips": [
+      "Expect crowds at popular spots—go early.",
+      "Rent a bike using Donkey Republic app.",
+      "Try local hot dogs from street vendors."
+    ],
+    "weather": "Sunny, ~70°F (21°C)",
+    "sunset": "8:45 PM"
+  },
+  {
+    "date": "8/10/2025",
+    "location": "Reykjavik, Iceland",
+    "timezone": "GMT (UTC+0)",
+    "currency": "Icelandic Króna (ISK)",
+    "exchange_rate": "1 USD = 135 ISK",
+    "emergency_number": "112",
+    "items": [
+      {
+        "type": "flight",
+        "description": "Fly CPH → KEF (12:35 PM → 1:55 PM, FlyPlay)",
+        "flight_number": "FP201",
+        "airline": "FlyPlay",
+        "departure": {
+          "airport": "Copenhagen Airport (CPH)",
+          "terminal": "2",
+          "time": "12:35",
+          "address": "Lufthavnsboulevarden 6, 2770 Kastrup, Denmark"
+        },
+        "arrival": {
+          "airport": "Keflavík International Airport (KEF)",
+          "terminal": "Main Terminal",
+          "time": "13:55",
+          "address": "235 Keflavík, Iceland"
+        },
+        "flight_status_url": "https://www.flyplay.com/en/manage-booking",
+        "check_in_url": "https://www.flyplay.com/en/online-check-in",
+        "baggage_policy_url": "https://www.flyplay.com/en/baggage",
+        "duration": "3h 20min"
+      },
+      {
+        "type": "car_rental",
+        "description": "Pick up Enterprise rental car (Expedia)",
+        "company": "Enterprise Rent-A-Car",
+        "location": "Keflavík International Airport",
+        "address": "Keflavík International Airport, 235 Keflavík, Iceland",
+        "phone": "+354 515 7000",
+        "confirmation": "Check Expedia confirmation email",
+        "desk_hours": "8:00 AM - 11:00 PM",
+        "requirements": "Valid driver's license, credit card, minimum age 20",
+        "fuel_policy": "Full to full",
+        "insurance": "CDW recommended for Iceland roads"
+      },
+      {
+        "type": "accommodation",
+        "description": "Check in to Iceland hotel",
+        "estimated_hotels": [
+          {
+            "name": "Hotel Reykjavik Centrum",
+            "address": "Aðalstræti 16, 101 Reykjavík, Iceland",
+            "phone": "+354 514 6000"
+          },
+          {
+            "name": "Canopy by Hilton Reykjavik City Centre",
+            "address": "Smáratorgi 1, 201 Kópavogur, Iceland",
+            "phone": "+354 520 8000"
+          }
+        ],
+        "check_in_time": "3:00 PM"
+      }
+    ],
+    "transportation": {
+      "airport_to_reykjavik": {
+        "distance": "50 km (31 miles)",
+        "drive_time": "45 minutes",
+        "route": "Route 41 to Route 1 to Reykjavik"
+      }
+    },
+    "useful_apps": {
+      "weather": {
+        "name": "Veður",
+        "description": "Icelandic weather app",
+        "download": "App Store/Google Play"
+      },
+      "road_conditions": {
+        "name": "Vegagerðin",
+        "website": "road.is"
+      }
+    },
+    "advance_bookings": {
+      "blue_lagoon": {
+        "address": "240 Grindavík, Iceland",
+        "booking_url": "https://www.bluelagoon.com",
+        "advance_notice": "Book 1-2 weeks ahead",
+        "price": "7,990-12,990 ISK (~$59-96)"
+      },
+      "sky_lagoon": {
+        "address": "Vesturvör 44-48, 200 Kópavogur, Iceland",
+        "booking_url": "https://www.skylagoon.is",
+        "price": "5,990-8,990 ISK (~$44-66)"
+      }
+    },
+    "tips": [
+      "Check weather using Veður app before driving.",
+      "Book Blue Lagoon or Sky Lagoon in advance.",
+      "Pack layers—it can be cold even in August."
+    ],
+    "packing_essentials": ["Waterproof jacket", "Warm layers", "Waterproof shoes", "Swimsuit"],
+    "weather": "50–60°F (10–16°C), wind possible",
+    "sunset": "10:00 PM"
+  },
+  {
+    "date": "8/11/2025",
+    "location": "Iceland",
+    "timezone": "GMT (UTC+0)",
+    "items": [
+      {
+        "type": "scenic_drive",
+        "name": "Golden Circle",
+        "total_distance": "300 km (186 miles)",
+        "drive_time": "3-4 hours (without stops)",
+        "recommended_duration": "Full day (8-10 hours with stops)",
+        "route": [
+          {
+            "stop": "Þingvellir National Park",
+            "address": "801 Selfoss, Iceland",
+            "coordinates": "64.2558° N, 21.1314° W",
+            "distance_from_reykjavik": "47 km",
+            "highlights": "Continental drift, historical parliament site",
+            "entrance_fee": "750 ISK parking (~$5.50)",
+            "visit_duration": "1-2 hours"
+          },
+          {
+            "stop": "Geysir Geothermal Area",
+            "address": "Haukaðalur, Iceland",
+            "coordinates": "64.3107° N, 20.3014° W",
+            "distance_from_thingvellir": "55 km",
+            "highlights": "Strokkur geyser (erupts every 5-10 minutes)",
+            "entrance_fee": "Free",
+            "facilities": "Restaurant, gift shop, restrooms",
+            "visit_duration": "45 minutes - 1 hour"
+          },
+          {
+            "stop": "Gullfoss Waterfall",
+            "address": "806 Selfoss, Iceland",
+            "coordinates": "64.3271° N, 20.1211° W",
+            "distance_from_geysir": "10 km",
+            "highlights": "Two-tier waterfall, rainbow views",
+            "entrance_fee": "Free",
+            "parking": "Free parking available",
+            "visit_duration": "45 minutes - 1 hour"
+          }
+        ]
+      },
+      {
+        "type": "activity",
+        "name": "Pet Icelandic horses",
+        "locations": [
+          {
+            "name": "Eldhestar",
+            "address": "816 Ölfus, Iceland",
+            "phone": "+354 480 4800",
+            "booking_url": "https://www.eldhestar.is"
+          },
+          {
+            "name": "Íslensk Reiðhjól",
+            "address": "Hafnarstræti 13, 600 Akureyri, Iceland",
+            "phone": "+354 555 7000"
+          }
+        ],
+        "horse_facts": "Icelandic horses have unique gaits: tölt and flying pace"
+      },
+      {
+        "type": "spa",
+        "name": "Secret Lagoon or Fontana Spa",
+        "secret_lagoon": {
+          "name": "Secret Lagoon (Gamla Laugin)",
+          "address": "Hvammstangi, Iceland",
+          "phone": "+354 555 3551",
+          "hours": "10:00 AM - 8:00 PM",
+          "price": "3,500 ISK (~$26) adults",
+          "temperature": "38-40°C (100-104°F)",
+          "booking_url": "https://secretlagoon.is"
+        },
+        "fontana_spa": {
+          "name": "Fontana Geothermal Baths",
+          "address": "Laugarvatn, Iceland",
+          "phone": "+354 486 1400",
+          "hours": "11:00 AM - 9:00 PM",
+          "price": "4,800 ISK (~$36) adults",
+          "booking_url": "https://fontana.is"
+        }
+      }
+    ],
+    "driving_essentials": {
+      "fuel_stations": {
+        "major_chains": ["N1", "Orkan", "Atlantsolía"],
+        "payment": "Credit card with PIN required",
+        "self_service": "Most stations are self-service",
+        "tip": "Fill up before leaving Reykjavik area"
+      },
+      "road_conditions": {
+        "website": "road.is",
+        "app": "Vegagerðin app",
+        "emergency": "Call 112"
+      }
+    },
+    "special_experiences": {
+      "friðheimar_tomato_farm": {
+        "name": "Friðheimar Tomato Farm",
+        "address": "Reykholt, 801 Selfoss, Iceland",
+        "phone": "+354 486 8894",
+        "specialty": "Tomato soup and fresh produce",
+        "hours": "12:00 PM - 4:00 PM",
+        "reservation": "Recommended"
+      },
+      "northern_lights": {
+        "forecast_apps": ["Aurora Forecast", "My Aurora Forecast"],
+        "august_visibility": "Limited (white nights)",
+        "best_months": "September - March"
+      }
+    },
+    "tips": [
+      "Fuel up at self-serve gas stations — credit card with PIN required.",
+      "Look for northern lights forecast (chances are slim but possible).",
+      "Stop at tomato farm (Friðheimar) for soup and fresh produce."
+    ],
+    "weather": "Cool, ~56°F (13°C)",
+    "sunset": "9:55 PM"
+  },
+  {
+    "date": "8/12/2025",
+    "location": "Iceland → Washington, DC",
+    "timezone_departure": "GMT (UTC+0)",
+    "timezone_arrival": "EDT (UTC-4)",
+    "items": [
+      {
+        "type": "car_return",
+        "description": "Return car at KEF",
+        "location": "Enterprise Car Rental - Keflavík Airport",
+        "address": "Keflavík International Airport, 235 Keflavík, Iceland",
+        "return_hours": "24/7 (key drop available)",
+        "fuel_requirement": "Return full tank",
+        "inspection": "Allow 15-20 minutes",
+        "shuttle": "No shuttle needed - walkable to terminal"
+      },
+      {
+        "type": "flight",
+        "description": "Fly KEF → IAD (7:45 PM → 8:10 PM, Icelandair)",
+        "flight_number": "FI614",
+        "airline": "Icelandair",
+        "departure": {
+          "airport": "Keflavík International Airport (KEF)",
+          "terminal": "Main Terminal",
+          "time": "19:45",
+          "address": "235 Keflavík, Iceland"
+        },
+        "arrival": {
+          "airport": "Washington Dulles International Airport (IAD)",
+          "terminal": "Main Terminal",
+          "time": "20:10 (EDT)",
+          "address": "1 Saarinen Cir, Dulles, VA 20166, USA"
+        },
+        "flight_status_url": "https://www.icelandair.com/support/manage-booking/",
+        "check_in_url": "https://checkin.icelandair.com",
+        "baggage_policy_url": "https://www.icelandair.com/support/baggage/",
+        "duration": "5h 25min",
+        "aircraft": "Boeing 737 MAX or 757-200"
+      },
+      {
+        "type": "activities",
+        "description": "Final day: souvenirs, scenic drive to airport",
+        "souvenir_shopping": {
+          "reykjavik_locations": [
+            {
+              "name": "Kolaportið Flea Market",
+              "address": "Tryggvagata 19, 101 Reykjavík",
+              "hours": "Saturday-Sunday 11 AM - 5 PM",
+              "specialties": "Local crafts, vintage items"
+            },
+            {
+              "name": "Handknitting Association of Iceland",
+              "address": "Skólavörðustígur 19, 101 Reykjavík",
+              "specialties": "Traditional Icelandic wool sweaters"
+            }
+          ],
+          "airport_shopping": {
+            "duty_free_hours": "Open during flight departures",
+            "specialties": "Icelandic chocolate, Blue Lagoon products, alcohol"
+          }
+        },
+        "scenic_drive": {
+          "route": "Reykjanes Peninsula to KEF Airport",
+          "highlights": "Lava fields, geothermal areas, coastal views",
+          "distance": "50 km",
+          "duration": "1 hour (with photo stops)"
+        }
+      }
+    ],
+    "airport_procedures": {
+      "check_in_time": "3 hours before international departure",
+      "security": "Allow 30-45 minutes",
+      "customs": "EU duty-free limits apply",
+      "car_return_to_terminal": "10-minute walk or free shuttle"
+    },
+    "duty_free_recommendations": {
+      "icelandic_chocolate": "Omnom, Nói Síríus brands",
+      "salts": "Saltverk sea salt",
+      "skincare": "Blue Lagoon products",
+      "alcohol": "Brennivín (traditional schnapps), local craft beer"
+    },
+    "tips": [
+      "Allow 2–2.5 hours at KEF for international departures.",
+      "Great duty-free deals on Icelandic chocolate and salts.",
+      "Enjoy final views of lava fields along the coastal drive."
+    ],
+    "weather": "Windy, ~55°F (13°C)",
+    "sunset": "9:45 PM"
+  }
+]
