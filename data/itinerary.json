@@ -255,76 +255,102 @@
     }
   ]
 },
-
-
-
-  {
-    "date": "7/30/2025",
-    "location": "Wengen via Lauterbrunnen",
-    "items": [
-      {
-        "activity": "Drive Zurich → Lauterbrunnen",
-        "route": {
-          "distance": "~150 km",
-          "duration": "2.5-3 hours",
-          "route": "A3 → A4 → A8 → A6 → exit Interlaken Ost",
-          "tolls": "Swiss highway vignette required",
-          "scenic_stops": ["Lucerne (optional)", "Brienz Lake viewpoint"],
-          "fuel_stops": "Multiple stations along A6"
-        }
-      },
-      {
-        "activity": "Park in Lauterbrunnen and take train to Wengen",
-        "transport": {
-          "parking": {
-            "name": "Lauterbrunnen BLT Parking",
-            "address": "Bahnhofstrasse, 3822 Lauterbrunnen",
-            "cost": "CHF 15/day",
-            "capacity": "Large lot, usually available"
-          },
-          "train": {
-            "operator": "Wengernalp Railway (WAB)",
-            "frequency": "Every 30 minutes",
-            "duration": "14 minutes",
-            "cost": "CHF 9.60 one-way",
-            "tickets": "Buy at station or SBB app",
-            "scenic_tip": "Sit on left side for valley views"
-          }
-        }
-      },
-      {
-        "activity": "Check into Hotel Edelweiss",
-        "hotel": {
-          "name": "Hotel Edelweiss Wengen",
-          "address": "3823 Wengen",
-          "phone": "+41 33 856 56 56",
-          "website": "https://edelweiss-wengen.ch",
-          "check_in": "3:00 PM",
-          "check_out": "11:00 AM",
-          "amenities": ["Mountain views", "Restaurant", "Wellness area", "WiFi"],
-          "note": "Car-free village - luggage transport available from station"
-        }
+{
+  "date": "7/30/2025",
+  "location": "Wengen via Kandersteg / Sörenberg",
+  "items": [
+    {
+      "activity": "Drive from Zurich towards the Alps",
+      "route": {
+        "distance": "~180-200 km",
+        "duration": "3 - 4 hours (total driving time)",
+        "route": "A4 → A14 → A8 → A6. Detours required for activities.",
+        "tolls": "Swiss highway vignette required"
       }
-    ],
-    "tips": [
-      "Staubbach Falls is right outside Lauterbrunnen station.",
-      "Sit on the left side of the train to Wengen for best views.",
-      "Wengen is car-free — enjoy the alpine peace."
-    ],
-    "weather": {
-      "temperature": "Cooler, 68°F (20°C)",
-      "mountain_weather": "Can change quickly, pack layers"
     },
-    "sunset": "8:55 PM",
-    "attractions_nearby": [
-      {
-        "name": "Staubbach Falls",
-        "location": "Lauterbrunnen village center",
-        "height": "297 meters",
-        "access": "5-minute walk from train station"
+    {
+      "activity": "Option 1: Ride the Rodelbahn Toboggan Run",
+      "details": {
+        "name": "Rodelbahn Oeschinensee",
+        "location": "Kandersteg, Switzerland",
+        "website": "http://www.rodelbahn.ch/",
+        "note": "Requires a gondola ride. Plan for 2-3 hours for the total experience."
       }
-    ]
+    },
+    {
+      "activity": "Option 2: Hike at Sörenberg",
+      "details": {
+        "name": "Sörenberg Hiking Area",
+        "location": "Sörenberg, Switzerland",
+        "website": "https://www.soerenberg.ch/de/sehen-erleben/sommer/wandern",
+        "note": "A separate destination with numerous trails. Check trail maps beforehand."
+      }
+    },
+    {
+      "activity": "Dinner in Interlaken",
+      "restaurant": {
+        "name": "Restaurant Laterne",
+        "address": "Höheweg 75, 3800 Interlaken, Switzerland",
+        "cuisine": "Swiss, European",
+        "specialty": "Fondue, Rösti, Swiss classics",
+        "website": "https://www.restaurant-laterne.ch/",
+        "note": "A cozy spot for classic Swiss food before heading up to Wengen."
+      }
+    },
+    {
+      "activity": "Park in Lauterbrunnen and take train to Wengen",
+      "transport": {
+        "parking": {
+          "name": "Lauterbrunnen BLT Parking",
+          "address": "Bahnhofstrasse, 3822 Lauterbrunnen",
+          "cost": "CHF 15/day",
+          "capacity": "Large lot, usually available"
+        },
+        "train": {
+          "operator": "Wengernalp Railway (WAB)",
+          "frequency": "Every 30 minutes",
+          "duration": "14 minutes",
+          "cost": "CHF 9.60 one-way",
+          "tickets": "Buy at station or SBB app",
+          "scenic_tip": "Sit on left side for valley views"
+        }
+      }
+    },
+    {
+      "activity": "Check into Hotel Edelweiss",
+      "hotel": {
+        "name": "Hotel Edelweiss Wengen",
+        "address": "3823 Wengen",
+        "phone": "+41 33 856 56 56",
+        "website": "https://edelweiss-wengen.ch",
+        "check_in": "3:00 PM",
+        "check_out": "11:00 AM",
+        "amenities": ["Mountain views", "Restaurant", "Wellness area", "WiFi"],
+        "note": "Car-free village - luggage transport available from station"
+      }
+    }
+  ],
+  "tips": [
+    "LEAVE EARLY! Plan to depart Zurich by 8:00 AM to have time for an activity.",
+    "Doing both the toboggan and a Sörenberg hike will be very difficult in one day. It's best to choose one.",
+    "Have dinner in Interlaken before heading up to Wengen, as mountain village restaurants can close earlier.",
+    "Sit on the left side of the train to Wengen for best views."
+  ],
+  "weather": {
+    "temperature": "Cooler, 68°F (20°C)",
+    "mountain_weather": "Can change quickly, pack layers"
   },
+  "sunset": "8:55 PM",
+  "attractions_nearby": [
+    {
+      "name": "Staubbach Falls",
+      "location": "Lauterbrunnen village center",
+      "height": "297 meters",
+      "access": "5-minute walk from train station"
+    }
+  ]
+},
+
   {
     "date": "7/31/2025",
     "location": "Wengen",
@@ -388,127 +414,138 @@
       "products": ["Picnic supplies", "Swiss specialties", "Hiking snacks"]
     }
   },
-  {
-    "date": "8/1/2025",
-    "location": "Wengen (Hotel Transfer)",
-    "items": [
-      {
-        "activity": "Check out of Edelweiss, check into Belvedere",
-        "hotels": {
-          "checkout": {
-            "hotel": "Hotel Edelweiss Wengen",
-            "time": "11:00 AM",
-            "luggage_storage": "Available if needed"
-          },
-          "checkin": {
-            "hotel": "Hotel Belvedere Wengen",
-            "address": "3823 Wengen",
-            "phone": "+41 33 855 14 14",
-            "website": "https://belvedere-wengen.ch",
-            "check_in": "3:00 PM",
-            "amenities": ["Spa", "Alpine views", "Fine dining", "Wellness center"],
-            "transport": "Short walk within village"
-          }
-        }
-      },
-      {
-        "activity": "Stroll around Wengen village",
-        "highlights": [
-          "Traditional Swiss chalets",
-          "Village church with mountain backdrop",
-          "Local craft shops",
-          "Wengen tourist information center"
-        ]
-      },
-      {
-        "activity": "Relax or spa if hotel has wellness",
-        "spa_options": {
-          "hotel_spa": "Hotel Belvedere Wellness Center",
-          "services": ["Alpine spa treatments", "Sauna", "Relaxation areas"],
-          "booking": "Reserve in advance at front desk"
-        }
+
+{
+  "date": "8/1/2025",
+  "location": "Grindelwald & Wengen",
+  "items": [
+    {
+      "activity": "Hotel Transfer & Depart for Grindelwald",
+      "details": {
+        "step1": "Check out of Hotel Edelweiss.",
+        "step2": "Walk luggage to Hotel Belvedere and store at front desk.",
+        "step3": "Take train from Wengen down to Lauterbrunnen to get the car."
       }
-    ],
-    "tips": [
-      "Try local Alpine cheese or rösti.",
-      "Check for live music at restaurants.",
-      "Sunsets can be stunning from your hotel balcony."
-    ],
-    "weather": {
-      "temperature": "Mild, 67°F (19°C)"
     },
-    "sunset": "8:50 PM",
-    "dining": [
-      {
-        "name": "Restaurant Taverne",
-        "specialty": "Rösti, Swiss Alpine cuisine",
-        "atmosphere": "Traditional, often has live music"
-      },
-      {
-        "name": "Hotel Silberhorn Restaurant",
-        "specialty": "Fine dining with mountain views",
-        "reservation": "Recommended"
+    {
+      "activity": "Drive Lauterbrunnen → Grindelwald",
+      "details": {
+        "duration": "20-25 minutes",
+        "parking": "Use public car parks, e.g., Parkhaus Eiger+ or Grindelwald Firstbahn."
       }
-    ]
-  },
-  {
-    "date": "8/2/2025",
-    "location": "Wengen",
-    "items": [
-      {
-        "activity": "Optional day trip to Jungfraujoch",
-        "details": {
-          "name": "Top of Europe",
-          "elevation": "3,454 meters",
-          "train": {
-            "route": "Wengen → Kleine Scheidegg → Jungfraujoch",
-            "duration": "1.5 hours each way",
-            "cost": "CHF 220-240 return (varies by season)",
-            "booking": "https://www.jungfrau.ch",
-            "advance_booking": "Recommended, especially in summer"
-          },
-          "attractions": ["Ice Palace", "Sphinx Observatory", "Glacier views", "Alpine Sensation"],
-          "tips": [
-            "Bring warm clothes (temperature around 0°C)",
-            "Sunglasses essential due to snow glare",
-            "Allow full day (6-8 hours total)"
-          ]
-        }
-      },
-      {
-        "activity": "Visit Trümmelbach Falls",
-        "details": {
-          "address": "Trümmelbachfälle, 3824 Lauterbrunnen",
-          "phone": "+41 33 855 32 32",
-          "hours": "9:00 AM - 5:00 PM (April-October)",
-          "admission": "CHF 12 adults",
-          "access": "Bus from Lauterbrunnen (10 minutes) or walk (45 minutes)",
-          "description": "Glacier waterfalls inside the mountain",
-          "special": "Underground elevator and viewing galleries"
-        }
-      },
-      {
-        "activity": "Walk Lauterbrunnen Valley",
-        "route": {
-          "distance": "Valley floor walk: 3-5 km",
-          "duration": "1-2 hours",
-          "highlights": ["72 waterfalls", "Valley views", "Traditional farms"],
-          "access": "Train down to Lauterbrunnen, walk, train back up"
-        }
-      }
-    ],
-    "tips": [
-      "Jungfraujoch is expensive — book in advance.",
-      "Trümmelbach is inside a mountain — wear layers.",
-      "Watch for cows with bells in the valley!"
-    ],
-    "weather": {
-      "temperature": "Cool in mountains, ~62°F (17°C)",
-      "jungfraujoch": "Around 32°F (0°C) - very cold!"
     },
-    "sunset": "8:45 PM"
+    {
+      "activity": "Hike/Explore Grindelwald-First",
+      "details": {
+        "name": "Grindelwald-First",
+        "attraction": "First Cliff Walk by Tissot",
+        "website": "https://www.jungfrau.ch/en-gb/grindelwaldfirst/",
+        "note": "A scenic, thrilling walk along the cliff face. Requires a 25-minute gondola ride from Grindelwald village to access.",
+        "other_activities": ["First Flyer (zip line)", "Mountain Carting"]
+      }
+    },
+    {
+      "activity": "Ride the Pfingstegg Toboggan",
+      "details": {
+        "name": "Sommerrodelbahn Pfingstegg",
+        "website": "https://www.pfingstegg.ch/en/summer/toboggan-run/",
+        "location": "Pfingstegg, Grindelwald",
+        "note": "A fun, classic toboggan run. Requires a separate, short cable car ride from Grindelwald village."
+      }
+    },
+    {
+      "activity": "Return to Wengen in the evening",
+      "details": {
+        "step1": "Drive from Grindelwald back to Lauterbrunnen.",
+        "step2": "Park the car in the long-term lot.",
+        "step3": "Take the train back up to Wengen and check into Hotel Belvedere."
+      }
+    }
+  ],
+  "tips": [
+    "Start your day early to fit everything in without rushing.",
+    "The gondolas for First and Pfingstegg are at different locations in Grindelwald; check the map.",
+    "Sunsets from the Hotel Belvedere balcony can be stunning."
+  ],
+  "weather": {
+    "temperature": "Mild, 67°F (19°C)"
   },
-  {
+  "sunset": "8:50 PM",
+  "dining": [
+    {
+      "name": "Restaurant Taverne (Wengen)",
+      "specialty": "Rösti, Swiss Alpine cuisine",
+      "atmosphere": "Traditional, often has live music"
+    },
+    {
+      "name": "Hotel Silberhorn Restaurant (Wengen)",
+      "specialty": "Fine dining with mountain views",
+      "reservation": "Recommended"
+    }
+  ]
+},
+{
+  "date": "8/2/2025",
+  "location": "Mürren & Gimmelwald",
+  "items": [
+    {
+      "activity": "Travel from Wengen to Mürren",
+      "details": {
+        "route": "Train from Wengen to Lauterbrunnen, Bus to Stechelberg, then Gondola up to Gimmelwald/Mürren.",
+        "duration": "Approx. 45-60 minutes each way.",
+        "note": "A scenic, multi-part journey across the valley floor and up the cliffside."
+      }
+    },
+    {
+      "activity": "Explore Mürren",
+      "details": [
+        {
+          "name": "Allmendhubel Flower Playground",
+          "access": "Take the short funicular ride from the center of Mürren.",
+          "note": "An amazing playground with trampolines, swings, and incredible mountain views.",
+          "website": "https://schilthorn.ch/en/Info/Allmendhubel_-_Flower_Park_and_more"
+        },
+        {
+          "name": "Ludo Trail",
+          "access": "A playful discovery trail through the village.",
+          "note": "Pick up game materials at the Mürren tourist office.",
+          "website": "https://muerren.swiss/en/map/detail/ludotrail-discover-the-village-in-a-playful-way-933c946e-be55-4198-9aa1-ae94442c118a.html"
+        }
+      ]
+    },
+    {
+      "activity": "Hike from Mürren down to Gimmelwald",
+      "details": {
+        "difficulty": "Easy",
+        "duration": "30-45 minutes",
+        "note": "A mostly downhill, paved path with stunning valley views. Perfect for families."
+      }
+    },
+    {
+      "activity": "Visit Gimmelwald",
+      "details": [
+        {
+          "name": "The Honesty Shop",
+          "address": "Kilchstatt 746a, 3826 Gimmelwald, Switzerland",
+          "note": "A famous self-service shop with local goods, snacks, and souvenirs. Bring cash!"
+        }
+      ]
+    }
+  ],
+  "tips": [
+    "The funicular ride up to the Allmendhubel playground is an adventure in itself for kids.",
+    "The walk from Mürren to Gimmelwald is easy and offers non-stop photo opportunities.",
+    "Bring cash (Swiss Francs) for the Honesty Shop."
+  ],
+  "weather": {
+    "temperature": "Cool in mountains, ~62°F (17°C)",
+    "conditions": "Check local webcams for visibility before you go."
+  },
+  "sunset": "8:45 PM"
+},
+
+
+{
     "date": "8/3/2025",
     "location": "Basel",
     "items": [

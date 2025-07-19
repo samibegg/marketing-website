@@ -1,81 +1,79 @@
-import { useState } from 'react';
-import { FiMapPin, FiSun, FiCloud, FiLink, FiAlertTriangle, FiDollarSign } from 'react-icons/fi';
-import { FaMountain, FaWater, FaWalking, FaInfoCircle, FaTrain } from 'react-icons/fa';
+import { FiMapPin, FiSun, FiCloud, FiLink } from 'react-icons/fi';
+import { FaRoute, FaChild, FaHiking, FaStore, FaInfoCircle } from 'react-icons/fa';
 
 // Helper function to create a Google Maps link
 const createMapLink = (address) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
 
 export default function Day7({ data }) {
-  const jungfrau = data.items.find(i => i.activity.includes('Jungfraujoch')).details;
-  const trummelbach = data.items.find(i => i.activity.includes('Trümmelbach')).details;
-  const lauterbrunnen = data.items.find(i => i.activity.includes('Walk Lauterbrunnen')).route;
+  const travel = data.items.find(i => i.activity.includes('Travel from Wengen')).details;
+  const murrenActivities = data.items.find(i => i.activity.includes('Explore Mürren')).details;
+  const hike = data.items.find(i => i.activity.includes('Hike from Mürren')).details;
+  const gimmelwald = data.items.find(i => i.activity.includes('Visit Gimmelwald')).details[0];
 
   return (
     <div className="bg-white rounded-xl shadow-lg mb-6 overflow-hidden">
       {/* Header */}
-      <div className="bg-red-800 text-white p-4">
+      <div className="bg-purple-800 text-white p-4">
         <div className="flex justify-between items-center">
-          <h2 className="text-2xl font-bold">Day 7: High Alpine Trip</h2>
+          <h2 className="text-2xl font-bold">Day 7: Mürren Adventure</h2>
           <div className="text-lg font-semibold">{new Date(data.date).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}</div>
         </div>
-        <p className="text-red-100">{data.location} Day Trip Options</p>
+        <p className="text-purple-100">{data.location}</p>
       </div>
 
       <div className="p-4 space-y-5">
-        {/* Option 1: Jungfraujoch */}
-        <div className="bg-blue-50 p-4 rounded-lg border-l-4 border-blue-500">
-          <h3 className="font-bold text-lg text-blue-800 flex items-center mb-2">
-            <FaMountain className="mr-3" /> Optional: Jungfraujoch
-          </h3>
-          <p className="text-sm text-blue-700 font-semibold">{jungfrau.name}</p>
-          <div className="mt-2 text-sm space-y-1">
-              {/* CORRECTED LINE BELOW */}
-              <p><FaTrain className="inline mr-2"/>~{jungfrau.train.duration} train each way</p>
-              <p><FiDollarSign className="inline mr-2"/>{jungfrau.train.cost} return</p>
+        {/* Travel */}
+        <div className="flex">
+          <FaRoute className="text-gray-500 mr-4 mt-1" size={24} />
+          <div>
+            <h3 className="font-bold text-lg">Getting There</h3>
+            <p className="text-sm text-gray-600">{travel.route}</p>
+            <p className="text-xs text-gray-500">{travel.note}</p>
           </div>
-          <div className="bg-red-100 text-red-800 p-2 mt-3 rounded-lg text-xs space-y-1">
-             <p className="font-bold flex items-center"><FiAlertTriangle className="mr-2"/>Must Know:</p>
-             <ul className="list-disc list-inside ml-1">
-                {jungfrau.tips.map((tip, i) => <li key={i}>{tip}</li>)}
-             </ul>
-          </div>
-           <div className="text-center mt-3">
-             <a href={jungfrau.train.booking} target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white font-bold py-2 px-4 rounded-lg hover:bg-blue-600">
-              Book Jungfraujoch Tickets
-            </a>
-           </div>
         </div>
 
-        {/* Option 2: Trümmelbach Falls */}
-        <div className="bg-teal-50 p-4 rounded-lg border-l-4 border-teal-500">
-          <h3 className="font-bold text-lg text-teal-800 flex items-center mb-2">
-            <FaWater className="mr-3" /> Visit Trümmelbach Falls
-          </h3>
-          <p className="text-sm">{trummelbach.description}</p>
-          <div className="flex items-center text-sm text-gray-600 mt-2">
-            <p>{trummelbach.address}</p>
-            <a href={createMapLink(trummelbach.address)} target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-500 hover:text-blue-700">
-              <FiMapPin />
-            </a>
-          </div>
-           <p className="text-xs text-gray-500 mt-1">Access via {trummelbach.access}</p>
+        {/* Mürren Activities */}
+        <div className="bg-sky-50 p-4 rounded-lg border-l-4 border-sky-500">
+            <h3 className="font-bold text-lg text-sky-800 mb-2">In Mürren...</h3>
+            <div className="space-y-3">
+                {murrenActivities.map((activity, i) => (
+                    <div key={i}>
+                        <h4 className="font-semibold flex items-center"><FaChild className="mr-2"/>{activity.name}</h4>
+                        <p className="text-sm text-gray-700">{activity.access}</p>
+                        <a href={activity.website} target="_blank" rel="noopener noreferrer" className="text-xs text-blue-600 hover:underline">Learn More</a>
+                    </div>
+                ))}
+            </div>
         </div>
 
-        {/* Option 3: Lauterbrunnen Valley */}
-         <div className="bg-green-50 p-4 rounded-lg border-l-4 border-green-500">
-          <h3 className="font-bold text-lg text-green-800 flex items-center mb-2">
-            <FaWalking className="mr-3" /> Walk Lauterbrunnen Valley
-          </h3>
-          <p className="text-sm">A relaxing {lauterbrunnen.duration} walk on the valley floor.</p>
-          <p className="text-xs text-gray-600 mt-1">Highlights: {lauterbrunnen.highlights.join(', ')}</p>
+        {/* Hike */}
+        <div className="flex">
+            <FaHiking className="text-green-600 mr-4 mt-1" size={24} />
+            <div>
+                <h3 className="font-bold text-lg">Hike down to Gimmelwald</h3>
+                <p className="text-sm text-gray-600">{hike.difficulty} ({hike.duration})</p>
+                <p className="text-xs text-green-700 font-semibold">{hike.note}</p>
+            </div>
+        </div>
+
+        {/* Gimmelwald */}
+        <div className="bg-orange-50 p-4 rounded-lg border-l-4 border-orange-400">
+            <h3 className="font-bold text-lg text-orange-800 flex items-center mb-2"><FaStore className="mr-3"/> {gimmelwald.name}</h3>
+            <div className="flex items-center text-sm mb-1">
+                <p>{gimmelwald.address}</p>
+                <a href={createMapLink(gimmelwald.address)} target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-500 hover:text-blue-700">
+                    <FiMapPin />
+                </a>
+            </div>
+            <p className="text-xs text-orange-700 font-semibold">{gimmelwald.note}</p>
         </div>
       </div>
-
+      
       {/* Family Travel Tip */}
-      <div className="p-4 bg-yellow-100">
+      <div className="p-4 bg-yellow-100 border-t">
           <h4 className="font-bold text-yellow-800 flex items-center"><FaInfoCircle className="mr-2"/>Family Travel Tip</h4>
           <p className="text-yellow-700 text-sm mt-1">
-            Before committing to the expensive Jungfraujoch trip, check the mountaintop webcams online that morning! If it's cloudy, you won't see a thing. Trümmelbach Falls is a fantastic "plan B" as it's just as impressive on a rainy day.
+            Let the kids burn off energy at the Flower Playground before you start the easy, paved walk down to Gimmelwald. The promise of picking a treat from the Honesty Shop is the perfect motivation to complete the walk!
           </p>
       </div>
 
@@ -86,7 +84,6 @@ export default function Day7({ data }) {
           <div>
             <p className="font-semibold">Weather</p>
             <p>{data.weather.temperature}</p>
-            <p className="text-xs text-blue-600 font-bold">{data.weather.jungfraujoch}</p>
           </div>
         </div>
         <div className="flex items-center">

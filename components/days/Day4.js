@@ -1,15 +1,17 @@
 import { useState } from 'react';
-import { FiMapPin, FiSun, FiCloud, FiInfo } from 'react-icons/fi';
-import { FaCar, FaParking, FaTrain, FaHotel, FaInfoCircle, FaCamera } from 'react-icons/fa';
+import { FiMapPin, FiSun, FiCloud, FiLink } from 'react-icons/fi';
+import { FaCar, FaParking, FaTrain, FaHotel, FaRegSnowflake, FaHiking, FaUtensils } from 'react-icons/fa';
 
 // Helper function to create a Google Maps link
 const createMapLink = (address) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
 
 export default function Day4({ data }) {
-  const driveInfo = data.items.find(i => i.activity.includes('Drive Zurich')).route;
+  const driveInfo = data.items.find(i => i.activity.includes('Drive from Zurich')).route;
+  const tobogganInfo = data.items.find(i => i.activity.includes('Rodelbahn')).details;
+  const hikeInfo = data.items.find(i => i.activity.includes('Hike at Sörenberg')).details;
+  const dinnerInfo = data.items.find(i => i.activity.includes('Dinner in Interlaken')).restaurant;
   const transportInfo = data.items.find(i => i.activity.includes('Park in Lauterbrunnen')).transport;
   const hotelInfo = data.items.find(i => i.activity.includes('Check into Hotel Edelweiss')).hotel;
-  const nearbyAttraction = data.attractions_nearby[0];
 
   return (
     <div className="bg-white rounded-xl shadow-lg mb-6 overflow-hidden">
@@ -22,84 +24,81 @@ export default function Day4({ data }) {
         <p className="text-green-100">{data.location}</p>
       </div>
 
-      {/* Timeline of Travel */}
       <div className="p-4 space-y-5">
+        {/* Highlight Tip */}
+        <div className="bg-red-100 border-l-4 border-red-500 text-red-700 p-3">
+            <p className="font-bold">{data.tips[0]}</p>
+        </div>
+
         {/* Step 1: Drive */}
         <div className="flex">
           <FaCar className="text-green-600 mr-4 mt-1" size={24} />
           <div>
-            <h3 className="font-bold text-lg">Drive Zurich → Lauterbrunnen</h3>
+            <h3 className="font-bold text-lg">Drive from Zurich towards the Alps</h3>
             <p className="text-sm text-gray-600">{driveInfo.duration} ({driveInfo.distance})</p>
-            <p className="text-xs mt-1 text-gray-500">Scenic stops: {driveInfo.scenic_stops.join(', ')}</p>
           </div>
         </div>
+        
+        {/* Activity Choices */}
+        <div className="p-4 rounded-lg border-2 border-dashed border-gray-300">
+            <h3 className="font-bold text-lg text-center text-gray-800 mb-1">Mid-Journey Activity Choice</h3>
+            <p className="text-xs text-center text-gray-500 mb-3">{data.tips[1]}</p>
+            <div className="space-y-3">
+                <div className="bg-sky-50 p-3 rounded-lg">
+                    <h4 className="font-semibold text-sky-800 flex items-center mb-1"><FaRegSnowflake className="mr-2" /> Option 1: {tobogganInfo.name}</h4>
+                    <p className="text-sm text-gray-700">{tobogganInfo.note}</p>
+                    <a href={tobogganInfo.website} target="_blank" rel="noopener noreferrer" className="text-xs text-blue-600 hover:underline mt-1 inline-block">Website</a>
+                </div>
+                <div className="bg-emerald-50 p-3 rounded-lg">
+                    <h4 className="font-semibold text-emerald-800 flex items-center mb-1"><FaHiking className="mr-2" /> Option 2: {hikeInfo.name}</h4>
+                    <p className="text-sm text-gray-700">{hikeInfo.note}</p>
+                    <a href={hikeInfo.website} target="_blank" rel="noopener noreferrer" className="text-xs text-blue-600 hover:underline mt-1 inline-block">Website</a>
+                </div>
+            </div>
+        </div>
 
-        {/* Step 2: Park & Train */}
+        {/* Dinner */}
+        <div className="flex">
+            <FaUtensils className="text-orange-500 mr-4 mt-1" size={24} />
+            <div>
+                <h3 className="font-bold text-lg">Dinner at {dinnerInfo.name}</h3>
+                <div className="flex items-center text-sm text-gray-600">
+                  <p>{dinnerInfo.address}</p>
+                  <a href={createMapLink(dinnerInfo.address)} target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-500 hover:text-blue-700">
+                      <FiMapPin />
+                  </a>
+                </div>
+                <p className="text-xs text-gray-500 mt-1">{dinnerInfo.note}</p>
+            </div>
+        </div>
+
+        {/* Final Leg */}
         <div className="flex">
           <FaTrain className="text-green-600 mr-4 mt-1" size={24} />
           <div className="flex-1">
-            <h3 className="font-bold text-lg">Park & Take Train to Wengen</h3>
-            {/* Parking Info */}
+            <h3 className="font-bold text-lg">Final Leg: Lauterbrunnen to Wengen</h3>
             <div className="bg-gray-100 p-3 rounded-lg mt-2">
-              <h4 className="font-semibold text-gray-800 flex items-center"><FaParking className="mr-2"/>Park in Lauterbrunnen</h4>
-              <div className="flex items-center text-sm mt-1">
-                  <p>{transportInfo.parking.name}</p>
-                  <a href={createMapLink(transportInfo.parking.address)} target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-500 hover:text-blue-700">
-                    <FiMapPin />
-                  </a>
-              </div>
-              <p className="text-xs text-gray-600">{transportInfo.parking.cost}</p>
+              <h4 className="font-semibold text-gray-800 flex items-center"><FaParking className="mr-2"/>Parking</h4>
+              <p className="text-sm mt-1">{transportInfo.parking.name}</p>
             </div>
-            {/* Train Info */}
             <div className="bg-blue-50 p-3 rounded-lg mt-2">
-              <h4 className="font-semibold text-blue-800 flex items-center"><FaTrain className="mr-2"/>Train to Wengen</h4>
-              <p className="text-sm mt-1">{transportInfo.train.duration} ride via {transportInfo.train.operator}</p>
-              <p className="text-xs text-gray-600">Runs every {transportInfo.train.frequency}, ~{transportInfo.train.cost}</p>
-              <p className="font-bold text-xs text-blue-700 mt-1">{transportInfo.train.scenic_tip}</p>
+              <h4 className="font-semibold text-blue-800 flex items-center"><FaTrain className="mr-2"/>Train</h4>
+              <p className="text-xs text-blue-700 mt-1">{transportInfo.train.scenic_tip}</p>
             </div>
-          </div>
-        </div>
-
-        {/* Step 3: Hotel Check-in */}
-        <div className="flex">
-          <FaHotel className="text-green-600 mr-4 mt-1" size={24} />
-          <div>
-            <h3 className="font-bold text-lg">Check into {hotelInfo.name}</h3>
-             <div className="flex items-center text-sm text-gray-600">
-                <p>{hotelInfo.address}</p>
-                <a href={createMapLink(`${hotelInfo.name}, ${hotelInfo.address}`)} target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-500 hover:text-blue-700">
-                    <FiMapPin />
-                </a>
+            <div className="bg-emerald-50 p-3 rounded-lg mt-2">
+              <h4 className="font-semibold text-emerald-800 flex items-center"><FaHotel className="mr-2"/>Hotel</h4>
+              <p className="text-sm mt-1">Check into {hotelInfo.name} in Wengen</p>
             </div>
-            <p className="text-xs mt-1 text-red-600 bg-red-100 p-1 rounded-md inline-block font-semibold">{hotelInfo.note}</p>
           </div>
         </div>
       </div>
 
-       {/* Nearby Attraction */}
-       <div className="p-4 border-t">
-          <h4 className="font-bold text-gray-800 flex items-center"><FaCamera className="mr-2"/>Don't Miss</h4>
-          <div className="text-sm mt-1 text-gray-600">
-            <p className="font-semibold">{nearbyAttraction.name}</p>
-            <p>{nearbyAttraction.access} from the Lauterbrunnen train station.</p>
-          </div>
-       </div>
-
-      {/* Family Travel Tip */}
-      <div className="p-4 bg-yellow-100">
-          <h4 className="font-bold text-yellow-800 flex items-center"><FaInfoCircle className="mr-2"/>Family Travel Tip</h4>
-          <p className="text-yellow-700 text-sm mt-1">
-            Make the train ride up to Wengen an event! Challenge the kids to be the first to spot a waterfall from the left side of the train. In Lauterbrunnen, pack essentials for the first night in backpacks and leave larger suitcases in the car to retrieve later if needed, simplifying the luggage transport in car-free Wengen.
-          </p>
-      </div>
-
-      {/* Vitals Section */}
-      <div className="bg-gray-50 p-4 grid grid-cols-2 gap-4 text-sm">
+      <div className="bg-gray-50 p-4 grid grid-cols-2 gap-4 text-sm border-t">
         <div className="flex items-center">
           <FiCloud className="text-gray-500 mr-2" size={20}/>
           <div>
             <p className="font-semibold">Weather</p>
-            <p>{data.weather.temperature} (Mountain weather!)</p>
+            <p>{data.weather.temperature}</p>
           </div>
         </div>
         <div className="flex items-center">
