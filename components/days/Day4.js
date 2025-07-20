@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { FiMapPin, FiSun, FiCloud, FiLink } from 'react-icons/fi';
-import { FaCar, FaParking, FaTrain, FaHotel, FaRegSnowflake, FaHiking, FaUtensils } from 'react-icons/fa';
+import { FaCar, FaParking, FaTrain, FaHotel, FaRegSnowflake, FaHiking, FaUtensils, FaInfoCircle } from 'react-icons/fa';
 
 // Helper function to create a Google Maps link
 const createMapLink = (address) => `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(address)}`;
@@ -56,6 +56,14 @@ export default function Day4({ data }) {
                 </div>
             </div>
         </div>
+
+       {/* Family Travel Tip */}
+       <div className="p-4 bg-yellow-100">
+           <h4 className="font-bold text-yellow-800 flex items-center"><FaInfoCircle className="mr-2"/>Family Travel Tip</h4>
+           <p className="text-yellow-700 text-sm mt-1">
+             During your stop in Interlaken before heading up the mountain, Café de Paris is a popular spot for a break with great pastries. For a good bookstore, seek out 'Bücher Lüthy' right on the main street, Höheweg. If rain foils your outdoor activity plans, the St. Beatus Caves, just a short drive from Interlaken, offer a dramatic and dry underground walk along waterfalls.
+           </p>
+       </div>
 
         {/* Dinner */}
         <div className="flex">

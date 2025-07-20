@@ -86,7 +86,7 @@ export default function Day13({ data }) {
       <div className="p-4 bg-yellow-100">
           <h4 className="font-bold text-yellow-800 flex items-center"><FaInfoCircle className="mr-2"/>Family Travel Tip</h4>
           <p className="text-yellow-700 text-sm mt-1">
-            For Tivoli Gardens, plan to arrive in the late afternoon. This lets you and the kids enjoy the rides and gardens in the daylight, have dinner, and then see the park magically transform as thousands of lights turn on at dusk. It's two experiences in one visit!
+            Near Tivoli Gardens, 'Conditori La Glace' is Copenhagen's oldest and most famous confectionary, an unforgettable stop for cake and coffee. 'Politikens Boghal' is a great bookstore right near the main walking street, Strøget. For a rainy day, the 'Ripley's Believe It or Not!' right on City Hall Square is a fun and quirky indoor alternative.
           </p>
       </div>
 

@@ -90,7 +90,7 @@ export default function Day6({ data }) {
       <div className="p-4 bg-yellow-100">
           <h4 className="font-bold text-yellow-800 flex items-center"><FaInfoCircle className="mr-2"/>Family Travel Tip</h4>
           <p className="text-yellow-700 text-sm mt-1">
-            The Grindelwald-First gondola is long (25 mins), so have snacks ready for the ride. The Cliff Walk is exciting but can be scary for little ones—let them lead. The Pfingstegg toboggan is a guaranteed win for all ages!
+            While in Grindelwald, the 'Sportzentrum' has an indoor swimming pool and ice rink that serves as a perfect rainy-day backup plan. For a classic café experience, stop by 'Bäckerei-Konditorei-Café Ringgenberg'. Comfortable, public restrooms are available at the Grindelwald-First gondola station.
           </p>
       </div>
 

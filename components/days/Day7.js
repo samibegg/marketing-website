@@ -73,7 +73,7 @@ export default function Day7({ data }) {
       <div className="p-4 bg-yellow-100 border-t">
           <h4 className="font-bold text-yellow-800 flex items-center"><FaInfoCircle className="mr-2"/>Family Travel Tip</h4>
           <p className="text-yellow-700 text-sm mt-1">
-            Let the kids burn off energy at the Flower Playground before you start the easy, paved walk down to Gimmelwald. The promise of picking a treat from the Honesty Shop is the perfect motivation to complete the walk!
+            In car-free Mürren, the Stäger-Stübli is a classic café for a warm drink and simple lunch. For a rainy day, the 'Sportchalet' in Mürren has an indoor pool. The most reliable and clean restrooms are located at the Schilthornbahn cable car station in Mürren and the Allmendhubel funicular station.
           </p>
       </div>
 

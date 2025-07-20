@@ -87,7 +87,7 @@ export default function Day10({ data }) {
       <div className="p-4 bg-yellow-100">
           <h4 className="font-bold text-yellow-800 flex items-center"><FaInfoCircle className="mr-2"/>Family Travel Tip</h4>
           <p className="text-yellow-700 text-sm mt-1">
-            The funicular ride up to Castle Hill is a huge hit with kids and saves their legs for exploring the top. For the afternoon, the Central Market is a feast for the senses and a great place to find paprika for souvenirs and try local snacks.
+            Near the Central Market Hall, the 'Central Café' (Centrál Kávéház) is a beautifully restored historic coffee house great for a relaxing break. If you're looking for an English-language bookstore with a cozy atmosphere, 'Massolit Books & Café' in the Jewish Quarter is a fantastic find. For a comfortable and clean public restroom, use the facilities inside the Market Hall itself.
           </p>
       </div>
 

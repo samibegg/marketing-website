@@ -82,7 +82,7 @@ export default function Day17({ data }) {
       <div className="p-4 bg-yellow-100">
           <h4 className="font-bold text-yellow-800 flex items-center"><FaInfoCircle className="mr-2"/>Family Travel Tip</h4>
           <p className="text-yellow-700 text-sm mt-1">
-            On the drive to the airport, have everyone share their number one favorite moment from the trip. Let the kids use their remaining currency (or a small budget) to pick one final snack or souvenir at the airport. It's a great way to end the adventure on a high note.
+            At Keflavík Airport (KEF) after you check in, 'Joe & The Juice' is a great spot for a final healthy snack or coffee. There's a well-stocked 'Eymundsson' bookstore for last-minute Icelandic reads. The airport is modern and spacious, with plenty of clean restrooms and gate-side play areas for kids to use up their last bit of energy before the flight home.
           </p>
       </div>
 

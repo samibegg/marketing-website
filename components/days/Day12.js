@@ -69,7 +69,7 @@ export default function Day12({ data }) {
       <div className="p-4 bg-yellow-100 border-t">
           <h4 className="font-bold text-yellow-800 flex items-center"><FaInfoCircle className="mr-2"/>Family Travel Tip</h4>
           <p className="text-yellow-700 text-sm mt-1">
-            Getting from CPH airport to the city is incredibly easy. The Metro (M2 line) is right in Terminal 3. You can tap a contactless credit card to pay for the whole family. Once checked in, a short walk to Nyhavn to see the famous colorful houses is a perfect, low-energy first activity.
+            After arriving in Copenhagen, drop your bags and head towards Nyhavn. For a classic Danish treat, find a 'vaffelbageri' (waffle bakery) for an ice cream cone. If it's raining, 'The National Museum of Denmark' is not far from your hotel and has excellent, interactive exhibits, including a dedicated Children's Museum.
           </p>
       </div>
 

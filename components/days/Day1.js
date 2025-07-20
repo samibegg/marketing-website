@@ -83,14 +83,6 @@ export default function Day1({ data }) {
         )}
       </div>
 
-      {/* Family Travel Tip */}
-       <div className="p-4 bg-yellow-100">
-           <h4 className="font-bold text-yellow-800 flex items-center"><FaInfoCircle className="mr-2"/>Family Travel Tip</h4>
-           <p className="text-yellow-700 text-sm mt-1">
-             To make the overnight flight more comfortable for the kids, consider bringing their favorite small pillow or blanket. Download a few new movies or games onto a tablet beforehand. Don't forget lollipops for takeoff and landing to help with ear pressure!
-           </p>
-       </div>
-
       {/* Tips Section */}
       <div className="p-4">
         <h4 className="font-bold text-gray-800">Reminders & Tips</h4>

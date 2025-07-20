@@ -80,7 +80,7 @@ export default function Day8({ data }) {
       <div className="p-4 bg-yellow-100">
           <h4 className="font-bold text-yellow-800 flex items-center"><FaInfoCircle className="mr-2"/>Family Travel Tip</h4>
           <p className="text-yellow-700 text-sm mt-1">
-            Make the border crossing fun for the kids: "We're sleeping in France tonight!" It's a great chance to talk about how close countries are in Europe. The Tinguely Fountain is a must-see for children—the playful, clanking sculptures are endlessly entertaining.
+            Upon arriving in Basel, Confiserie Schiesser on Marktplatz is one of Switzerland's oldest confectioneries, perfect for a welcome treat. 'Bider & Tanner' is an excellent, large bookstore with a great kids' section. If it rains, the 'Spielzeug Welten Museum' (Toy Worlds Museum) is an incredible, multi-story world of historic toys that will captivate everyone.
           </p>
       </div>
 

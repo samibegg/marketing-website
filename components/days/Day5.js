@@ -92,7 +92,7 @@ export default function Day5({ data }) {
       <div className="p-4 bg-yellow-100">
           <h4 className="font-bold text-yellow-800 flex items-center"><FaInfoCircle className="mr-2"/>Family Travel Tip</h4>
           <p className="text-yellow-700 text-sm mt-1">
-            Empower the kids by letting them lead on the Männlichen Panorama Trail (it's very safe and easy). Before you go, stop at the Coop to let them pick out their own "summit snacks." A picnic with a view you've earned together is always a highlight.
+            In Wengen village, Café Gruebi is a cozy spot for coffee and cake, perfect for a post-hike reward. The public restrooms at the Wengen train station are clean and well-maintained. On a rainy day when high trails are slick, the 'Trümmelbach Falls' down in the valley (Day 7's original plan) are a fantastic, mostly-covered alternative as the waterfalls are inside the mountain.
           </p>
       </div>
 

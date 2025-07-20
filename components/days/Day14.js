@@ -80,7 +80,7 @@ export default function Day14({ data }) {
       <div className="p-4 bg-yellow-100">
           <h4 className="font-bold text-yellow-800 flex items-center"><FaInfoCircle className="mr-2"/>Family Travel Tip</h4>
           <p className="text-yellow-700 text-sm mt-1">
-            Turn the travel between sights into an adventure. Rent bikes with the Donkey Republic app to get from the Round Tower to the Little Mermaid. Copenhagen's bike lanes are safe and it's the most authentic way to see the city. The kids will love it!
+            While exploring near the Round Tower, 'The Living Room' is a famously cozy café with a basement full of comfy chairs, perfect for a relaxing break. For a guaranteed clean public restroom, use the facilities inside the Magasin du Nord department store at Kongens Nytorv. If it rains, the 'National Gallery of Denmark' (SMK) is nearby and has creative workshops for children.
           </p>
       </div>
 

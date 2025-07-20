@@ -68,7 +68,7 @@ export default function Day11({ data }) {
       <div className="p-4 bg-yellow-100 border-t">
           <h4 className="font-bold text-yellow-800 flex items-center"><FaInfoCircle className="mr-2"/>Family Travel Tip</h4>
           <p className="text-yellow-700 text-sm mt-1">
-            The outdoor pools at Széchenyi are best for kids. The large "whirlpool" that spins you around in a circle is a huge hit! Don't worry about staying for hours; even a 90-minute visit is a memorable experience before heading to the park.
+            While at the City Park, 'Gundel' is a legendary, high-end restaurant, but its garden café offers a more relaxed setting for a memorable cake and coffee. If it's a washout, the indoor sections of the Széchenyi Baths are still enjoyable, and the 'Hungarian Agricultural Museum' inside Vajdahunyad Castle is surprisingly engaging and a great way to stay dry.
           </p>
       </div>
 

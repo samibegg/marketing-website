@@ -82,7 +82,7 @@ export default function Day15({ data }) {
       <div className="p-4 bg-yellow-100">
           <h4 className="font-bold text-yellow-800 flex items-center"><FaInfoCircle className="mr-2"/>Family Travel Tip</h4>
           <p className="text-yellow-700 text-sm mt-1">
-            Iceland is a huge change! Prepare the kids for an adventure to a "real-life volcano and glacier land." After picking up the car, make it a game to spot the first lava field. Download the weather app (Veður) and check the forecast together.
+            Upon arriving in Reykjavik, 'Brauð & Co.' is a must-visit bakery known for its incredible cinnamon buns—a perfect welcome snack. For a great bookstore with a cozy café inside, find 'Eymundsson' on Austurstræti. If it's a rainy evening, the 'Perlan' museum offers an amazing indoor ice cave exhibit and a 360° view of the city.
           </p>
       </div>
 

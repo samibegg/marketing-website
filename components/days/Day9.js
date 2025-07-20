@@ -72,7 +72,7 @@ export default function Day9({ data }) {
       <div className="p-4 bg-yellow-100 border-t">
           <h4 className="font-bold text-yellow-800 flex items-center"><FaInfoCircle className="mr-2"/>Family Travel Tip</h4>
           <p className="text-yellow-700 text-sm mt-1">
-            Welcome to Hungary! Get the kids involved by showing them the new currency (Forint) and teaching them to say "hello" (Szia - "see-ya"). Use an ATM at the airport for the best exchange rates. The 200E airport bus is very efficient and a cheap way to see the outskirts of the city on your way in.
+            After checking into your hotel in the Castle District, 'Ruszwurm Cukrászda' is one of Budapest's oldest and most famous pastry shops—a perfect first taste of Hungary. For a rainy arrival evening, consider a short taxi to the 'House of Houdini' museum, a magical and intriguing stop right in the Castle District.
           </p>
       </div>
 

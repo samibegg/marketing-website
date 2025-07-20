@@ -70,7 +70,7 @@ export default function Day16({ data }) {
           <div className="p-3 bg-yellow-100 rounded-lg">
               <h4 className="font-bold text-yellow-800 flex items-center"><FaInfoCircle className="mr-2"/>Family Travel Tip</h4>
               <p className="text-yellow-700 text-sm mt-1">
-                A full day of driving can be a lot for kids. Keep the stops exciting and promise a fun reward at the end, like lunch at the unique tomato farm or a dip in the Secret Lagoon. Let them be the official "geyser eruption spotter" at Geysir!
+                On the Golden Circle route, the Visitor Centre at Þingvellir National Park has clean restrooms and a small café, making it a good first stop. At the Geysir area, the 'Geysir Center' across the street is a large complex with shops, multiple food options (from soup to sandwiches), and well-maintained bathrooms, perfect for a midway break.
               </p>
           </div>
           <div className="p-3 bg-red-100 rounded-lg mt-3">

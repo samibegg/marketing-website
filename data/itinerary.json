@@ -255,6 +255,7 @@
     }
   ]
 },
+
 {
   "date": "7/30/2025",
   "location": "Wengen via Kandersteg / Sörenberg",
@@ -484,6 +485,7 @@
     }
   ]
 },
+
 {
   "date": "8/2/2025",
   "location": "Mürren & Gimmelwald",
@@ -543,7 +545,6 @@
   },
   "sunset": "8:45 PM"
 },
-
 
 {
     "date": "8/3/2025",
@@ -845,7 +846,7 @@
         "type": "accommodation",
         "description": "Check out Hilton, check into SLH Copenhagen",
         "checkout_hotel": {
-          "name": "Hilton Copenhagen Airport",
+          "name": "Hilton Budapest",
           "address": "Ellehammersvej 20, 2770 Kastrup, Denmark",
           "phone": "+45 32 50 15 01",
           "checkout_time": "12:00 PM",

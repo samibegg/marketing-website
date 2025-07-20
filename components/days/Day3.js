@@ -94,7 +94,7 @@ export default function Day3({ data }) {
        <div className="p-4 bg-yellow-100">
            <h4 className="font-bold text-yellow-800 flex items-center"><FaInfoCircle className="mr-2"/>Family Travel Tip</h4>
            <p className="text-yellow-700 text-sm mt-1">
-             Let the kids choose the evening activity. Frame it as a choice between a "boat adventure" on Lake Zurich or finding the "best toy store" on the famous Bahnhofstrasse shopping street. Giving them a choice reduces fatigue-driven meltdowns.
+             While exploring Zurich, if you need a break, the iconic Sprüngli café at Paradeplatz is a must for hot chocolate and Luxemburgerli macarons. For a fantastic bookstore with a children's section, head to Orell Füssli on Bahnhofstrasse. If it's raining, the Swiss National Museum near the main station is an excellent, castle-like alternative with engaging exhibits.
            </p>
        </div>
     </div>
