@@ -193,8 +193,17 @@
         "tickets": "Adults CHF 24, online booking recommended",
         "website": "https://www.fifamuseum.com",
         "duration": "2-3 hours",
-        "nearest_transport": "Tram 7/14 to Enge station",
-        "suggested_time": "1:00 PM - 4:00 PM"
+        "suggested_time": "Flexible entry time"
+      }
+    },
+    {
+      "activity": "Visit Confiserie Sprüngli",
+      "details": {
+        "name": "Confiserie Sprüngli at Paradeplatz",
+        "address": "Bahnhofstrasse 21, 8001 Zürich",
+        "hours": "Mon-Sat from 8:00 AM, Sun from 9:30 AM",
+        "website": "https://www.spruengli.ch/",
+        "note": "Iconic café famous for its hot chocolate, pastries, and Luxemburgerli macarons."
       }
     },
     {
@@ -206,9 +215,7 @@
         "tickets": "Adults CHF 15, advance booking required",
         "website": "https://www.lindt-home-of-chocolate.com",
         "duration": "1.5-2 hours",
-        "transport": "S-Bahn S8/S24 to Kilchberg",
-        "parking": "Free on-site parking",
-        "suggested_time": "4:30 PM - 6:30 PM"
+        "suggested_time": "Entry at 15:45"
       }
     },
     {
@@ -218,41 +225,32 @@
         "address": "Falkenstrasse 6, 8008 Zürich",
         "phone": "+41 44 258 98 98",
         "website": "https://www.ambassador.ch",
-        "check_in": "3:00 PM (after Lindt visit)",
+        "check_in": "3:00 PM (can check in after Lindt visit)",
         "check_out": "12:00 PM",
         "amenities": ["Spa", "Fitness center", "Restaurant", "Bar", "WiFi", "Business center"],
         "location": "Central Zurich location, walking distance to main attractions",
-        "parking": "Keep rental car at hotel - valet parking available (additional fee) for onward journey to Wengen",
-        "luxury_features": ["Premium spa services", "Fine dining", "Concierge services"]
-      }
-    },
-    {
-      "activity": "Evening walk along Lake Zurich or Bahnhofstrasse",
-      "details": {
-        "bahnhofstrasse": {
-          "description": "1.4 km luxury shopping street",
-          "highlights": ["Paradeplatz", "Jelmoli", "Sprüngli cafe"],
-          "walking_time": "30-45 minutes"
-        },
-        "lake_zurich": {
-          "promenade": "Scenic lakeside walk from Bellevue to Tiefenbrunnen",
-          "evening_activities": ["Lakeside dining", "Sunset views", "Evening boat tours"],
-          "boat_tours": {
-            "operator": "Zürichsee-Schifffahrtsgesellschaft (ZSG)",
-            "departure_points": ["Bürkliplatz", "Bellevue", "Wollishofen"],
-            "evening_options": [
-              {
-                "name": "Sunset cruise",
-                "duration": "1.5 hours",
-                "cost": "CHF 25",
-                "highlights": ["City lights", "Alpine backdrop", "Romantic atmosphere"]
-              }
-            ],
-            "booking": "https://www.zsg.ch"
-          }
-        }
+        "parking": "Keep rental car at hotel - valet parking available (additional fee) for onward journey to Wengen"
       }
     }
+  ],
+  "alternate_plans": [
+    {
+      "name": "Rainy Day Trip to Appenzell",
+      "description": "A full-day trip to the Appenzell region as an alternative to the Zurich city activities.",
+      "activity": "Visit Appenzeller Schaukäserei",
+      "details": {
+        "name": "Appenzeller Schaukäserei (Cheese Factory)",
+        "address": "Dorf 711, 9063 Stein AR, Switzerland",
+        "hours": "Daily 9:00 AM - 5:30 PM",
+        "website": "https://www.schaukaeserei.ch/",
+        "note": "A scenic 90-minute drive from Zurich. See how cheese is made! This would replace the Zurich activities due to time."
+      }
+    }
+  ],
+  "tips": [
+    "Sprüngli is a perfect spot for a mid-morning break before heading to the Lindt factory.",
+    "Zurich's tram system is excellent for getting between attractions.",
+    "The evening walk along Lake Zurich is beautiful at sunset."
   ]
 },
 
