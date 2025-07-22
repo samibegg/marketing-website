@@ -11,7 +11,7 @@ export default function Day2({ data }) {
   // Helper to find specific items
   const getItem = (activityName) => data.items.find(item => item.activity.includes(activityName));
   const rentalInfo = getItem('rental car').rental;
-  const hotelInfo = getItem('Check into Hilton').hotel;
+  const hotelInfo = getItem('Ambassador').hotel;
   const hikeInfo = getItem('Drive to Elm').destination;
   const dinnerInfo = getItem('Dinner at mit&ohne').restaurant;
 
@@ -72,7 +72,6 @@ export default function Day2({ data }) {
                   <FiMapPin />
                 </a>
             </div>
-            <p className="text-sm font-semibold text-red-500 bg-red-100 px-2 py-1 rounded-md mt-1 inline-block">{hotelInfo.note}</p>
           </div>
         </div>
 
@@ -82,8 +81,8 @@ export default function Day2({ data }) {
           <div className="bg-green-50 p-3 rounded-lg flex-1">
             <h3 className="font-bold text-lg text-green-800">Hike in Elm</h3>
             <div className="flex items-center text-sm text-green-700 mb-2">
-                <p>Drive to {hikeInfo.village.address}</p>
-                <a href={createMapLink(hikeInfo.village.address)} target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-500 hover:text-blue-700">
+                <p>Drive to {hikeInfo.address}</p>
+                <a href={createMapLink(hikeInfo.address)} target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-500 hover:text-blue-700">
                     <FiMapPin />
                 </a>
             </div>

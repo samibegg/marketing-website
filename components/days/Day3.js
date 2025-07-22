@@ -10,7 +10,7 @@ export default function Day3({ data }) {
   const fifaInfo = data.items.find(item => item.activity.includes('FIFA'))?.details;
   const sprungliInfo = data.items.find(item => item.activity.includes('Sprüngli'))?.details;
   const lindtInfo = data.items.find(item => item.activity.includes('Lindt'))?.details;
-  const hotelInfo = data.items.find(item => item.activity.includes('Ambassador'))?.hotel;
+  const hotelInfo = data.items.find(item => item.activity.includes('Check into Hilton'))?.hotel;
   const alternatePlan = data.alternate_plans?.[0];
 
   return (

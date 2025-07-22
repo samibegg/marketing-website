@@ -81,18 +81,17 @@
       }
     },
     {
-      "activity": "Check into Hilton Zurich Airport & drop bags",
+      "activity": "Check into Ambassador Hotel & Spa",
       "hotel": {
-        "name": "Hilton Zurich Airport",
-        "address": "Hohenbühlstrasse 10, 8152 Opfikon",
-        "phone": "+41 43 210 40 00",
-        "website": "https://www.hilton.com/zurich-airport",
-        "check_in": "3:00 PM (early check-in requested)",
-        "check_out": "Next morning",
-        "amenities": ["Airport shuttle", "Fitness center", "Restaurant", "WiFi", "Business center"],
-        "shuttle_info": "Complimentary shuttle every 10 minutes to/from ZRH",
-        "distance_to_airport": "5 minutes by shuttle",
-        "note": "Drop bags and freshen up before driving to Elm for hiking"
+        "name": "Ambassador Hotel & Spa",
+        "address": "Falkenstrasse 6, 8008 Zürich",
+        "phone": "+41 44 258 98 98",
+        "website": "https://www.ambassador.ch",
+        "check_in": "3:00 PM (can check in after Lindt visit)",
+        "check_out": "12:00 PM",
+        "amenities": ["Spa", "Fitness center", "Restaurant", "Bar", "WiFi", "Business center"],
+        "location": "Central Zurich location, walking distance to main attractions",
+        "parking": "Keep rental car at hotel - valet parking available (additional fee) for onward journey to Wengen"
       }
     },
     {
@@ -219,17 +218,18 @@
       }
     },
     {
-      "activity": "Check into Ambassador Hotel & Spa",
+      "activity": "Check into Hilton Zurich Airport & drop bags",
       "hotel": {
-        "name": "Ambassador Hotel & Spa",
-        "address": "Falkenstrasse 6, 8008 Zürich",
-        "phone": "+41 44 258 98 98",
-        "website": "https://www.ambassador.ch",
-        "check_in": "3:00 PM (can check in after Lindt visit)",
-        "check_out": "12:00 PM",
-        "amenities": ["Spa", "Fitness center", "Restaurant", "Bar", "WiFi", "Business center"],
-        "location": "Central Zurich location, walking distance to main attractions",
-        "parking": "Keep rental car at hotel - valet parking available (additional fee) for onward journey to Wengen"
+        "name": "Hilton Zurich Airport",
+        "address": "Hohenbühlstrasse 10, 8152 Opfikon",
+        "phone": "+41 43 210 40 00",
+        "website": "https://www.hilton.com/zurich-airport",
+        "check_in": "3:00 PM (early check-in requested)",
+        "check_out": "Next morning",
+        "amenities": ["Airport shuttle", "Fitness center", "Restaurant", "WiFi", "Business center"],
+        "shuttle_info": "Complimentary shuttle every 10 minutes to/from ZRH",
+        "distance_to_airport": "5 minutes by shuttle",
+        "note": "Drop bags and freshen up before driving to Elm for hiking"
       }
     }
   ],
@@ -268,11 +268,12 @@
       }
     },
     {
-      "activity": "Option 1: Ride the Rodelbahn Toboggan Run",
+      "activity": "Option 1: Ride the Frakigaudi Summer Toboggan",
       "details": {
-        "name": "Rodelbahn Oeschinensee",
+        "name": "Frakigaudi Summer Toboggan",
+        "address": "Schlossweg 1, 6010 Kriens, Switzerland",
         "location": "Kandersteg, Switzerland",
-        "website": "http://www.rodelbahn.ch/",
+        "website": "https://www.rodelbahn.ch/en/",
         "note": "Requires a gondola ride. Plan for 2-3 hours for the total experience."
       }
     },
@@ -280,6 +281,7 @@
       "activity": "Option 2: Hike at Sörenberg",
       "details": {
         "name": "Sörenberg Hiking Area",
+        "address": "Hinter-Schöniseistrasse 4, 6174 Sörenberg, Switzerland",
         "location": "Sörenberg, Switzerland",
         "website": "https://www.soerenberg.ch/de/sehen-erleben/sommer/wandern",
         "note": "A separate destination with numerous trails. Check trail maps beforehand."
@@ -288,11 +290,11 @@
     {
       "activity": "Dinner in Interlaken",
       "restaurant": {
-        "name": "Restaurant Laterne",
-        "address": "Höheweg 75, 3800 Interlaken, Switzerland",
+        "name": "Restaurant West-End",
+        "address": "Rugenparkstrasse 2, 3800 Interlaken, Switzerland",
         "cuisine": "Swiss, European",
         "specialty": "Fondue, Rösti, Swiss classics",
-        "website": "https://www.restaurant-laterne.ch/",
+        "website": "https://www.westend-perbacco.ch/",
         "note": "A cozy spot for classic Swiss food before heading up to Wengen."
       }
     },
@@ -301,7 +303,7 @@
       "transport": {
         "parking": {
           "name": "Lauterbrunnen BLT Parking",
-          "address": "Bahnhofstrasse, 3822 Lauterbrunnen",
+          "address": "Gütli 481, 3812 Wilderswil, Switzerland",
           "cost": "CHF 15/day",
           "capacity": "Large lot, usually available"
         },
@@ -319,7 +321,7 @@
       "activity": "Check into Hotel Edelweiss",
       "hotel": {
         "name": "Hotel Edelweiss Wengen",
-        "address": "3823 Wengen",
+        "address": "Am Acher 1366A, 3823 Wengen BE, Switzerland",
         "phone": "+41 33 856 56 56",
         "website": "https://edelweiss-wengen.ch",
         "check_in": "3:00 PM",

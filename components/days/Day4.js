@@ -7,7 +7,7 @@ const createMapLink = (address) => `https://www.google.com/maps/search/?api=1&qu
 
 export default function Day4({ data }) {
   const driveInfo = data.items.find(i => i.activity.includes('Drive from Zurich')).route;
-  const tobogganInfo = data.items.find(i => i.activity.includes('Rodelbahn')).details;
+  const tobogganInfo = data.items.find(i => i.activity.includes('Frakigaudi Summer')).details;
   const hikeInfo = data.items.find(i => i.activity.includes('Hike at Sörenberg')).details;
   const dinnerInfo = data.items.find(i => i.activity.includes('Dinner in Interlaken')).restaurant;
   const transportInfo = data.items.find(i => i.activity.includes('Park in Lauterbrunnen')).transport;
@@ -46,12 +46,24 @@ export default function Day4({ data }) {
             <div className="space-y-3">
                 <div className="bg-sky-50 p-3 rounded-lg">
                     <h4 className="font-semibold text-sky-800 flex items-center mb-1"><FaRegSnowflake className="mr-2" /> Option 1: {tobogganInfo.name}</h4>
+                      <div className="flex items-center text-sm mb-1">
+                        <p>{tobogganInfo.address}</p>
+                        <a href={createMapLink(tobogganInfo.address)} target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-500 hover:text-blue-700">
+                          <FiMapPin />
+                        </a>
+                      </div>
                     <p className="text-sm text-gray-700">{tobogganInfo.note}</p>
                     <a href={tobogganInfo.website} target="_blank" rel="noopener noreferrer" className="text-xs text-blue-600 hover:underline mt-1 inline-block">Website</a>
                 </div>
                 <div className="bg-emerald-50 p-3 rounded-lg">
                     <h4 className="font-semibold text-emerald-800 flex items-center mb-1"><FaHiking className="mr-2" /> Option 2: {hikeInfo.name}</h4>
                     <p className="text-sm text-gray-700">{hikeInfo.note}</p>
+                      <div className="flex items-center text-sm mb-1">
+                        <p>{hikeInfo.address}</p>
+                        <a href={createMapLink(hikeInfo.address)} target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-500 hover:text-blue-700">
+                          <FiMapPin />
+                        </a>
+                      </div>
                     <a href={hikeInfo.website} target="_blank" rel="noopener noreferrer" className="text-xs text-blue-600 hover:underline mt-1 inline-block">Website</a>
                 </div>
             </div>
@@ -88,6 +100,12 @@ export default function Day4({ data }) {
             <div className="bg-gray-100 p-3 rounded-lg mt-2">
               <h4 className="font-semibold text-gray-800 flex items-center"><FaParking className="mr-2"/>Parking</h4>
               <p className="text-sm mt-1">{transportInfo.parking.name}</p>
+                <div className="flex items-center text-sm mb-1">
+                  <p>{transportInfo.parking.address}</p>
+                  <a href={createMapLink(transportInfo.parking.address)} target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-500 hover:text-blue-700">
+                    <FiMapPin />
+                  </a>
+                </div>
             </div>
             <div className="bg-blue-50 p-3 rounded-lg mt-2">
               <h4 className="font-semibold text-blue-800 flex items-center"><FaTrain className="mr-2"/>Train</h4>
@@ -96,6 +114,12 @@ export default function Day4({ data }) {
             <div className="bg-emerald-50 p-3 rounded-lg mt-2">
               <h4 className="font-semibold text-emerald-800 flex items-center"><FaHotel className="mr-2"/>Hotel</h4>
               <p className="text-sm mt-1">Check into {hotelInfo.name} in Wengen</p>
+                <div className="flex items-center text-sm mb-1">
+                  <p>{hotelInfo.address}</p>
+                  <a href={createMapLink(hotelInfo.address)} target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-500 hover:text-blue-700">
+                    <FiMapPin />
+                  </a>
+                </div>
             </div>
           </div>
         </div>

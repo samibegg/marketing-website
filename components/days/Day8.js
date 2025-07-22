@@ -46,7 +46,7 @@ export default function Day8({ data }) {
             </div>
             <div className="bg-orange-100 text-orange-800 p-2 mt-2 rounded-lg text-xs">
                 <p className="font-bold flex items-center"><FiAlertTriangle className="mr-2"/>Cross-Border Note</p>
-                [cite_start]<p className="mt-1">{hotel.location_note} [cite: 53] Passport may be required for check-in. [cite_start]Currency is Euro (EUR)[cite: 53].</p>
+                <p className="mt-1">{hotel.location_note} Passport may be required for check-in. Currency is Euro (EUR).</p>
             </div>
           </div>
         </div>
@@ -56,7 +56,7 @@ export default function Day8({ data }) {
           <FaWalking className="text-red-600 mr-4 mt-1" size={24} />
           <div>
             <h3 className="font-bold text-lg">Evening Stroll by the Rhine</h3>
-            [cite_start]<p className="text-sm text-gray-600">Route: {evening.route} [cite: 55]</p>
+            <p className="text-sm text-gray-600">Route: {evening.route} </p>
           </div>
         </div>
       </div>
