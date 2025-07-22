@@ -47,6 +47,7 @@ export default function Day12({ data }) {
             <a href={flight.flight_status_url} target="_blank" rel="noopener noreferrer" className="bg-blue-500 text-white text-center font-bold py-2 px-3 rounded-lg flex items-center justify-center shadow-sm hover:bg-blue-600">
                 <FiLink className="mr-2" /> Flight Status
             </a>
+            <p><span className="font-semibold">Confirmation:</span> <span className="font-mono bg-gray-200 px-1 rounded">{flight.confirmation}</span></p>
         </div>
         </div>
 

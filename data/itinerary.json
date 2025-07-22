@@ -618,6 +618,7 @@
         "flight": {
           "airline": "Wizz Air",
           "flight_number": "W6 2357 (typical)",
+          "confirmation": "DW48XN",
           "departure": {
             "airport": "Basel-Mulhouse-Freiburg Airport (BSL/MLH/EAP)",
             "terminal": "Terminal 1",
@@ -825,6 +826,7 @@
         "description": "Fly BUD → CPH (7:35 PM → 9:30 PM, Ryanair)",
         "flight_number": "FR2347",
         "airline": "Ryanair",
+        "confirmation": "EU8HVD",
         "departure": {
           "airport": "Budapest Ferenc Liszt International Airport (BUD)",
           "terminal": "2A",
@@ -1020,6 +1022,7 @@
         "type": "flight",
         "description": "Fly CPH → KEF (12:35 PM → 1:55 PM, FlyPlay)",
         "flight_number": "FP201",
+        "confirmation": "M4DVF0",
         "airline": "FlyPlay",
         "departure": {
           "airport": "Copenhagen Airport (CPH)",
@@ -1248,6 +1251,7 @@
         "type": "flight",
         "description": "Fly KEF → IAD (7:45 PM → 8:10 PM, Icelandair)",
         "flight_number": "FI614",
+        "confirmation": "BEEP6T",
         "airline": "Icelandair",
         "departure": {
           "airport": "Keflavík International Airport (KEF)",
