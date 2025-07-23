@@ -45,6 +45,12 @@ export default function Day6({ data }) {
                     <h4 className="font-semibold text-sky-800 flex items-center mb-1"><FaHiking className="mr-2" /> {firstHike.name}</h4>
                     <p className="text-sm text-gray-700">Main attraction: {firstHike.attraction}.</p>
                     <a href={firstHike.website} target="_blank" rel="noopener noreferrer" className="text-xs text-blue-600 hover:underline mt-1 inline-block">Website</a>
+                    <div className="flex items-center text-sm mb-1">
+                      <p>{firstHike.address}</p>
+                      <a href={createMapLink(firstHike.address)} target="_blank" rel="noopener noreferrer" className="ml-2 text-blue-500 hover:text-blue-700">
+                        <FiMapPin />
+                      </a>
+                    </div>
                 </div>
                 <div className="bg-emerald-50 p-3 rounded-lg">
                     <h4 className="font-semibold text-emerald-800 flex items-center mb-1"><FaRegSnowflake className="mr-2" /> {pfingstegg.name}</h4>
