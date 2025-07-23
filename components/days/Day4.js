@@ -106,6 +106,7 @@ export default function Day4({ data }) {
                     <FiMapPin />
                   </a>
                 </div>
+                <a href={transportInfo.parking.website} target="_blank" rel="noopener noreferrer" className="text-xs text-blue-600 hover:underline mt-1 inline-block">Website</a>
             </div>
             <div className="bg-blue-50 p-3 rounded-lg mt-2">
               <h4 className="font-semibold text-blue-800 flex items-center"><FaTrain className="mr-2"/>Train</h4>
