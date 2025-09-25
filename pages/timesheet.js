@@ -19,14 +19,14 @@ export default function Timesheet() {
 
   const [notes, setNotes] = useState('');
 
-  // Set default week ending date to next Sunday
+  // Set default week ending date to next Friday
   useEffect(() => {
     const today = new Date();
-    const nextSunday = new Date(today);
-    nextSunday.setDate(today.getDate() + (7 - today.getDay()));
+    const nextFriday = new Date(today);
+    nextFriday.setDate(today.getDate() + (5 - today.getDay()));
     setConsultantInfo(prev => ({
       ...prev,
-      weekEnding: nextSunday.toISOString().split('T')[0]
+      weekEnding: nextFriday.toISOString().split('T')[0]
     }));
   }, []);
 
@@ -253,7 +253,7 @@ export default function Timesheet() {
                           value={entry.rate || ''}
                           onChange={(e) => updateTimeEntry(entry.id, 'rate', e.target.value)}
                           className="w-20 bg-transparent text-center focus:outline-none focus:bg-white focus:ring-1 focus:ring-blue-500"
-                          placeholder="125.00"
+                          placeholder="300.00"
                         />
                       </td>
                       <td className="border border-gray-800 p-2 text-center font-semibold">
