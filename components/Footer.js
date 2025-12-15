@@ -31,7 +31,7 @@ export default function Footer() {
             <a href="https://x.com/forgemissioncom" target="_blank" rel="noopener noreferrer" className="hover:text-blue-400">
               <FaTwitter size={20} />
             </a>
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">
+            <a href="https://github.com/forgemission" target="_blank" rel="noopener noreferrer" className="hover:text-gray-900">
               <FaGithub size={20} />
             </a>
           </div>
