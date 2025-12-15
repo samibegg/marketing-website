@@ -374,7 +374,7 @@ export default function HomePage() {
               <p className="text-sm uppercase tracking-wide text-blue-600 font-semibold mb-2">Project</p>
               <h3 className="text-3xl font-bold text-gray-900 mb-4">Dedicated Automation & AI Partner</h3>
               <p className="text-gray-600 mb-6">starting at</p>
-              <p className="text-5xl font-extrabold text-gray-900 mb-8">$6,499</p>
+              <p className="text-5xl font-extrabold text-gray-900 mb-8">$7,499</p>
               
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
@@ -520,7 +520,12 @@ export default function HomePage() {
             
             <details className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
               <summary className="font-semibold text-lg text-gray-900 cursor-pointer">What is n8n and why do you use it?</summary>
-              <p className="mt-4 text-gray-600">n8n is an enterprise-grade workflow automation platform that enables businesses to orchestrate complex processes across multiple systems. Unlike competitors such as Zapier, n8n offers unlimited workflows without per-execution costs, making it highly scalable for growing organizations. As a self-hosted solution, it provides complete control over your data and security posture. We leverage n8n's flexibility to build sophisticated, multi-step automations tailored to your specific business requirements, while ensuring your team can easily maintain them long-term.</p>
+              <p className="mt-4 text-gray-600">n8n is an enterprise-grade workflow automation platform that enables businesses to orchestrate complex, repeatable processes across multiple systems through API-based integrations. Unlike competitors such as Zapier, n8n offers unlimited workflows without per-execution costs, making it highly scalable for growing organizations. As a self-hosted solution, it provides complete control over your data and security posture. We leverage n8n to build production-grade automations for recurring business processes—invoice processing, lead routing, inventory management, customer onboarding—ensuring your team can maintain and modify these workflows long-term without dependency on external developers.</p>
+            </details>
+            
+            <details className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
+              <summary className="font-semibold text-lg text-gray-900 cursor-pointer">What are MCP servers and how do they complement workflow automation?</summary>
+              <p className="mt-4 text-gray-600">MCP (Model Context Protocol) servers enable AI agents to interact directly with your business systems for discovery, configuration, and maintenance tasks. While n8n handles structured, repeatable workflows, MCP servers excel at exploratory work—analyzing your existing data structures, troubleshooting integration issues, configuring new system connections, and performing ad-hoc data migrations. This AI-powered layer accelerates implementation timelines and enables intelligent system management that adapts to your environment. Together, n8n and MCP servers provide both the automation infrastructure and the intelligent tooling needed to rapidly deploy and maintain complex integrations across your technology stack.</p>
             </details>
             
             <details className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
@@ -530,7 +535,7 @@ export default function HomePage() {
             
             <details className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
               <summary className="font-semibold text-lg text-gray-900 cursor-pointer">What technology stack do you work with?</summary>
-              <p className="mt-4 text-gray-600">We primarily build on n8n, a powerful workflow automation platform with native integrations for 99% of business applications. It offers superior flexibility and cost-effectiveness compared to platforms like Zapier and Make. This versatility means we can integrate with virtually any system in your technology ecosystem, regardless of its architecture or API structure.</p>
+              <p className="mt-4 text-gray-600">We leverage a dual-platform approach optimized for different automation needs. For repeatable workflows and complex multi-step processes requiring API-based integrations, we build on n8n—a powerful enterprise automation platform with native connectors for 99% of business applications. It offers superior flexibility and cost-effectiveness compared to platforms like Zapier and Make. For data discovery, system configuration, and maintenance tasks, we utilize MCP (Model Context Protocol) servers, which enable AI agents to interact directly with your systems for setup, troubleshooting, and ongoing optimization. This versatile architecture allows us to integrate with virtually any system in your technology ecosystem, regardless of its architecture or API structure.</p>
             </details>
             
             <details className="bg-white p-6 rounded-xl shadow-sm border border-gray-200">
